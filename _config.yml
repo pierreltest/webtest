@@ -1,0 +1,89 @@
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+
+# Nav structure
+nav:
+  # Should match page.headerMenu
+  create:
+    - name: Creation &amp; Layout Tools
+      href: /book-creation-layout-tools
+    - name: BookWright
+      href: /bookwright
+    - name: InDesign Plugin
+      href: /indesign-plugin
+    - name: Booksmart
+      href: /booksmart
+    - name: Bookify
+      href: /online-photo-books
+    - name: Lightroom
+      href: /lightroom
+    - name: Templates
+      href: /templates
+
+  formats-pricing:
+    - name: Photo Books
+      href: /photo-books
+    - name: Trade Books
+      href: /trade-books
+    - name: Magazines
+      href: /magazine
+    - name: Ebooks
+      href: /ebook
+    - name: Custom Book Options
+      href: /custom-book-options
+    - name: Pricing
+      href: /pricing
+    - name: Volume Pricing
+      href: /volume-pricing
+
+  sell-distribute:
+    - name: Sell & Distribute Options
+      href: /distribution-options
+    - name: Blurb Direct Sell
+      href: /blurb-direct-sell
+    - name: Sell On Amazon
+      href: /blurb-to-amazon
+    - name: Global Distribution Network
+      href: /global-retail-network
+    - name: Fulfillment for Volume Purchases
+      href: /volume-purchase-fulfillment
+
+  community:
+    - name: Events
+      href: /events
+    - name: Online Workshops
+      href: /webinars
+    - name: Blurb Stories
+      href: /blog
+    - name: Forums
+      href: https://support.blurb.com/categories/20076681
+
+  help:
+    - name: FAQs
+      href: https://support.blurb.com/forums
+    - name: Instruction
+      href: /tutorials
+    - name: Customer Support
+      href: https://support.blurb.com/?locale={#}
+
+  bookstore:
+    - name: New & Notable
+      href: /bookstore/new
+    - name: Editors Picks
+      href: /bookstore/featured
+    - name: Best Sellers
+      href: /bookstore/popular
+    - name: All Categories
+      href: /bookstore/category

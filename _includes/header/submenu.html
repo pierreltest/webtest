@@ -1,0 +1,25 @@
+{% comment %}
+Main submenu
+{% endcomment %}
+{% unless include.subnav == true %}
+<ul class="controls__subnav--lvl1  js-subnav">
+  {% for item in include.items %}
+  <li class="controls__subnav--lvl1__item">
+    <a class="controls__subnav--lvl1__link" href="{{ item.href }}">{{ item.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endunless %}
+
+{% comment %}
+Subnav
+{% endcomment %}
+
+{% if include.subnav == true %}
+{% for item in include.items %}
+<li class="controls__current-subnav__item{% if page.href == item.href %} active{% endif %}">
+  <a class="controls__current-subnav__link" href="{{ item.href }}">{{ item.name }}</a>
+  <span class="controls__current-subnav__arrow  icon  indicator--down--blue"></span>
+</li>
+{% endfor %}
+{% endif %}
