@@ -3,21 +3,22 @@
   <div class="grid-construct  guidline__wrapper">
     <div class="guideline--vertical--left"></div>
     <ul class="utility__list">
-      <li class="utility__list-item  utility__list-item--show-lg"><a
-        class="utility__cta" href="#">Join Blurb Now</a></li>
-      <li class="utility__list-item  utility__list-item--show-lg"><a
-        class="utility__cta" href="#">Sign In</a></li>
-      <li class="utility__list-item  utility__list-item--show-lg"><a
-        class="utility__cta" href="#">Help</a></li>
+      <!--<script type="text/javascript">-->
+        <!--// Will be replaced with necessary info by jQuery.-->
+        <!--var blotchMenuItemTemplate = '<li class="utility__list-item  utility__list-item--show-lg"><a class="utility__cta" href="#"></a></li>';-->
+      <!--</script>-->
+      <li class="utility__list-item  utility__list-item--show-lg utility__account-menu-item js-utility__account-menu-item"><a class="utility__cta" href="#">Join Blurb Now</a></li>
+      <li class="utility__list-item  utility__list-item--show-lg utility__account-menu-item js-utility__account-menu-item"><a class="utility__cta" href="#">Sign In</a></li>
+      <li class="utility__list-item  utility__list-item--show-lg utility__account-menu-item js-utility__account-menu-item"><a class="utility__cta" href="#">Help</a></li>
       <li class="utility__list-item  utility__list-item--search"
           data-controller="search">
         <div class="controls__search__form-wrap js-search-form">
-          <form action="" class="controls__search__form clearfix">
+          <form action="/search/site_search" class="controls__search__form clearfix">
             <span
               class="controls__search__field-icon  icon  magnify--black"></span>
             <!-- to remove -->
-            <label for="nav-search-field" class="controls__search__label">Search:</label>
-            <input type="text" name="nav-search-field"
+            <label for="search" class="controls__search__label">Search:</label>
+            <input type="text" name="search"
                    class="controls__search__field" placeholder="Search for...">
             <button
               class="controls__search__button  controls__search__button--submit"
@@ -132,118 +133,7 @@ to duplicate stuff.
     {% endfor %}
   </ul>
 {% endunless %}
-<div class="footer__legal">
-  <div class="grid-construct">
-    <div class="full-column">
-      <ul class="footer__legal__list">
-        <li
-          class="footer__legal__list-item  footer__legal__list-item--copyright">&copy;
-          1999-2014 Blurb
-        </li>
-        <!--
-                  -->
-        <li class="footer__legal__list-item"><a
-          class="footer__legal__link" href="#">Company</a></li>
-        <!--
-                  -->
-        <li class="footer__legal__list-item"><a
-          class="footer__legal__link" href="#">Careers</a></li>
-        <!--
-                  -->
-        <li class="footer__legal__list-item"><a
-          class="footer__legal__link" href="#">Engineering</a></li>
-        <!--
-                  -->
-        <li class="footer__legal__list-item"><a
-          class="footer__legal__link" href="#">Pricing</a></li>
-        <!--
-                  -->
-        <li class="footer__legal__list-item"><a
-          class="footer__legal__link" href="#">Privacy &amp; Legal</a>
-        </li>
-        <!--
-                  -->
-        <li class="footer__legal__list-item"><a
-          class="footer__legal__link" href="#">Affiliate Program</a></li>
-        <!--
-                  -->
-        <li class="footer__legal__list-item"><a
-          class="footer__legal__link" href="#">Support</a></li>
-      </ul>
-      <div class="footer__lang-select" data-controller="languageSelect">
-        <div class="footer__lang-select__btn">
-          <div class="footer__lang-select__selected  js-lang-select-btn">
-                  <span
-                    class="icon  flag--united-states--sm  footer__lang-select__selected-icon"></span>
-                  <span
-                    class="footer__lang-select__selected-text">United States</span>
-            <span class="icon  indicator--down--white"></span>
-          </div>
-        </div>
-
-        <div
-          class="footer__lang-select__select-wrap  js-lang-select-wrap">
-          <div class="footer__lang-select__list-wrap">
-            <ul class="footer__lang-select__column">
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--united-states"></span> United States</a>
-              </li>
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--australia"></span> Australia</a>
-              </li>
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--brazil"></span> Brazil</a>
-              </li>
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--italy"></span> Italy</a>
-              </li>
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--netherlands"></span> Netherlands</a>
-              </li>
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--united-kingdom"></span> United
-                  Kingdom</a>
-              </li>
-            </ul>
-            <ul class="footer__lang-select__column">
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--france"></span> France</a>
-              </li>
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--germany"></span> Germany</a>
-              </li>
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--spain"></span> Spain</a>
-              </li>
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--canada"></span> Canada</a>
-              </li>
-              <li class="footer__lang-select__list-item">
-                <a class="footer__lang-select__link" href="#"><span
-                  class="icon  flag--globe"></span> Other Countries</a>
-              </li>
-            </ul>
-            <div class="footer__lang-select__stem">
-              <span class="icon bubble-stem--gray"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-</div>
+  {% include footer--legal.html %}
 
 <div class="guideline--vertical--right"></div>
 </div>
