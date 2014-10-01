@@ -5,11 +5,39 @@ description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+
 exclude: [vendor]
+
+#baseurl: "" # the subpath of your site, e.g. /blog/
+language_selector:
+  en: "http://www.blurb.com"
+  en-au: "http://au.blurb.com"
+  pt-br: "http://br.blurb.com"
+  it: "http://it.blurb.com"
+  nl: "http://nl.blurb.com"
+  en-gb: "http://www.blurb.co.uk"
+  fr: "http://www.blurb.fr"
+  de: "http://www.blurb.de"
+  es: "http://www.blurb.es"
+  en-ca: "http://www.blurb.ca"
+
+locale_names:
+  en: "United States"
+  en-au: "Australia"
+  pt-br: "Brazil"
+  it: "Italy"
+  nl: "Netherlands"
+  en-gb: "United Kingdom"
+  fr: "France"
+  de: "Germany"
+  es: "Spain"
+  en-ca: "Canada"
+  es-la: "United States"
+  fr-ca: "Canada"
+
+#url: "http://yourdomain.com" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+#github_username:  jekyll
 
 # Build settings
 markdown: kramdown
@@ -19,7 +47,7 @@ nav:
   # Should match page.headerMenu
   create:
     - name: Creation &amp; Layout Tools
-      href: /book-creation-layout-tools
+      href: /bookmaking-tools
     - name: BookWright
       href: /bookwright
     - name: InDesign Plugin
@@ -45,7 +73,7 @@ nav:
     - name: Custom Book Options
       href: /custom-book-options
     - name: Pricing
-      href: /pricing
+      href: /pricing-calculator
     - name: Volume Pricing
       href: /volume-pricing
 
@@ -68,16 +96,10 @@ nav:
       href: /webinars
     - name: Blurb Stories
       href: /blog
+      languages:
+        - en
     - name: Forums
       href: https://support.blurb.com/categories/20076681
-
-  help:
-    - name: FAQs
-      href: https://support.blurb.com/forums
-    - name: Instruction
-      href: /tutorials
-    - name: Customer Support
-      href: https://support.blurb.com/?locale={#}
 
   bookstore:
     - name: New & Notable

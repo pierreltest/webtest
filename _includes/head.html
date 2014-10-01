@@ -1,4 +1,6 @@
+{% assign path_parts = page.path | split:"." %}
+{% assign language = path_parts[1] %}
 <head>
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ page.meta_description }}">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.meta_description }}">
 </head>
