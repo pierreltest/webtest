@@ -1,7 +1,17 @@
 GEM
   remote: https://rubygems.org/
+  remote: http://repo.blurb.com/gem_repo/
   specs:
     blankslate (2.1.2.4)
+    capistrano (2.9.0.1)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
+    capistrano_colors (0.5.5)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     classifier-reborn (2.0.1)
@@ -14,6 +24,7 @@ GEM
     execjs (2.2.1)
     fast-stemmer (1.0.2)
     ffi (1.9.3)
+    highline (1.6.21)
     hitimes (1.2.2)
     jekyll (2.4.0)
       classifier-reborn (~> 2.0)
@@ -45,6 +56,14 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.4)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.1)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
+    nokogiri (1.5.5)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.9)
@@ -67,4 +86,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano (= 2.9.0.1)
+  capistrano-ext (= 1.2.1)
+  capistrano_colors (= 0.5.5)
   jekyll
+  nokogiri (= 1.5.5)
