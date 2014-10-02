@@ -2,14 +2,55 @@
 <div class="header--utility">
   <div class="grid-construct  guidline__wrapper">
     <div class="guideline--vertical--left"></div>
-    <ul class="utility__list">
-      <!--<script type="text/javascript">-->
-        <!--// Will be replaced with necessary info by jQuery.-->
-        <!--var blotchMenuItemTemplate = '<li class="utility__list-item  utility__list-item--show-lg"><a class="utility__cta" href="#"></a></li>';-->
-      <!--</script>-->
-      <li class="utility__list-item  utility__list-item--show-lg utility__account-menu-item js-utility__account-menu-item"><a class="utility__cta" href="#">Join Blurb Now</a></li>
-      <li class="utility__list-item  utility__list-item--show-lg utility__account-menu-item js-utility__account-menu-item"><a class="utility__cta" href="#">Sign In</a></li>
-      <li class="utility__list-item  utility__list-item--show-lg utility__account-menu-item js-utility__account-menu-item"><a class="utility__cta" href="#">Help</a></li>
+    <script type="text/javascript">
+      // Will be replaced with necessary info by Drupal.
+      var blurbMenuItemTemplate = '<li class="utility__list-item  utility__list-item--show-lg utility__account-menu-item js-utility__account-menu-item"><a class="utility__cta" href="#"></a></li>';
+      var blurbAccountMenuLoggedOut = [
+        {
+          text: 'Join Blurb'
+          , url: 'https://secure.blurb.com/my/account/register'
+          , type: 'url'
+        }
+        , {
+          text: 'Sign In'
+          , url: 'https://secure.blurb.com/my/account/login'
+          , type: 'url'
+        }
+        , {
+          text: 'Help'
+          , url: '/help'
+          , type: 'url'
+        }
+      ]
+      var blurbAccountMenuLoggedIn = [
+        {
+          text: 'My Dashboard'
+          , url: '/my/dashboard'
+          , type: 'url'
+        }
+        , {
+          text: 'Profile'
+          , url: '/my/account/profile'
+          , type: 'url'
+        }
+        , {
+          text: 'Settings'
+          , url: 'https://secure.blurb.com/my/account'
+          , type: 'url'
+        }
+        , {
+          text: 'Sign out'
+          , url: 'https://secure.blurb.com/my/account/login'
+          , type: 'url'
+        }
+        , {
+          text: 'Help'
+          , url: '/help'
+          , type: 'url'
+        }
+      ]
+    </script>
+    <ul class="utility__list js-utility__account-menu">
       <li class="utility__list-item  utility__list-item--search"
           data-controller="search">
         <div class="controls__search__form-wrap js-search-form">
