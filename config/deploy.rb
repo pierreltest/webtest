@@ -19,7 +19,10 @@ namespace :quickbuild do
     temp_name = DateTime.now.strftime("/tmp/quickbuild_%Y_%m_%d_%H%M%S.tar.gz")
     drupal_target = "/data/apps/drupal/current/drupal/sites/default/files/quickbuild"
     cmds = [
-        "tar -xzf #{temp_name} -C #{File.dirname(drupal_target)}",
+      "rm -rf /tmp/quickbuild",
+      "tar -xzf #{temp_name} -C /tmp",
+      "mkdir -p #{drupal_target}",
+      "cp -f /tmp/quickbuild/* #{drupal_target}"
       ]
     begin
       upload("_site/quickbuild.tar.gz", temp_name)
@@ -29,7 +32,7 @@ namespace :quickbuild do
       end
       end
     ensure
-      run("rm -f #{temp_name}")
+      run("rm -f #{temp_name}; rm -rf /tmp/quickbuild")
     end
   end
 end
