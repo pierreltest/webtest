@@ -3,7 +3,7 @@
   <script type="text/javascript">
   var Blurb = Blurb || {};
   Blurb.currency = "USD";  // "GBP", etc...
-</script>
+  </script>
 
 <div class="module  pricing-module" data-controller="pricing">
   <div class="grid-construct">
@@ -27,3 +27,75 @@
   </div>
 </div>
 <!-- End Pricing Module 23 -->
+
+<!-- Google Analytics tracking for pricing module -->
+<script type="text/javascript">
+  function getPricingModuleOptionValue(sectionOptions, textSelector) {
+    var selectorStrings = [];
+    $.each(sectionOptions, function (index, value) {
+      selectorStrings.push('.js-option-item.active[data-id="' + value + '"]');
+    });
+
+    // We can only send one value, and only one should be selected, so take the
+    // first one. There can be only one.
+    var firstMatch = $(selectorStrings.join(','), $('.pricing-module')).get(0);
+    var selectedValues = [];
+    $(textSelector, $(firstMatch)).each(function () {
+      var thisText = jQuery.trim($(this).text());
+      if (thisText) {
+        selectedValues.push(thisText);
+      }
+    });
+    selectedValue = selectedValues.join(' ');
+
+    return selectedValue;
+  }
+
+  (function ($) {
+    $('.pricing-module').on('click', '.js-option-item:not(#page-count)', function () {
+      // Figure out the current values of stuff.
+      // 01 - Book Types
+      var bookTypeOptions = [ 'photo_book', 'trade_book', 'magazine' ];
+      var bookType = getPricingModuleOptionValue(bookTypeOptions, 'div.three-col__desc');
+      _GA.send('send','event','Photo Book Pricing Widget', 'Book Types', bookType);
+
+      // 02 - Size
+      // These change depending on 01, but we don't have to care about that.
+      var sizeOptions = [ 'standard_landscape', 'standard_portrait_true8x10', 'square', 'large_square', 'large_landscape', 'pocket', 'trade', 'magazine' ]
+      var bookSize = getPricingModuleOptionValue(sizeOptions, 'div.four-col__desc__heading, div.four-col__desc__sub-heading');
+      _GA.send('send','event','Photo Book Pricing Widget', 'Size', bookSize);
+
+      // 03 - Covers
+      var coverOptions = [ 'softcover', 'dustjacket', 'imagewrap' ];
+      var bookCover = getPricingModuleOptionValue(coverOptions, 'div.three-col__desc');
+      _GA.send('send','event','Photo Book Pricing Widget', 'Covers', bookCover);
+
+      // 04 - Papers - Can vary based on Book Type
+      var paperOptions = [ 'standard_paper', 'premium_matte_paper', 'premium_lustre_paper', 'pro_medium_gloss_paper', 'pro_uncoated_paper', 'standard_trade_matte_paper', 'standard_trade_bw_matte_paper', 'economy_trade_matte_paper', 'economy_trade_bw_matte_paper', 'economy_trade_bw_cream_matte_paper', 'magazine_paper' ];
+      var bookPaper = getPricingModuleOptionValue(paperOptions, 'div.two-col__desc__heading, div.two-col__desc__subheading');
+      _GA.send('send','event','Photo Book Pricing Widget', 'Papers', bookPaper);
+
+      // 05 - Custom Options.
+      // There can be Logo, End Sheets, and Cover Linens here. We just simply
+      // look for them all but only send the ones that actually have values.
+      var customLogoOptions = [ 'true', 'false' ]; // lol
+      var bookCustomLogo = getPricingModuleOptionValue(customLogoOptions, 'div.two-col__desc__heading');
+      if (bookCustomLogo) {
+        _GA.send('send','event','Photo Book Pricing Widget', 'Custom Options Logo', bookCustomLogo);
+      }
+
+      var customEndSheetOptions = [ 'standard_mid_grey_endsheet', 'pro_white_endsheet', 'pro_charcoal_endsheet', 'pro_light_grey_endsheet', 'pro_black_endsheet', 'standard_white_endsheet' ];
+      var bookCustomEndSheet = getPricingModuleOptionValue(customEndSheetOptions, 'div.two-col__desc__heading');
+      if (bookCustomEndSheet) {
+        _GA.send('send','event','Photo Book Pricing Widget', 'Custom Options End Sheets', bookCustomEndSheet);
+      }
+
+      var customCoverLinenOptions = [ 'pro_charcoal_linen_covering', 'pro_oatmeal_linen_covering', 'standard_grey_linen_covering', 'standard_black_linen_covering' ];
+      var bookCustomCoverLinen = getPricingModuleOptionValue(customCoverLinenOptions, 'div.two-col__desc__heading');
+      if (bookCustomCoverLinen) {
+        _GA.send('send','event','Photo Book Pricing Widget', 'Custom Options Cover Linens', bookCustomCoverLinen);
+      }
+    });
+  })(jQuery);
+</script>
+<!-- End Google Analytics tracking for pricing module -->
