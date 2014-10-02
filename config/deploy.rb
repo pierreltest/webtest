@@ -29,7 +29,7 @@ namespace :quickbuild do
       end
       end
     ensure
-      run("rm -f #{temp_name}; rm -rf /tmp/quickbuild")
+      run("rm -f #{temp_name}")
     end
   end
 end
