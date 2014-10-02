@@ -19,8 +19,6 @@ namespace :quickbuild do
     temp_name = DateTime.now.strftime("/tmp/quickbuild_%Y_%m_%d_%H%M%S.tar.gz")
     drupal_target = "/data/apps/drupal/current/drupal/sites/default/files/quickbuild"
     cmds = [
-        "rm -rf /tmp/quickbuild",
-        "rm -rf #{drupal_target}",
         "tar -xzf #{temp_name} -C #{File.dirname(drupal_target)}",
       ]
     begin
