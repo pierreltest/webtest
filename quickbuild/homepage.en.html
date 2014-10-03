@@ -1035,3 +1035,35 @@ meta_description: "Create and publish a book, magazine or ebook with Blurb's sel
 
 </div>
 <!-- End Add Bento Grid Module 18 -->
+
+<!-- Start Google Analytics tracking for homepage -->
+<script type="text/javascript">
+  (function ($) {
+    $(function () {
+      $('.module.hero-bento').on('click', '.js-hero-bento-item:not(.active)', function () {
+        // You can never have enough $.trim().
+        var title = $.trim($(this).find('.hero-bento__block-text').text());
+        _GA.send('send','event','Bento Box',title,'Open');
+      });
+
+      $('.module.hero-slides').on('click', '.js-hero-slide-cta', function (event) {
+        // Delay the redirect a bit so GA can receive the tracking pixel.
+        var $elem = $(this);
+        var title = $.trim($('.module.hero-bento .js-hero-bento-item.active .hero-bento__block-text').text());
+          _GA.send('send','event','Bento Box',title,'Start Now');
+        if (!$elem.attr('target') || $elem.attr('target').toLowerCase() !== '_blank') {
+          // To get the title, we just check the title of the active bento item.
+          event.preventDefault();
+          setTimeout(function () {
+            location.href = $elem.attr('href')
+          }, 300);
+        }
+      });
+
+      $('.module.formats-drawer:not(.active)').on('click', function () {
+        _GA.send('send','event','Homepage','View All Formats & Pricing Expand');
+      })
+    });
+  })(jQuery);
+</script>
+<!-- End Google Analytics tracking for homepage -->
