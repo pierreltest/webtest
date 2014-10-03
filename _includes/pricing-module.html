@@ -3,7 +3,7 @@
   <script type="text/javascript">
   var Blurb = Blurb || {};
   Blurb.currency = "USD";  // "GBP", etc...
-</script>
+  </script>
 
 <div class="module  pricing-module" data-controller="pricing">
   <div class="grid-construct">
@@ -27,3 +27,195 @@
   </div>
 </div>
 <!-- End Pricing Module 23 -->
+
+<!-- Google Analytics tracking for pricing module -->
+<script type="text/javascript">
+  (function ($) {
+    $(function () {
+      var bookTypeTextSelector = 'div.three-col__desc';
+      var bookSizeTextSelector = 'div.four-col__desc__heading, div.four-col__desc__sub-heading';
+      var bookCoverTextSelector = bookTypeTextSelector;
+      var bookPaperTextSelector = 'div.two-col__desc__heading, div.two-col__desc__subheading';
+      var customOptionTextSelector = 'div.two-col__desc__heading';
+
+      function _buildPricingModuleHumanName(element, textSelector) {
+        var selectedValues = [];
+        $(textSelector, $(element)).each(function () {
+          var thisText = jQuery.trim($(this).text());
+          if (thisText) {
+            selectedValues.push(thisText);
+          }
+        });
+        selectedValue = selectedValues.join(' ');
+        return selectedValue;
+      }
+
+      function getPricingModuleOptionValue(sectionOptions, textSelector) {
+        var selectorStrings = [];
+        $.each(sectionOptions, function (index, value) {
+          selectorStrings.push('.js-option-item.active[data-id="' + value + '"]');
+        });
+
+        // We can only send one value, and only one should be selected, so take the
+        // first one. There can be only one.
+        var firstMatch = $(selectorStrings.join(','), $('.pricing-module')).get(0);
+        var selectedValue = _buildPricingModuleHumanName(firstMatch, textSelector);
+        return selectedValue;
+      }
+
+      function getPricingModuleOptionHumanName(machineName, textSelector) {
+        var firstMatch = $('.js-option-item.active[data-id="' + machineName + '"]', $('.pricing-module')).get(0);
+        var selectedValue = _buildPricingModuleHumanName(firstMatch, textSelector);
+        return selectedValue;
+      }
+
+      $('.pricing-module').on('click', '.js-option-item:not(#page-count)', function () {
+        // Figure out the current values of stuff.
+        // 01 - Book Types
+        var bookTypeOptions = ['photo_book', 'trade_book', 'magazine'];
+        var bookType = getPricingModuleOptionValue(bookTypeOptions, bookTypeTextSelector);
+        _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Book Types', bookType);
+
+        // 02 - Size
+        // These change depending on 01, but we don't have to care about that.
+        var sizeOptions = [
+          'standard_landscape',
+          'standard_portrait_true8x10',
+          'square',
+          'large_square',
+          'large_landscape',
+          'pocket',
+          'trade',
+          'magazine'
+        ]
+        var bookSize = getPricingModuleOptionValue(sizeOptions, bookSizeTextSelector);
+        _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Size', bookSize);
+
+        // 03 - Covers
+        var coverOptions = ['softcover', 'dustjacket', 'imagewrap'];
+        var bookCover = getPricingModuleOptionValue(coverOptions, bookCoverTextSelector);
+        _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Covers', bookCover);
+
+        // 04 - Papers - Can vary based on Book Type
+        var paperOptions = [
+          'standard_paper',
+          'premium_matte_paper',
+          'premium_lustre_paper',
+          'pro_medium_gloss_paper',
+          'pro_uncoated_paper',
+          'standard_trade_matte_paper',
+          'standard_trade_bw_matte_paper',
+          'economy_trade_matte_paper',
+          'economy_trade_bw_matte_paper',
+          'economy_trade_bw_cream_matte_paper',
+          'magazine_paper'
+        ];
+        var bookPaper = getPricingModuleOptionValue(paperOptions, bookPaperTextSelector);
+        _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Papers', bookPaper);
+
+        // 05 - Custom Options.
+        // There can be Logo, End Sheets, and Cover Linens here. We just simply
+        // look for them all but only send the ones that actually have values.
+        var customLogoOptions = ['true', 'false']; // lol
+        var bookCustomLogo = getPricingModuleOptionValue(customLogoOptions, customOptionTextSelector);
+        if (bookCustomLogo) {
+          _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Custom Options Logo', bookCustomLogo);
+        }
+
+        var customEndSheetOptions = [
+          'standard_mid_grey_endsheet',
+          'pro_white_endsheet',
+          'pro_charcoal_endsheet',
+          'pro_light_grey_endsheet',
+          'pro_black_endsheet',
+          'standard_white_endsheet'
+        ];
+        var bookCustomEndSheet = getPricingModuleOptionValue(customEndSheetOptions, customOptionTextSelector);
+        if (bookCustomEndSheet) {
+          _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Custom Options End Sheets', bookCustomEndSheet);
+        }
+
+        var customCoverLinenOptions = [
+          'pro_charcoal_linen_covering',
+          'pro_oatmeal_linen_covering',
+          'standard_grey_linen_covering',
+          'standard_black_linen_covering'
+        ];
+        var bookCustomCoverLinen = getPricingModuleOptionValue(customCoverLinenOptions, customOptionTextSelector);
+        if (bookCustomCoverLinen) {
+          _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Custom Options Cover Linens', bookCustomCoverLinen);
+        }
+      });
+
+      // The pricing module does a request while loading, but we don't need to
+      // track that.
+      var pricingModuleReady = false;
+      $(document).on('pricing:change', function (event, eventData) {
+        var attr = eventData.changed, pricingModuleValueArray = [];
+
+        if (pricingModuleReady && attr.bookType && attr.coverType && attr.paperType) {
+          // Book type per se is actually kind of stupid; the object tells us
+          // the size, and all sizes are unique to that book type. So here's
+          // what we'll do. If it's /pocket/ or /trade/, it's a Trade Book. If
+          // it's /magazine/, it's Magazine. Anything else? Photo Book.
+          var actualBookType = ([ 'pocket', 'trade'].indexOf(attr.bookType) ? 'Trade Book' : ( attr.bookType == 'magazine' ? 'magazine' : 'Photo Book' ));
+          pricingModuleValueArray.push('Book Types:' + actualBookType);
+
+          if (attr.bookType) {
+            pricingModuleValueArray.push('Size:' + getPricingModuleOptionHumanName(attr.bookType, bookSizeTextSelector));
+          }
+          if (attr.coverType) {
+            pricingModuleValueArray.push('Covers:' + getPricingModuleOptionHumanName(attr.coverType, bookCoverTextSelector));
+          }
+          if (attr.paperType) {
+            pricingModuleValueArray.push('Papers:' + getPricingModuleOptionHumanName(attr.paperType, bookPaperTextSelector));
+          }
+          if (attr.customLogoUpgrade) {
+            pricingModuleValueArray.push('Custom Options Logo:' + getPricingModuleOptionHumanName(attr.customLogoUpgrade, customOptionTextSelector));
+          }
+          if (attr.endsheetType) {
+            pricingModuleValueArray.push('Custom Options End Sheets:' + getPricingModuleOptionHumanName(attr.endsheetType, customOptionTextSelector));
+          }
+          if (attr.linenType) {
+            pricingModuleValueArray.push('Custom Options Cover Linens:' + getPricingModuleOptionHumanName(attr.linenType, customOptionTextSelector));
+          }
+
+          var pricingModuleValues = pricingModuleValueArray.join('|');
+          _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Returned Pricing Options', pricingModuleValues);
+        }
+
+        if (!pricingModuleReady) {
+          pricingModuleReady = true;
+        }
+      });
+
+      function handlePagesChanged (event) {
+        var pageCount = $(this).val();
+        _GA.send('send','event','Photo Book Pricing Widget','Estimated Pages', pageCount);
+      }
+
+      // Send changed number of pages when the pricing module registers the
+      // change, which is when they press enter or the field blurs.
+      $('body').on('blur', '.pricing-module #page-count', handlePagesChanged);
+
+      // ;( ;( ;(
+      $('body').on('click', '.pricing-module .pricing--accordion-summary .summary--table a', function (event) {
+        // Double-check that they really did click the link we want.
+        // We can't match text because they might not be on the English site.
+        // So we make do.
+        var $elem = $(this);
+        if ($elem.parents('td').is(':last-child')) {
+          // Delay the redirect a bit so GA can receive the tracking pixel.
+          if (!$elem.attr('target') || $elem.attr('target').toLowerCase() !== '_blank') {
+            _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Get A Quote');
+            event.preventDefault();
+            setTimeout(function () {
+              location.href = $elem.attr('href');
+            }, 300);
+          }
+        }
+      });
+    });
+  })(jQuery);
+</script>
+<!-- End Google Analytics tracking for pricing module -->
