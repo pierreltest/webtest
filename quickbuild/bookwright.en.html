@@ -5,6 +5,29 @@ headerMenu: create
 title: "BookWright: Powerful book publishing software | Blurb"
 meta_description: "Download Blurb BookWright: free self-publishing software anyone can use. Design and publish beautiful photo books, trade books, magazines, ebooks"
 ---
+<script>
+  $j(window).load(function() {
+    var l = this.location.href;
+    var n = l.indexOf("register=true");
+    if (n > 0 )
+    {
+      var downloadPath ="";
+      var isOSX = (navigator.platform.indexOf('Mac') >= 0);
+      if(isOSX)
+      {
+        downloadPath = 'http://www.blurb.com/downloadbookwrightmac';
+        _GA.track(['_trackEvent','BookWright','Download','mac']);
+      } else {
+        downloadPath = 'http://www.blurb.com/downloadbookwrightwin';
+        _GA.track(['_trackEvent','BookWright','Download','win']);
+      }
+
+      path = downloadPath;
+      window.location.assign(path);
+
+    }
+  });
+</script>
 
   <div class="module  page-banner">
     <div class="page-banner__bg">
@@ -49,7 +72,7 @@ meta_description: "Download Blurb BookWright: free self-publishing software anyo
         <p class="product-highlight__copy">	We think BookWright is incredibly intuitive, but we've created a <a href="http://www.blurb.com/guides/bookwright/booksmart-or-bookify-importing">detailed user guide</a> to help you get started.</p>
 
         <div class="product-highlight__cta">
-          <a href="#" class="cta  btn  btn--inline  btn--border-black">Download Bookwright</a>
+          <a href="#" class="cta  btn  btn--inline  btn--border-black" id="eula-box" rel="blotchbox">Download Bookwright</a>
         </div>
 
       </div>
