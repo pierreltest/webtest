@@ -121,4 +121,7 @@
     </div>
   </section>
   {% include footer--legal.html %}
+  {%if page.partner_tracking %}
+    {% include partner-tracking.html %}
+  {% endif %}
 </footer>
