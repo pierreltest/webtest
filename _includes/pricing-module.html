@@ -267,14 +267,26 @@
         }
       });
 
-      function handlePagesChanged (event) {
-        var pageCount = $(this).val();
-        _GA.send('send','event','Photo Book Pricing Widget','Estimated Pages', pageCount);
-      }
-
-      // Send changed number of pages when the pricing module registers the
-      // change, which is when they press enter or the field blurs.
-      $('body').on('blur', '.pricing-module #page-count', handlePagesChanged);
+      var waitASec, lastValue;
+      // Send changed number of pages. We catch a few different events to ensure
+      // it gets sent.
+      $('body').on('change keyup paste', '.pricing-module #page-count', function (event) {
+        // Wait 1 second after the user has stopped changing the textbox before
+        // sending to GA.
+        if (waitASec) {
+          clearTimeout(waitASec);
+        }
+        var $this = $(this);
+        if ($(this).val() != lastValue) {
+          waitASec = setTimeout(function () {
+            var pageCount = $this.val();
+//            console.log('pageCount', pageCount);
+            _GA.send('send','event','Photo Book Pricing Widget','Estimated Pages', pageCount);
+            lastValue = $this.val();
+            clearTimeout(waitASec); // Just in case.
+          }, 1000)
+        }
+      });
 
       // ;( ;( ;(
       $('body').on('click', '.pricing-module .pricing--accordion-summary .summary--table a', function (event) {
