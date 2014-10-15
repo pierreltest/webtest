@@ -1,8 +1,10 @@
+{% assign path_parts = page.path | split:"." %}
+{% assign language = path_parts[1] %}
 <a name="price-form"></a>
 <!-- Add Pricing Module 23 -->
   <script type="text/javascript">
   var Blurb = Blurb || {};
-  Blurb.currency = "USD";  // "GBP", etc...
+  Blurb.currency = "{{ site.currencies[language] }}";  // "GBP", etc...
   </script>
 
 <div class="module  pricing-module" data-controller="pricing">
@@ -69,12 +71,24 @@
         return selectedValue;
       }
 
-      $('.pricing-module').on('click', '.js-option-item:not(#page-count)', function () {
+      var readyForClicks, bookType, bookSize, bookCover, bookPaper, bookCustomLogo, bookCustomEndSheet, bookCustomCoverLinen, currentBookOptions, previousBookOptions;
+
+      function updateBookValues() {
+        // Store the previous options so our event hook can compare.
+        previousBookOptions = {
+          bookType: bookType,
+          bookSize: bookSize,
+          bookCover: bookCover,
+          bookPaper: bookPaper,
+          bookCustomLogo: bookCustomLogo,
+          bookCustomEndSheet: bookCustomEndSheet,
+          bookCustomCoverLinen: bookCustomCoverLinen
+        };
+
         // Figure out the current values of stuff.
         // 01 - Book Types
         var bookTypeOptions = ['photo_book', 'trade_book', 'magazine'];
-        var bookType = getPricingModuleOptionValue(bookTypeOptions, bookTypeTextSelector);
-        _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Book Types', bookType);
+        bookType = getPricingModuleOptionValue(bookTypeOptions, bookTypeTextSelector);
 
         // 02 - Size
         // These change depending on 01, but we don't have to care about that.
@@ -88,13 +102,11 @@
           'trade',
           'magazine'
         ]
-        var bookSize = getPricingModuleOptionValue(sizeOptions, bookSizeTextSelector);
-        _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Size', bookSize);
+        bookSize = getPricingModuleOptionValue(sizeOptions, bookSizeTextSelector);
 
         // 03 - Covers
         var coverOptions = ['softcover', 'dustjacket', 'imagewrap'];
-        var bookCover = getPricingModuleOptionValue(coverOptions, bookCoverTextSelector);
-        _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Covers', bookCover);
+        bookCover = getPricingModuleOptionValue(coverOptions, bookCoverTextSelector);
 
         // 04 - Papers - Can vary based on Book Type
         var paperOptions = [
@@ -110,17 +122,13 @@
           'economy_trade_bw_cream_matte_paper',
           'magazine_paper'
         ];
-        var bookPaper = getPricingModuleOptionValue(paperOptions, bookPaperTextSelector);
-        _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Papers', bookPaper);
+        bookPaper = getPricingModuleOptionValue(paperOptions, bookPaperTextSelector);
 
         // 05 - Custom Options.
         // There can be Logo, End Sheets, and Cover Linens here. We just simply
         // look for them all but only send the ones that actually have values.
         var customLogoOptions = ['true', 'false']; // lol
-        var bookCustomLogo = getPricingModuleOptionValue(customLogoOptions, customOptionTextSelector);
-        if (bookCustomLogo) {
-          _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Custom Options Logo', bookCustomLogo);
-        }
+        bookCustomLogo = getPricingModuleOptionValue(customLogoOptions, customOptionTextSelector);
 
         var customEndSheetOptions = [
           'standard_mid_grey_endsheet',
@@ -130,10 +138,7 @@
           'pro_black_endsheet',
           'standard_white_endsheet'
         ];
-        var bookCustomEndSheet = getPricingModuleOptionValue(customEndSheetOptions, customOptionTextSelector);
-        if (bookCustomEndSheet) {
-          _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Custom Options End Sheets', bookCustomEndSheet);
-        }
+        bookCustomEndSheet = getPricingModuleOptionValue(customEndSheetOptions, customOptionTextSelector);
 
         var customCoverLinenOptions = [
           'pro_charcoal_linen_covering',
@@ -141,9 +146,82 @@
           'standard_grey_linen_covering',
           'standard_black_linen_covering'
         ];
-        var bookCustomCoverLinen = getPricingModuleOptionValue(customCoverLinenOptions, customOptionTextSelector);
-        if (bookCustomCoverLinen) {
-          _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Custom Options Cover Linens', bookCustomCoverLinen);
+        bookCustomCoverLinen = getPricingModuleOptionValue(customCoverLinenOptions, customOptionTextSelector);
+
+        // Now store the current options
+        currentBookOptions = {
+          bookType: bookType,
+          bookSize: bookSize,
+          bookCover: bookCover,
+          bookPaper: bookPaper,
+          bookCustomLogo: bookCustomLogo,
+          bookCustomEndSheet: bookCustomEndSheet,
+          bookCustomCoverLinen: bookCustomCoverLinen
+        };
+      }
+
+      // Initialize this once the pricing module has loaded.
+      var firstBookUpdate = setInterval(function () {
+//        console.log('Checking if pricing module is ready...');
+        updateBookValues();
+        if (currentBookOptions.bookType) {
+          // If this worked, then we are good. Otherwise, it'll keep running
+          // until it does.
+          readyForClicks = true;
+          clearInterval(firstBookUpdate);
+        }
+      }, 100);
+
+      $('.pricing-module').on('click', '.js-option-item:not(#page-count)', function () {
+        // If the pricing module is still loading, don't send any clicks since
+        // we can't accurately tell what they have changed.
+        if (readyForClicks) {
+          // Update the book values so we can compare and see which ones to send.
+          updateBookValues();
+
+//          console.log('previous', previousBookOptions, 'new', currentBookOptions);
+          if (currentBookOptions.bookType != previousBookOptions.bookType) {
+//            console.log('bookType', bookType);
+            _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Book Types', bookType);
+            // We always return after the first match because if a selection
+            // causes other things to change, those will be sent too if we don't
+            // do this.
+            return;
+          }
+          if (currentBookOptions.bookSize != previousBookOptions.bookSize) {
+//            console.log('bookSize', bookSize);
+            _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Size', bookSize);
+            return;
+          }
+          if (currentBookOptions.bookCover != previousBookOptions.bookCover) {
+//            console.log('bookCover', bookCover);
+            _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Covers', bookCover);
+            return;
+          }
+
+          if (currentBookOptions.bookPaper != previousBookOptions.bookPaper) {
+//            console.log('bookPaper', bookPaper);
+            _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Covers', bookCover);
+            return;
+          }
+
+          if (bookCustomLogo && currentBookOptions.bookCustomLogo != previousBookOptions.bookCustomLogo) {
+//            console.log('bookCustomLogo', bookCustomLogo);
+            _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Custom Options Logo', bookCustomLogo);
+            return;
+          }
+
+          if (bookCustomEndSheet && currentBookOptions.bookCustomEndSheet != previousBookOptions.bookCustomEndSheet) {
+//            console.log('bookCustomEndSheet', bookCustomEndSheet);
+            _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Custom Options End Sheets', bookCustomEndSheet);
+            return;
+          }
+
+          if (bookCustomCoverLinen && currentBookOptions.bookCustomCoverLinen != previousBookOptions.bookCustomCoverLinen) {
+//            console.log('bookCustomCoverLinens', bookCustomCoverLinen);
+            _GA.send('send', 'event', 'Photo Book Pricing Widget', 'Custom Options Cover Linens', bookCustomCoverLinen);
+            return;
+          }
         }
       });
 
@@ -189,14 +267,26 @@
         }
       });
 
-      function handlePagesChanged (event) {
-        var pageCount = $(this).val();
-        _GA.send('send','event','Photo Book Pricing Widget','Estimated Pages', pageCount);
-      }
-
-      // Send changed number of pages when the pricing module registers the
-      // change, which is when they press enter or the field blurs.
-      $('body').on('blur', '.pricing-module #page-count', handlePagesChanged);
+      var waitASec, lastValue;
+      // Send changed number of pages. We catch a few different events to ensure
+      // it gets sent.
+      $('body').on('change keyup paste', '.pricing-module #page-count', function (event) {
+        // Wait 1 second after the user has stopped changing the textbox before
+        // sending to GA.
+        if (waitASec) {
+          clearTimeout(waitASec);
+        }
+        var $this = $(this);
+        if ($(this).val() != lastValue) {
+          waitASec = setTimeout(function () {
+            var pageCount = $this.val();
+//            console.log('pageCount', pageCount);
+            _GA.send('send','event','Photo Book Pricing Widget','Estimated Pages', pageCount);
+            lastValue = $this.val();
+            clearTimeout(waitASec); // Just in case.
+          }, 1000)
+        }
+      });
 
       // ;( ;( ;(
       $('body').on('click', '.pricing-module .pricing--accordion-summary .summary--table a', function (event) {

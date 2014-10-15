@@ -35,6 +35,20 @@ locale_names:
   es-la: "United States"
   fr-ca: "Canada"
 
+currencies:
+  en: "USD"
+  en-au: "AUD"
+  pt-br: "BRL"
+  it: "EUR"
+  nl: "EUR"
+  en-gb: "GBP"
+  fr: "EUR"
+  de: "EUR"
+  es: "EUR"
+  en-ca: "CAD"
+  es-la: "USD"
+  fr-ca: "CAD"
+
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 #github_username:  jekyll
