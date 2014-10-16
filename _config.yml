@@ -38,7 +38,7 @@ locale_names:
 currencies:
   en: "USD"
   en-au: "AUD"
-  pt-br: "BRL"
+  pt-br: "USD"
   it: "EUR"
   nl: "EUR"
   en-gb: "GBP"
