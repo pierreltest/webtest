@@ -360,99 +360,120 @@ partner_tracking: true
 
       <p>
 
-      <div class="item" class="form">
+      <div class="item form one-column-form">
         <div class='section'>
           <div class="order_form">
             <div
               class="explanation_text">* required fields
             </div>
             <form id="quote_form"
+                  class="one-column-form__form"
                   action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
                   method="post">
               <input type="hidden" name="oid" value="00D600000006rrs"> <input
-              type="hidden" name="retURL"
-              value="http://www.blurb.com/volume-pricing?vol_conf=1">
+                     type="hidden" name="retURL"
+                     value="http://www.blurb.com/volume-pricing?vol_conf=1" />
 
-              <input name="00N60000002FiPv" id="00N60000002FiPv"
-                     maxlength="100" type="text"
-                     defaultValue=" Name*"
-                     class="form-text NormalTextBox txtSearch"
-                     value="Name*"><br/>
+              <div class="form-row form-row--centered form-row--compact">
+                <input name="00N60000002FiPv"id="00N60000002FiPv"
+                       maxlength="100" type="text"
+                       defaultValue=" Name*"
+                       class="form-text NormalTextBox txtSearch one-column-form__form-input"
+                       value="Name*" />
+              </div>
 
-              <input id="company" maxlength="40" name="company"
-                     type="text" defaultValue=" Organization name*" class="form-text NormalTextBox
-                txtSearch" value="Organization name*"><br/>
+              <div class="form-row form-row--centered form-row--compact">
+                <input id="company" maxlength="40" name="company"
+                type="text" defaultValue=" Organization name*" class="form-text NormalTextBox txtSearch"
+                value="Organization name*" />
+              </div>
 
-              <input id="phone" maxlength="40" name="phone"
-                     type="text" defaultValue=" Phone number*" class="form-text NormalTextBox txtSearch"
-                     value="Phone number*"><br/>
+              <div class="form-row form-row--centered form-row--compact">
+                <input id="phone" maxlength="40" name="phone"
+                       type="text" defaultValue=" Phone number*" class="form-text NormalTextBox txtSearch"
+                       value="Phone number*" />
+              </div>
 
-              <input id="email" maxlength="80" name="email"
-                     type="text" defaultValue=" Email address*" class="form-text NormalTextBox
-                txtSearch" value="Email address*"><br/>
+              <div class="form-row form-row--centered form-row--compact">
+                <input id="email" maxlength="80" name="email"
+                       type="text" defaultValue=" Email address*" class="form-text NormalTextBox txtSearch"
+                       value="Email address*" />
+              </div>
 
-              <select class="js-selectmenu" id="00N60000002dSoC" name="00N60000002dSoC"
-                           title="Project intent" data-placeholder="Project intent*">
-                <option
+              <div class="form-row form-row--centered form-row--compact">
+                <select class="js-selectmenu" id="00N60000002dSoC" name="00N60000002dSoC"
+                  title="Project intent" data-placeholder="Project intent*">
+                  <option></option>
+                  <option
                   value="Personal book">Personal book
-                </option>
-                <option
+                  </option>
+                  <option
                   value="Book to sell">Book to sell
-                </option>
-                <option
+                  </option>
+                  <option
                   value="Business-related book">Business-related book
-                </option>
-              </select><br />
+                  </option>
+                </select>
+              </div>
 
-              <select class="js-selectmenu" id="00N60000002dSoH" name="00N60000002dSoH"
-                           title="When needed" data-placeholder="When needed*">
-                <option
+              <div class="form-row form-row--centered form-row--compact">
+                <select class="js-selectmenu" id="00N60000002dSoH" name="00N60000002dSoH"
+                  title="When needed" data-placeholder="When needed*">
+                  <option></option>
+                  <option
                   value="This month">This month
-                </option>
-                <option
+                  </option>
+                  <option
                   value="Next month">Next month
-                </option>
-                <option
+                  </option>
+                  <option
                   value="Within three months">Within three months
-                </option>
-                <option
+                  </option>
+                  <option
                   value="3-6 months">3-6 months
-                </option>
-                <option
+                  </option>
+                  <option
                   value="7+ months">7+ months
-                </option>
-              </select><br />
+                  </option>
+                </select>
+              </div>
 
-              <input id="00N60000002FiPR"
-                     name="00N60000002FiPR"
-                     maxlength="5" name="email"
-                     type="text"
-                     defaultValue="Page count*" class="form-text
+              <div class="form-row form-row--centered form-row--compact">
+                <input id="00N60000002FiPR"
+                name="00N60000002FiPR"
+                maxlength="5" name="email"
+                type="text"
+                defaultValue="Page count*" class="form-text
                 NormalTextBox txtSearch"
-                     value="Page count*"><br/>
+                value="Page count*">
+              </div>
 
-              <select class="js-selectmenu" id="00N60000002DKm4" name="00N60000002DKm4"
-                      title=" Quantity needed"
-                      class="id-quantity_needed"
-                      data-placeholder="Quantity needed*">
-                <option value="501-999">501-999</option>
-                <option
+              <div class="form-row form-row--centered form-row--compact">
+                <select class="js-selectmenu" id="00N60000002DKm4" name="00N60000002DKm4"
+                  title=" Quantity needed"
+                  class="id-quantity_needed"
+                  data-placeholder="Quantity needed*">
+                  <option></option>
+                  <option value="501-999">501-999</option>
+                  <option
                   value="1,000-2,499">1,000-2,499
-                </option>
-                <option
+                  </option>
+                  <option
                   value="2,500-4,999">2,500-4,999
-                </option>
-                <option value="5,000+">5,000+</option>
-              </select><br />
+                  </option>
+                  <option value="5,000+">5,000+</option>
+                </select>
+              </div>
 
               <div id="error_text"></div>
-            </form>
 
-            <div id="quote-button-container">
-              <button id="quote_button"
-                      class="cta  btn  btn--inline  btn--border-black">Submit
-              </button>
-            </div>
+              <div class="form-row form-row--centered form-row--compact">
+                <button id="quote_button"
+                  class="cta btn btn--inline one-column-form__form-button">
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
