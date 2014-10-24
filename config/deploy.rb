@@ -25,7 +25,7 @@ namespace :quickbuild do
       "cp -f /tmp/quickbuild/* #{drupal_target}"
       ]
     begin
-      upload("_site/quickbuild.tar.gz", temp_name)
+      upload("quickbuild.tar.gz", temp_name)
       cmds.each do |cmd|
       run("set -e; #{cmd}") do |channel, stream, data|
         logger.info( "[#{stream} :: #{channel[:host]}] #{data}")
