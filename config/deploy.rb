@@ -12,7 +12,7 @@ namespace :deploy do
 end
 
 namespace :quickbuild do
-  task :deploy, :roles => [:drupal] do
+  task :deploy, :roles => [:drupal], :only => {:primary => true} do
     set :user, 'blurbapp'
     output = `set -e; bundle exec jekyll build; tar -czf quickbuild.tar.gz -C _site quickbuild;`
     puts(output)
