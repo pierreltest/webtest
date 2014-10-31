@@ -1,14 +1,8 @@
-# Site settings
-#title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-
+# Build settings
+markdown: kramdown
 exclude: [vendor]
 
-#baseurl: "" # the subpath of your site, e.g. /blog/
+# Site settings
 language_selector:
   en: "http://www.blurb.com"
   en-au: "http://au.blurb.com"
@@ -22,18 +16,174 @@ language_selector:
   en-ca: "http://www.blurb.ca"
 
 locale_names:
-  en: "United States"
-  en-au: "Australia"
-  pt-br: "Brazil"
-  it: "Italy"
-  nl: "Netherlands"
-  en-gb: "United Kingdom"
-  fr: "France"
-  de: "Germany"
-  es: "Spain"
-  en-ca: "Canada"
-  es-la: "United States"
-  fr-ca: "Canada"
+  en:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  en-au:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  pt-br:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  it:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  nl:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  en-gb:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  fr:
+    en: "États-Unis"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  de:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  es:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  en-ca:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  es-la:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  fr-ca:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
 
 currencies:
   en: "USD"
@@ -49,78 +199,284 @@ currencies:
   es-la: "USD"
   fr-ca: "CAD"
 
-#url: "http://yourdomain.com" # the base hostname & protocol for your site
-#twitter_username: jekyllrb
-#github_username:  jekyll
-
-# Build settings
-markdown: kramdown
+# Global strings
+strings:
+  en:
+    Search-colon: "Search:"
+    Search-for-ellipsis: "Search for..."
+    # To see these three you have to look at the mobile view
+    Home: "Home"
+    Sign-in: "Sign In"
+    Join-Now: "Join Now"
+  en-au:
+    Search-colon: "Search:"
+  pt-br:
+    Search-colon: "Search:"
+  it:
+    Search-colon: "Search:"
+  nl:
+    Search-colon: "Search:"
+  en-gb:
+    Search-colon: "Search:"
+  fr:
+    Search-colon: "Search:"
+  de:
+    Search-colon: "Search:"
+  es:
+    Search-colon: "Búsqueda:"
+  en-ca:
+    Search-colon: "Search:"
+  es-la:
+    Search-colon: "Search:"
+  fr-ca:
+    Search-colon: "Recherche&nbsp:"
 
 # Nav structure
+nav_headers:
+  en:
+    create: 'Create'
+    formats-pricing: 'Formats &amp; Pricing'
+    sell-distribute: 'Sell &amp; Distribute'
+    community: 'Community'
+    bookstore: 'Bookstore'
+  en-au:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  pt-br:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  it:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  nl:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  en-gb:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  fr:
+    create: 'Créer'
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  de:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  es:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  es-la:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  en-ca:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+
 nav:
-  # Should match page.headerMenu
-  create:
-    - name: Creation &amp; Layout Tools
-      href: /bookmaking-tools
-    - name: BookWright
-      href: /bookwright
-    - name: InDesign Plugin
-      href: /indesign-plugin
-    - name: BookSmart
-      href: /booksmart
-    - name: Bookify
-      href: /online-photo-books
-    - name: Lightroom
-      href: /lightroom
-    - name: Templates
-      href: /templates
+  en:
+    # Should match page.headerMenu
+    create:
+      - name: Creation &amp; Layout Tools
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: InDesign Plugin
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Templates
+        href: /templates
 
-  formats-pricing:
-    - name: Photo Books
-      href: /photo-books
-    - name: Trade Books
-      href: /trade-books
-    - name: Magazines
-      href: /magazine
-    - name: Ebooks
-      href: /ebook
-    - name: Custom Book Options
-      href: /custom-book-options
-    - name: Pricing
-      href: /pricing-calculator
-    - name: Volume Pricing
-      href: /volume-pricing
+    formats-pricing:
+      - name: Photo Books
+        href: /photo-books
+      - name: Trade Books
+        href: /trade-books
+      - name: Magazines
+        href: /magazine
+      - name: Ebooks
+        href: /ebook
+      - name: Custom Book Options
+        href: /custom-book-options
+      - name: Pricing
+        href: /pricing-calculator
+      - name: Volume Pricing
+        href: /volume-pricing
 
-  sell-distribute:
-    - name: Sell & Distribute Options
-      href: /distribution-options
-    - name: Blurb Direct Sell
-      href: /blurb-direct-sell
-    - name: Sell On Amazon
-      href: /blurb-to-amazon
-    - name: Global Distribution Network
-      href: /global-retail-network
-    - name: Fulfillment for Volume Purchases
-      href: /volume-purchase-fulfillment
+    sell-distribute:
+      - name: Sell & Distribute Options
+        href: /distribution-options
+      - name: Blurb Direct Sell
+        href: /blurb-direct-sell
+      - name: Sell On Amazon
+        href: /blurb-to-amazon
+      - name: Global Distribution Network
+        href: /global-retail-network
+      - name: Fulfillment for Volume Purchases
+        href: /volume-purchase-fulfillment
 
-  community:
-    - name: Events
-      href: /events
-    - name: Online Workshops
-      href: /webinars
-    - name: Blurb Stories
-      href: /blog
-      languages:
-        - en
-    - name: Forums
-      href: https://support.blurb.com/categories/20076681
+    community:
+      - name: Events
+        href: /events
+      - name: Online Workshops
+        href: /webinars
+      - name: Blurb Stories
+        href: /blog
+        languages:
+          - en
+      - name: Forums
+        href: https://support.blurb.com/categories/20076681
 
-  bookstore:
-    - name: New & Notable
-      href: /bookstore/new
-    - name: Editors Picks
-      href: /bookstore/featured
-    - name: Best Sellers
-      href: /bookstore/popular
-    - name: All Categories
-      href: /bookstore/category
+    bookstore:
+      - name: New & Notable
+        href: /bookstore/new
+      - name: Editors Picks
+        href: /bookstore/featured
+      - name: Best Sellers
+        href: /bookstore/popular
+      - name: All Categories
+        href: /bookstore/category
+  en-au:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  pt-br:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  it:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  nl:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  en-gb:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  fr:
+    create:
+      - name: Outils de création et de mise en page
+        href: /bookmaking-tools
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  de:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  es:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  es-la:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  en-ca:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+
+account_menu:
+  en:
+    Join-Blurb: 'Join Blurb Now'
+    Sign-In: 'Sign In'
+    Help: 'Help'
+    My-Dashboard: 'My Dashboard'
+    Profile: 'Profile'
+    Settings: 'Settings'
+    Sign-out: 'Sign out'
+  en-au:
+  pt-br:
+  it:
+  nl:
+  en-gb:
+  fr:
+    Join-Blurb: "Inscrivez-vous sur Blurb maintenant"
+    Sign-In: 'Se connecter'
+    Help: 'Aide'
+    My-Dashboard: 'Mon tableau de bord'
+    Profile: 'Profil'
+    Settings: 'Réglages'
+    Sign-out: 'Se déconnecter'
+  de:
+  es:
+  es-la:
+  en-ca:
+
+footer_legal:
+  en:
+    Company-Info: Company Info
+    Work-at-Blurb: Work at Blurb
+    Engineering: Engineering
+    Pricing: Pricing
+    Privacy-Legal: "Privacy &amp; Legal"
+    Cookie-Policy: Cookie Policy
+    Impressum: Impressum
+    Support: Support
+  en-au:
+  pt-br:
+  it:
+  nl:
+  en-gb:
+  fr:
+    Company-Profile: Informations sur la société
+  de:
+    Impressum: Impressum
+  es:
+  es-la:
+  en-ca:

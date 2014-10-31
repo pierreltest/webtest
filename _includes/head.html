@@ -9,4 +9,12 @@
   <meta name="description" content="{{ page.meta_description }}">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   {% endif %}
+
+  <script type="text/javascript">
+    if (typeof Blurb === "undefined") {
+      var Blurb;
+    }
+    Blurb = Blurb || {};
+    Blurb.locale = "{{ language }}";
+  </script>
 </head>
