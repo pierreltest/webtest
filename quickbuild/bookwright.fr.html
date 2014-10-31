@@ -1,0 +1,86 @@
+---
+layout: quickbuild 
+href: /bookwright
+headerMenu: create 
+title: "BookWright : Puissant logiciel d'édition de livres | Blurb"
+meta_description: "Téléchargez BookWright de Blurb : le logiciel gratuit d'auto-édition accessible à tout le monde. Concevez et publiez de magnifiques livres photo, Grands Poches, magazines, ebooks."
+partner_tracking: true 
+---
+<script>
+  $j(window).load(function() {
+    var l = this.location.href;
+    var n = l.indexOf("register=true");
+    if (n > 0 )
+    {
+      var downloadPath ="";
+      var isOSX = (navigator.platform.indexOf('Mac') >= 0);
+      if(isOSX)
+      {
+        downloadPath = 'http://www.blurb.com/downloadbookwrightmac';
+        _GA.track(['_trackEvent','BookWright','Download','mac']);
+      } else {
+        downloadPath = 'http://www.blurb.com/downloadbookwrightwin';
+        _GA.track(['_trackEvent','BookWright','Download','win']);
+      }
+
+      path = downloadPath;
+      window.location.assign(path);
+
+    }
+  });
+</script>
+
+  <div class="module  page-banner">
+    <div class="page-banner__bg">
+      <div class="grid-construct">
+        <div class="page-banner__inner-wrap">
+          <div class="page-banner__image" style="background-image: url('/sites/default/files/buildkit/1_Banner-bookwright.jpg');">
+          </div>
+          <div class="page-banner__content">
+            <h1 class="page-banner__headline">BookWright</h1>
+            <div class="page-banner__content-divider"></div>
+            <p class="page-banner__copy">BookWright est le seul logiciel de PAO conçu expressément pour la création de livres imprimés, magazines et ebooks d'allure professionnelle. Aucun besoin d'engager un concepteur, de connaître une seule ligne de code ou d'acheter des logiciels coûteux.</p>
+            <div class="page-banner__content-divider"></div>
+            <p>
+            <a href="/my/account/register?jumpto=http%3A//www.blurb.com/bookwright%3Fregister%3Dtrue" class="page-banner__cta  btn  btn--white  btn--inline">Télécharger BookWright</a>
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<div class="module  product-highlight">
+  <div class="grid-construct">
+    <div class="product-highlight__wrapper clearfix">
+
+<div class="product-highlight--left"><img src="/sites/default/files/buildkit/15_Product-Highlight_bookwright.png" alt=""><br />
+</div>
+      <div class="product-highlight--right">
+
+        <h2 class="headline--small">Un outil de création qui permet à chacun d'exprimer sa créativité</h2>
+
+        <p class="product-highlight__copy">BookWright est une application de conception et de mise en page puissante et riche en fonctionnalités destinée à la création de livres photo, Grands Poches, magazines et ebooks. Elle est simple, et gratuite. Fonctionnalités incluses :
+        </p>
+          <ul>
+            <li>Mises en page conçues par des professionnels, à télécharger gratuitement (et possibilité de créer les vôtres en toute facilité)</li>
+            <li>Livre imprimé, ebook et PDF, le tout à partir du même fichier de projet</li>
+            <li>Numéro ISBN spécifique gratuit pour chaque version de votre livre (d'une valeur de 125 $) </li>
+            <li>Une impression fidèle à l'aperçu grâce au profil colorimétrique conçu spécifiquement pour nos imprimantes</li>
+            <li>Conteneurs de texte reformatable</li>
+            <li>Importation de fichiers RTF (Rich Text Format) pour les livres essentiellement textuels</li>
+            <li>Importation de vos fichiers de livre Blurb existants (créés dans BookSmart ou Bookify)</li>
+          </ul>
+        
+        <p class="product-highlight__copy">	Nous pensons que BookWright est incroyablement intuitif, mais nous avons cependant créé un <a href="/guides/bookwright/booksmart-or-bookify-importing">guide d'utilisation détaillé</a> pour vous aider à démarrer.</p>
+
+        <div class="product-highlight__cta">
+          <a href="/my/account/register?jumpto=http%3A//www.blurb.com/bookwright%3Fregister%3Dtrue" class="cta  btn  btn--inline  btn--border-black">Télécharger BookWright</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div> 
