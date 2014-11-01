@@ -58,12 +58,12 @@
             <span
               class="controls__search__field-icon  icon  magnify--black"></span>
             <!-- to remove -->
-            <label for="search" class="controls__search__label">{{ site.strings[language].Search }}</label>
+            <label for="search" class="controls__search__label">{{ site.strings[language].Search-colon }}</label>
             <input type="text" name="search"
                    class="controls__search__field" placeholder="{{ site.strings[language].Search-for-ellipsis }}">
             <button
               class="controls__search__button  controls__search__button--submit"
-              type="submit">Submit
+              type="submit">{{ site.strings[language].Submit }}
             </button>
             <button
               class="controls__search__button  controls__search__button--close  js-search-close"
@@ -77,8 +77,8 @@
       <li class="utility__list-item  utility__list-item--show-md-sm"><a
         class="utility__cta" href="/">{{ site.strings[language].Home }}</a></li>
       <li class="utility__list-item  utility__list-item--show-md-sm"><a
-        class="utility__cta" href="/my/account/login"></a>{{ site.strings[language].Sign-in }} or <a class="utility__cta"
-                                                        href="/my/account/register">{{ site.strings[language].Join-now }}</a>
+        class="utility__cta" href="/my/account/login"></a>{{ site.strings[language].Sign-in }} {{ site.strings[language].Mobile-or }} <a class="utility__cta"
+                                                        href="/my/account/register">{{ site.strings[language].Join-Now }}</a>
       </li>
       <li
         class="utility__list-item  utility__list-item--social  utility__list-item--show-lg">
