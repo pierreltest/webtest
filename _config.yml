@@ -1,14 +1,8 @@
-# Site settings
-#title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-
+# Build settings
+markdown: kramdown
 exclude: [vendor]
 
-#baseurl: "" # the subpath of your site, e.g. /blog/
+# Site settings
 language_selector:
   en: "http://www.blurb.com"
   en-au: "http://au.blurb.com"
@@ -22,18 +16,174 @@ language_selector:
   en-ca: "http://www.blurb.ca"
 
 locale_names:
-  en: "United States"
-  en-au: "Australia"
-  pt-br: "Brazil"
-  it: "Italy"
-  nl: "Netherlands"
-  en-gb: "United Kingdom"
-  fr: "France"
-  de: "Germany"
-  es: "Spain"
-  en-ca: "Canada"
-  es-la: "United States"
-  fr-ca: "Canada"
+  en:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  en-au:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  pt-br:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  it:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  nl:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  en-gb:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  fr:
+    en: "États-Unis"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  de:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  es:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  en-ca:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  es-la:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
+  fr-ca:
+    en: "United States"
+    en-au: "Australia"
+    pt-br: "Brazil"
+    it: "Italy"
+    nl: "Netherlands"
+    en-gb: "United Kingdom"
+    fr: "France"
+    de: "Germany"
+    es: "Spain"
+    en-ca: "Canada"
+    es-la: "United States"
+    fr-ca: "Canada"
+    other: "Other Countries"
 
 currencies:
   en: "USD"
@@ -49,78 +199,1034 @@ currencies:
   es-la: "USD"
   fr-ca: "CAD"
 
-#url: "http://yourdomain.com" # the base hostname & protocol for your site
-#twitter_username: jekyllrb
-#github_username:  jekyll
+# Global strings
+strings:
 
-# Build settings
-markdown: kramdown
+  en:
+    Search-colon: "Search:"
+    Search-for-ellipsis: "Search for..."
+    Submit: "Submit"
+    # To see these three you have to look at the mobile view
+    Home: "Home"
+    Sign-in: "Sign In"
+    Mobile-or: "or"
+    Join-Now: "Join Now"
+    
+    
+  en-au:
+    Search-colon: "Search:"
+  pt-br:
+    Search-colon: "Pesquisar:"
+    Search-for-ellipsis: "Pesquisar por..."
+    Submit: "Enviar"   
+    # To see these three you have to look at the mobile view
+    Home: "Início"
+    Sign-in: "Acesse" 
+    mobile-or: "ou"
+    Join-Now: "Inscreva-se já"
+  it:
+    Search-colon: "Cerca:"
+    Search-for-ellipsis: "Cerca..."
+    Submit: "Invia"
+    # To see these three you have to look at the mobile view
+    Home: "Home"
+    Sign-in: "Accedi"
+    Mobile-or: "o"
+    Join-Now: "Iscriviti ora"
+  nl:
+    Search-colon: "Zoeken:"
+    Search-for-ellipsis: "Zoeken naar..."
+    Submit: "Verzenden"   
+    # To see these three you have to look at the mobile view
+    Home: "Start"
+    Sign-in: "Meld je aan" 
+    mobile-or: "of"
+    Join-Now: "geef je nu op"
+  en-gb:
+    Search-colon: "Search:"
+    Search-for-ellipsis: "Search for..."
+    Submit: "Submit"
+    # To see these three you have to look at the mobile view
+    Home: "Home"
+    Sign-in: "Sign In"
+    Mobile-or: "or"
+    Join-Now: "Join Now"
+  fr:
+    Search-colon: "Recherche :"
+    Search-for-ellipsis: "Rechercher..."
+    Submit: "Soumettre"
+    # To see these three you have to look at the mobile view
+    Home: "Accueil"
+    Sign-in: "Se connecter"
+    Mobile-or: "ou"
+    Join-Now: "S'inscrire maintenant"
+  de:
+    Search-colon: "Suchen:"
+    Search-for-ellipsis: "Suchen nach ..."
+    Submit: "Absenden"
+    # To see these three you have to look at the mobile view
+    Home: "Startseite"
+    Sign-in: "Anmelden"
+    Mobile-or: "oder"
+    Join-Now: "Mitglied werden"
+  es:
+    Search-colon: "Búsqueda:"
+    Search-for-ellipsis: "Buscar..."
+    Submit: "Enviar"
+    # To see these three you have to look at the mobile view
+    Home: "Inicio"
+    Sign-in: "Conéctese"
+    Mobile-or: "o"
+    Join-Now: "inscríbase ahora"
+  en-ca:
+    Search-colon: "Search:"
+  es-la:
+    Search-colon: "Búsqueda:"
+    Search-for-ellipsis: "Buscar..."
+    Submit: "Enviar"
+    # To see these three you have to look at the mobile view
+    Home: "Inicio"
+    Sign-in: "Conéctese"
+    Mobile-or: "o"
+    Join-Now: "inscríbase ahora"
+  fr-ca:
+    Search-colon: "Recherche :"
+    Search-for-ellipsis: "Rechercher..."
+    Submit: "Soumettre"
+    # To see these three you have to look at the mobile view
+    Home: "Accueil"
+    Sign-in: "Se connecter"
+    Mobile-or: "ou"
+    Join-Now: "S'inscrire maintenant"
 
 # Nav structure
+nav_headers:
+  en:
+    create: 'Create'
+    formats-pricing: 'Formats &amp; Pricing'
+    sell-distribute: 'Sell &amp; Distribute'
+    community: 'Community'
+    bookstore: 'Bookstore'
+  en-au:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  pt-br:
+    create: 'Criar'
+    formats-pricing: 'Formatos e preços'
+    sell-distribute: 'Vender e distribuir'
+    community: 'Comunidade'
+    bookstore: 'Livraria'
+  it:
+    create: 'Crea'
+    formats-pricing: 'Formati e listino'
+    sell-distribute: 'Vendi e distribuisci'
+    community: 'Community'
+    bookstore: 'Shop online'
+  nl:
+    create: 'Maken'
+    formats-pricing: 'Formaten en prijzen'
+    sell-distribute: 'Verkopen en distribueren'
+    community: 'Gemeenschap'
+    bookstore: 'Boekwinkel'
+  en-gb:
+    create: 'Create'
+    formats-pricing: 'Formats &amp; Pricing'
+    sell-distribute: 'Sell &amp; Distribute'
+    community: 'Community'
+    bookstore: 'Bookshop'
+  fr:
+    create: 'Créer'
+    formats-pricing: 'Formats et tarifs'
+    sell-distribute: 'Vendre et distribuer'
+    community: 'Communauté'
+    bookstore: 'Librairie'
+  de:
+    create: 'Erstellen'
+    formats-pricing: 'Formate und Preise'
+    sell-distribute: 'Verkauf und Vertrieb'
+    community: 'Community'
+    bookstore: 'Buchshop'
+  es:
+    create: 'Crear'
+    formats-pricing: 'Formatos y precios'
+    sell-distribute: 'Vender y distribuir'
+    community: 'Comunidad'
+    bookstore: 'Librería'
+  es-la:
+    create: 'Crear'
+    formats-pricing: 'Formatos y precios'
+    sell-distribute: 'Vender y distribuir'
+    community: 'Comunidad'
+    bookstore: 'Librería'
+  en-ca:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  fr-ca:
+    create: 'Créer'
+    formats-pricing: 'Formats et tarifs'
+    sell-distribute: 'Vendre et distribuer'
+    community: 'Communauté'
+    bookstore: 'Librairie'
 nav:
-  # Should match page.headerMenu
-  create:
-    - name: Creation &amp; Layout Tools
-      href: /bookmaking-tools
-    - name: BookWright
-      href: /bookwright
-    - name: InDesign Plugin
-      href: /indesign-plugin
-    - name: BookSmart
-      href: /booksmart
-    - name: Bookify
-      href: /online-photo-books
-    - name: Lightroom
-      href: /lightroom
-    - name: Templates
-      href: /templates
+  en:
+    # Should match page.headerMenu
+    create:
+      - name: Creation &amp; Layout Tools
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: InDesign Plugin
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Templates
+        href: /templates
 
-  formats-pricing:
-    - name: Photo Books
-      href: /photo-books
-    - name: Trade Books
-      href: /trade-books
-    - name: Magazines
-      href: /magazine
-    - name: Ebooks
-      href: /ebook
-    - name: Custom Book Options
-      href: /custom-book-options
-    - name: Pricing
-      href: /pricing-calculator
-    - name: Volume Pricing
-      href: /volume-pricing
+    formats-pricing:
+      - name: Photo Books
+        href: /photo-books
+      - name: Trade Books
+        href: /trade-books
+      - name: Magazines
+        href: /magazine
+      - name: Ebooks
+        href: /ebook
+      - name: Custom Book Options
+        href: /custom-book-options
+      - name: Pricing
+        href: /pricing-calculator
+      - name: Volume Pricing
+        href: /volume-pricing
 
-  sell-distribute:
-    - name: Sell & Distribute Options
-      href: /distribution-options
-    - name: Blurb Direct Sell
-      href: /blurb-direct-sell
-    - name: Sell On Amazon
-      href: /blurb-to-amazon
-    - name: Global Distribution Network
-      href: /global-retail-network
-    - name: Fulfillment for Volume Purchases
-      href: /volume-purchase-fulfillment
+    sell-distribute:
+      - name: Sell & Distribute Options
+        href: /distribution-options
+      - name: Blurb Direct Sell
+        href: /blurb-direct-sell
+      - name: Sell On Amazon
+        href: /blurb-to-amazon
+      - name: Global Distribution Network
+        href: /global-retail-network
+      - name: Fulfillment for Volume Purchases
+        href: /volume-purchase-fulfillment
 
-  community:
-    - name: Events
-      href: /events
-    - name: Online Workshops
-      href: /webinars
-    - name: Blurb Stories
-      href: /blog
-      languages:
-        - en
-    - name: Forums
-      href: https://support.blurb.com/categories/20076681
+    community:
+      - name: Events
+        href: /events
+      - name: Online Workshops
+        href: /webinars
+      - name: Blurb Stories
+        href: /blog
+        languages:
+          - en
+      - name: Forums
+        href: https://support.blurb.com/categories/20076681
 
-  bookstore:
-    - name: New & Notable
-      href: /bookstore/new
-    - name: Editors Picks
-      href: /bookstore/featured
-    - name: Best Sellers
-      href: /bookstore/popular
-    - name: All Categories
-      href: /bookstore/category
+    bookstore:
+      - name: New & Notable
+        href: /bookstore/new
+      - name: Editors Picks
+        href: /bookstore/featured
+      - name: Best Sellers
+        href: /bookstore/popular
+      - name: All Categories
+        href: /bookstore/category
+  en-au:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+
+
+  pt-br:
+    # Should match page.headerMenu
+    create:
+      - name: Ferramentas de criação e layout
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: InDesign Plugin
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Modelos
+        href: /templates
+
+    formats-pricing:
+      - name: Livros fotográficos
+        href: /photo-books
+      - name: Livros comerciais
+        href: /trade-books
+      - name: Revistas
+        href: /magazine
+      - name: E-books
+        href: /ebook
+      - name: Opções para livros personalizados
+        href: /custom-book-options
+      - name: Preços
+        href: /pricing-calculator
+      - name: Preço por volume
+        href: /volume-pricing
+
+    sell-distribute:
+      - name: Opções para vender e distribuir
+        href: /distribution-options
+      - name: Venda Direta do Blurb
+        href: /blurb-direct-sell
+      - name: Venda na Amazon
+        href: /blurb-to-amazon
+      - name: Rede Global de Distribuição
+        href: /global-retail-network
+      - name: Atendimento para compras por volume
+        href: /volume-purchase-fulfillment
+
+    community:
+      - name: Eventos
+        href: /events
+      - name: Workshops online
+        href: /webinars
+      - name: Histórias do Blurb
+        href: /blog
+        languages:
+          - en
+      - name: Fóruns
+        href: https://support.blurb.com/categories/20076681
+
+    bookstore:
+      - name: Novidades e destaques
+        href: /bookstore/new
+      - name: Escolhas dos editores
+        href: /bookstore/featured
+      - name: Best-sellers
+        href: /bookstore/popular
+      - name: Todas as categorias
+        href: /bookstore/category
+  it:
+    # Should match page.headerMenu
+    create:
+      - name: Strumenti di creazione e layout
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: Plug-in di InDesign
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Modelli
+        href: /templates
+
+    formats-pricing:
+      - name: Fotolibri
+        href: /photo-books
+      - name: Libri tascabili grandi
+        href: /trade-books
+      - name: Riviste
+        href: /magazine
+      - name: E-books
+        href: /ebook
+      - name: Opzioni di personalizzazione dei libri
+        href: /custom-book-options
+      - name: Listino
+        href: /pricing-calculator
+      - name: Sconti sui volumi
+        href: /volume-pricing
+
+    sell-distribute:
+      - name: Opzioni di vendita e distribuzione
+        href: /distribution-options
+      - name: Vendita diretta Blurb
+        href: /blurb-direct-sell
+      - name: Vendi su Amazon
+        href: /blurb-to-amazon
+      - name: Network di distribuzione globale
+        href: /global-retail-network
+      - name: Evasione ordini cospicui
+        href: /volume-purchase-fulfillment
+
+    community:
+      - name: Eventi
+        href: /events
+      - name: Workshop Online
+        href: /webinars
+      - name: Storie di Blurb
+        href: /blog
+        languages:
+          - en
+      - name: Forum
+        href: https://support.blurb.com/categories/20076681
+
+    bookstore:
+      - name: Novità ed elementi degni di nota
+        href: /bookstore/new
+      - name: Scelti dagli editori
+        href: /bookstore/featured
+      - name: Best seller
+        href: /bookstore/popular
+      - name: Tutte le categorie
+        href: /bookstore/category
+  nl:
+    # Should match page.headerMenu
+    create:
+      - name: Lay-outtools en tools voor het maken van boeken
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: InDesign-invoegtoepassing
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Sjablonen
+        href: /templates
+
+    formats-pricing:
+      - name: Fotoboeken
+        href: /photo-books
+      - name: Trade-boeken
+        href: /trade-books
+      - name: Magazines
+        href: /magazine
+      - name: E-books
+        href: /ebook
+      - name: Aangepaste boekopties
+        href: /custom-book-options
+      - name: Prijzen
+        href: /pricing-calculator
+      - name: Prijzen van bulkorders
+        href: /volume-pricing
+
+    sell-distribute:
+      - name: Opties voor verkoop en distributie
+        href: /distribution-options
+      - name: Directe verkoop Blurb
+        href: /blurb-direct-sell
+      - name: Verkopen op Amazon
+        href: /blurb-to-amazon
+      - name: Wereldwijd distributienetwerk
+        href: /global-retail-network
+      - name: Verwerking van bulkorders
+        href: /volume-purchase-fulfillment
+
+    community:
+      - name: Evenementen
+        href: /events
+      - name: Online workshops
+        href: /webinars
+      - name: Blurb-verhalen
+        href: /blog
+        languages:
+          - en
+      - name: Forums
+        href: https://support.blurb.com/categories/20076681
+
+    bookstore:
+      - name: Nieuw en opmerkelijk
+        href: /bookstore/new
+      - name: De keuze van onze editors
+        href: /bookstore/featured
+      - name: Bestsellers
+        href: /bookstore/popular
+      - name: Alle categorieën
+        href: /bookstore/category
+  en-gb:
+    # Should match page.headerMenu
+    create:
+      - name: Creation &amp; Layout Tools
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: InDesign Plug-in
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Templates
+        href: /templates
+
+    formats-pricing:
+      - name: Photo Books
+        href: /photo-books
+      - name: Trade Books
+        href: /trade-books
+      - name: Magazines
+        href: /magazine
+      - name: Ebooks
+        href: /ebook
+      - name: Custom Book Options
+        href: /custom-book-options
+      - name: Pricing
+        href: /pricing-calculator
+      - name: Volume Pricing
+        href: /volume-pricing
+
+    sell-distribute:
+      - name: Sell &amp; Distribute Options
+        href: /distribution-options
+      - name: Blurb Direct Sell
+        href: /blurb-direct-sell
+      - name: Sell On Amazon
+        href: /blurb-to-amazon
+      - name: Global Distribution Network
+        href: /global-retail-network
+      - name: Fulfillment for Volume Purchases
+        href: /volume-purchase-fulfillment
+
+    community:
+      - name: Events
+        href: /events
+      - name: Online Workshops
+        href: /webinars
+      - name: Blurb Stories
+        href: /blog
+        languages:
+          - en
+      - name: Forums
+        href: https://support.blurb.com/categories/20076681
+
+    bookstore:
+      - name: New &amp; Notable
+        href: /bookstore/new
+      - name: Editor&#39;s Picks
+        href: /bookstore/featured
+      - name: Best Sellers
+        href: /bookstore/popular
+      - name: All Categories
+        href: /bookstore/category
+  fr:
+    # Should match page.headerMenu
+    create:
+      - name: Outils de création et de mise en page
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: Plug-in InDesign
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Modèles
+        href: /templates
+
+    formats-pricing:
+      - name: Livres photo
+        href: /photo-books
+      - name: Grands Poches 15 x 23
+        href: /trade-books
+      - name: Magazines
+        href: /magazine
+      - name: Ebooks
+        href: /ebook
+      - name: Options de livre personnalisées
+        href: /custom-book-options
+      - name: Tarifs
+        href: /pricing-calculator
+      - name: Tarifs pour les grandes quantités
+        href: /volume-pricing
+
+    sell-distribute:
+      - name: Options de vente et de distribution
+        href: /distribution-options
+      - name: Vente directe Blurb
+        href: /blurb-direct-sell
+      - name: Vente sur Amazon
+        href: /blurb-to-amazon
+      - name: Réseau de vente au détail international
+        href: /global-retail-network
+      - name: Exécution d&#39;achats en grande quantité
+        href: /volume-purchase-fulfillment
+
+    community:
+      - name: Événements
+        href: /events
+      - name: Ateliers en ligne
+        href: /webinars
+      - name: Histoires de Blurb
+        href: /blog
+        languages:
+          - fr
+      - name: Forums
+        href: https://support.blurb.com/categories/20076681
+
+    bookstore:
+      - name: Nouveau et important
+        href: /bookstore/new
+      - name: Choix de la rédaction
+        href: /bookstore/featured
+      - name: Meilleures ventes
+        href: /bookstore/popular
+      - name: Toutes les catégories
+        href: /bookstore/category
+  de:
+    # Should match page.headerMenu
+    create:
+      - name: Gestaltungs- und Layoutwerkzeuge
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: InDesign-Plug-in
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Layoutvorlagen
+        href: /templates
+
+    formats-pricing:
+      - name: Fotobücher
+        href: /photo-books
+      - name: Taschenbücher
+        href: /trade-books
+      - name: Zeitschriften
+        href: /magazine
+      - name: eBooks
+        href: /ebook
+      - name: Individuelle Buchoptionen
+        href: /custom-book-options
+      - name: Preise
+        href: /pricing-calculator
+      - name: Mengenrabatte
+        href: /volume-pricing
+
+    sell-distribute:
+      - name: Optionen für Verkauf und Vertrieb
+        href: /distribution-options
+      - name: Blurb-Direktvertrieb
+        href: /blurb-direct-sell
+      - name: Bei Amazon verkaufen
+        href: /blurb-to-amazon
+      - name: Globales Vertriebsnetz
+        href: /global-retail-network
+      - name: Abwicklung von Großbestellungen
+        href: /volume-purchase-fulfillment
+
+    community:
+      - name: Veranstaltungen
+        href: /events
+      - name: Online-Workshops
+        href: /webinars
+      - name: Blurb-Storys
+        href: /blog
+        languages:
+          - ge
+      - name: Foren
+        href: https://support.blurb.com/categories/20076681
+
+    bookstore:
+      - name: Neu und sehenswert
+        href: /bookstore/new
+      - name: Unsere Empfehlung
+        href: /bookstore/featured
+      - name: Bestseller
+        href: /bookstore/popular
+      - name: Alle Kategorien
+        href: /bookstore/category
+  es:
+    # Should match page.headerMenu
+    create:
+      - name: Herramientas de creación y composición
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: Plug-in de InDesign
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Plantillas
+        href: /templates
+
+    formats-pricing:
+      - name: Libros de fotografías
+        href: /photo-books
+      - name: Libros comerciales
+        href: /trade-books
+      - name: Revistas
+        href: /magazine
+      - name: Libros electrónicos
+        href: /ebook
+      - name: Opciones de libros personalizados
+        href: /custom-book-options
+      - name: Precios
+        href: /pricing-calculator
+      - name: Precios por volumen
+        href: /volume-pricing
+
+    sell-distribute:
+      - name: Opciones de venta y distribución
+        href: /distribution-options
+      - name: Venta directa en Blurb
+        href: /blurb-direct-sell
+      - name: Venta en Amazon
+        href: /blurb-to-amazon
+      - name: Red global de distribución
+        href: /global-retail-network
+      - name: Ejecución de compras por volumen
+        href: /volume-purchase-fulfillment
+
+    community:
+      - name: Eventos
+        href: /events
+      - name: Talleres en línea
+        href: /webinars
+      - name: Blurb Stories
+        href: /blog
+        languages:
+          - en
+      - name: Foros
+        href: https://support.blurb.com/categories/20076681
+
+    bookstore:
+      - name: Nuevo y destacado
+        href: /bookstore/new
+      - name: Los elegidos del editor
+        href: /bookstore/featured
+      - name: Éxitos de venta
+        href: /bookstore/popular
+      - name: Todas las categorías
+        href: /bookstore/category
+
+  es-la:
+    # Should match page.headerMenu
+    create:
+      - name: Herramientas de creación y composición
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: Plug-in de InDesign
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Plantillas
+        href: /templates
+
+    formats-pricing:
+      - name: Libros de fotografías
+        href: /photo-books
+      - name: Libros comerciales
+        href: /trade-books
+      - name: Revistas
+        href: /magazine
+      - name: Libros electrónicos
+        href: /ebook
+      - name: Opciones de libros personalizados
+        href: /custom-book-options
+      - name: Precios
+        href: /pricing-calculator
+      - name: Precios por volumen
+        href: /volume-pricing
+
+    sell-distribute:
+      - name: Opciones de venta y distribución
+        href: /distribution-options
+      - name: Venta directa en Blurb
+        href: /blurb-direct-sell
+      - name: Venta en Amazon
+        href: /blurb-to-amazon
+      - name: Red global de distribución
+        href: /global-retail-network
+      - name: Ejecución de compras por volumen
+        href: /volume-purchase-fulfillment
+
+    community:
+      - name: Eventos
+        href: /events
+      - name: Talleres en línea
+        href: /webinars
+      - name: Blurb Stories
+        href: /blog
+        languages:
+          - en
+      - name: Foros
+        href: https://support.blurb.com/categories/20076681
+
+    bookstore:
+      - name: Nuevo y destacado
+        href: /bookstore/new
+      - name: Los elegidos del editor
+        href: /bookstore/featured
+      - name: Éxitos de venta
+        href: /bookstore/popular
+      - name: Todas las categorías
+        href: /bookstore/category
+
+  en-ca:
+    create:
+    formats-pricing:
+    sell-distribute:
+    community:
+    bookstore:
+  fr-ca:
+    # Should match page.headerMenu
+    create:
+      - name: Outils de création et de mise en page
+        href: /bookmaking-tools
+      - name: BookWright
+        href: /bookwright
+      - name: Plug-in InDesign
+        href: /indesign-plugin
+      - name: BookSmart
+        href: /booksmart
+      - name: Bookify
+        href: /online-photo-books
+      - name: Lightroom
+        href: /lightroom
+      - name: Modèles
+        href: /templates
+
+    formats-pricing:
+      - name: Livres photo
+        href: /photo-books
+      - name: Grands Poches 15 x 23
+        href: /trade-books
+      - name: Magazines
+        href: /magazine
+      - name: Ebooks
+        href: /ebook
+      - name: Options de livre personnalisées
+        href: /custom-book-options
+      - name: Tarifs
+        href: /pricing-calculator
+      - name: Tarifs pour les grandes quantités
+        href: /volume-pricing
+
+    sell-distribute:
+      - name: Options de vente et de distribution
+        href: /distribution-options
+      - name: Vente directe Blurb
+        href: /blurb-direct-sell
+      - name: Vente sur Amazon
+        href: /blurb-to-amazon
+      - name: Réseau de vente au détail international
+        href: /global-retail-network
+      - name: Exécution d&#39;achats en grande quantité
+        href: /volume-purchase-fulfillment
+
+    community:
+      - name: Événements
+        href: /events
+      - name: Ateliers en ligne
+        href: /webinars
+      - name: Histoires de Blurb
+        href: /blog
+        languages:
+          - fr
+      - name: Forums
+        href: https://support.blurb.com/categories/20076681
+
+    bookstore:
+      - name: Nouveau et important
+        href: /bookstore/new
+      - name: Choix de la rédaction
+        href: /bookstore/featured
+      - name: Meilleures ventes
+        href: /bookstore/popular
+      - name: Toutes les catégories
+        href: /bookstore/category
+account_menu:
+  en:
+    Join-Blurb: 'Join Blurb Now'
+    Sign-In: 'Sign In'
+    Help: 'Help'
+    My-Dashboard: 'My Dashboard'
+    Profile: 'Profile'
+    Settings: 'Settings'
+    Sign-out: 'Sign out'
+  en-au:
+  pt-br:
+    Join-Blurb: 'Inscreva-se no Blurb agora'
+    Sign-In: 'Acesse'
+    Help: 'Ajuda'
+    My-Dashboard: 'Meu painel'
+    Profile: 'Perfil'
+    Settings: 'Config.'
+    Sign-out: 'Sair'
+  it:
+    Join-Blurb: 'Partecipa a Blurb ora'
+    Sign-In: 'Accedi'
+    Help: 'Assistenza'
+    My-Dashboard: 'Dashboard personale'
+    Profile: 'Profilo'
+    Settings: 'Impostaz'
+    Sign-out: 'Esci'
+  nl:
+    Join-Blurb: 'Word nu lid van Blurb'
+    Sign-In: 'Aanmelden'
+    Help: 'Help'
+    My-Dashboard: 'Mijn dashboard'
+    Profile: 'Profiel'
+    Settings: 'Instellingen'
+    Sign-out: 'Afmelden'
+  en-gb:
+    Join-Blurb: 'Join Blurb Now'
+    Sign-In: 'Sign In'
+    Help: 'Help'
+    My-Dashboard: 'My Dashboard'
+    Profile: 'Profile'
+    Settings: 'Settings'
+    Sign-out: 'Sign out'
+  fr:
+    Join-Blurb: "Inscrivez-vous sur Blurb maintenant"
+    Sign-In: 'Se connecter'
+    Help: 'Aide'
+    My-Dashboard: 'Mon tableau de bord'
+    Profile: 'Profil'
+    Settings: 'Réglages'
+    Sign-out: 'Se déconnecter'
+  de:
+    Join-Blurb: 'Jetzt bei Blurb anmelden'
+    Sign-In: 'Anmelden'
+    Help: 'Hilfe'
+    My-Dashboard: 'Meine Übersicht'
+    Profile: 'Profil'
+    Settings: 'Einstellungen'
+    Sign-out: 'Abmelden'
+  es:
+    Join-Blurb: 'Inscríbase en Blurb ahora'
+    Sign-In: 'Conéctese'
+    Help: 'Ayuda'
+    My-Dashboard: 'Mi panel'
+    Profile: 'Perfil'
+    Settings: 'Configuraciones'
+    Sign-out: 'Cerrar sesión'
+  es-la:
+    Join-Blurb: 'Inscríbase en Blurb ahora'
+    Sign-In: 'Conéctese'
+    Help: 'Ayuda'
+    My-Dashboard: 'Mi panel'
+    Profile: 'Perfil'
+    Settings: 'Configuraciones'
+    Sign-out: 'Cerrar sesión'
+  en-ca:
+  fr-ca:
+    Join-Blurb: "Inscrivez-vous sur Blurb maintenant"
+    Sign-In: 'Se connecter'
+    Help: 'Aide'
+    My-Dashboard: 'Mon tableau de bord'
+    Profile: 'Profil'
+    Settings: 'Réglages'
+    Sign-out: 'Se déconnecter'
+footer_legal:
+  en:
+    Company-Info: Company Info
+    Work-at-Blurb: Work at Blurb
+    Engineering: Engineering
+    Pricing: Pricing
+    Privacy-Legal: "Privacy &amp; Legal"
+    Cookie-Policy: Cookie Policy
+    Impressum: Impressum
+    Support: Support
+  en-au:
+  pt-br:
+    Company-Info: Informações da empresa
+    Work-at-Blurb: Trabalhe no Blurb
+    Engineering: Engenharia
+    Pricing: Preços
+    Privacy-Legal: "Privacidade e aspectos jurídicos"
+    Cookie-Policy: Cookie Policy
+    Impressum: Impressum
+    Support: Support
+  it:
+    Company-Info: Informazioni sull&#39;azienda
+    Work-at-Blurb: Lavora con noi
+    Engineering: Engineering
+    Pricing: Listino
+    Privacy-Legal: "Privacy e note legali"
+    Cookie-Policy: 
+    Impressum: 
+    Support: 
+  nl:
+    Company-Info: Bedrijfsinfo
+    Work-at-Blurb: Werken bij Blurb
+    Engineering: Engineering
+    Pricing: Prijzen
+    Privacy-Legal: "Privacy en juridische informatie"
+    Cookie-Policy: Cookie Policy
+    Impressum: Impressum
+    Support: Ondersteuning
+  en-gb:
+    Company-Info: Company Info
+    Work-at-Blurb: Work at Blurb
+    Engineering: Engineering
+    Pricing: Pricing
+    Privacy-Legal: "Privacy &amp; Legal"
+    Cookie-Policy: Cookie Policy
+    Impressum: Impressum
+    Support: Support
+  fr:
+    Company-Info: Informations sur la société
+    Work-at-Blurb: Offres d’emplois Blurb
+    Engineering: Ingénierie
+    Pricing: Tarifs
+    Privacy-Legal: "Confidentialité et mentions légales"
+    Cookie-Policy: Cookie Policy
+    Impressum: Impressum
+    Support: Assistance
+  de:
+    Company-Info: Unternehmensinfo
+    Work-at-Blurb: Jobs bei Blurb
+    Engineering: Engineering
+    Pricing: Preise
+    Privacy-Legal: "Datenschutz und rechtliche Bestimmungen"
+    Support: Kundenservice
+  es:
+    Company-Info: Información de la empresa
+    Work-at-Blurb: Empleo
+    Engineering: Ingeniería
+    Pricing: Precios
+    Privacy-Legal: "Privacidad e información legal"
+    Support: Asistencia
+  es-la:
+    Company-Info: Información de la empresa
+    Work-at-Blurb: Empleo
+    Engineering: Ingeniería
+    Pricing: Precios
+    Privacy-Legal: "Privacidad e información legal"
+    Support: Asistencia
+  en-ca:
+  fr-ca:
+    Company-Info: Informations sur la société
+    Work-at-Blurb: Offres d’emplois Blurb
+    Engineering: Ingénierie
+    Pricing: Tarifs
+    Privacy-Legal: "Confidentialité et mentions légales"
+    Cookie-Policy: Cookie Policy
+    Impressum: Impressum
+    Support: Assistance
