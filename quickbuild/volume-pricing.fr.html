@@ -1,0 +1,455 @@
+---
+layout: quickbuild 
+href: /volume-pricing
+headerMenu: formats-pricing 
+title: "Tarifs pour les grandes quantités en cas d'impression de nombreux exemplaires"
+meta_description: "Vous souhaitez imprimer votre livre en grande quantité ? Découvrez les coûts d'impression en grande qualité. Obtenez les tarifs pour l'impression offset de livres, Grands Poches et magazines. Devis personnalisés"
+partner_tracking: true 
+---
+<div class="module  page-banner">
+  <div class="page-banner__bg">
+    <div class="grid-construct">
+      <div class="page-banner__inner-wrap">
+        <div class="page-banner__image" style="background-image: url('/sites/default/files/buildkit/1_banner_volume-pricing.jpg');">
+        </div>
+        <div class="page-banner__content">
+          <h1 class="page-banner__headline">Tarifs pour les grandes quantités</h1>
+          <div class="page-banner__content-divider"></div>
+          <p class="page-banner__copy">Si votre projet de livre ou de magazine exige d'imprimer un grand nombre d'exemplaires ou que les exigences sont complexes ou uniques, vous pouvez tirer parti des tarifs pour les grandes quantités et des services de gestion de comptes proposés par Blurb.</p>
+          <div class="page-banner__content-divider"></div>
+          <p>
+            <!--<a href="/bookmaking-tools" class="page-banner__cta  btn  btn--white  btn--inline">Start making</a>-->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-construct">
+
+    <!-- Change classes so all captions share a default caption style -->
+    <div class="page-banner__caption">
+      <div class="page-banner__caption-title"></div>
+      <div class="page-banner__caption-author"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Add module 8 full width center aligned content -->
+<div class="module  center-aligned-content">
+  <div class="grid-construct">
+    <div class="center-aligned-content__inner">
+
+        <h2 style="font-size: 1.5rem !important;">Service de gestion de compte pour les projets de grande envergure</h2>
+        <p>Si vous envisagez un projet de 500 exemplaires ou plus, nos consultants sont là pour vous aider. Nous sommes à vos côtés tout au long du projet d'édition, que ce soit dans la recherche de financements ou dans la relation avec vos partenaires, comme les concepteurs de couverture et les correcteurs. Au cours du processus d'impression, notre équipe de gestion de compte et de production se charge de votre projet, étape après étape. Et nous pouvons vous orienter vers les options d'entreposage, de distribution et d'exécution de commandes adaptées à vos besoins post-impression.</p>
+        <p>Que vous distribuiez vos livres gratuitement comme des cadeaux ou à titre promotionnel, que vous recourriez à un financement communautaire pour un projet qui vous passionne ou que vous vendiez vos livres à une clientèle bien établie, les tarifs pour les grandes quantités et les services de gestion de comptes de Blurb vous aident à progresser tout au long du processus d'édition de façon efficace et rentable.</p>
+      
+    </div>
+  </div>
+</div>
+<!-- end module 8 full width center aligned content -->
+
+<a id="quote-form"></a>
+
+<!-- Start Volume Pricing Form -->
+<script type="text/javascript">
+  (function ($j) {
+    $j(document).ready(function () {
+
+      var n;
+      $j(".faq_expand").each(function () {
+        $j(this).click(function () {
+          $j(".faq_text[rel!=" + $j(this).attr("rel") + "]:visible").slideUp();
+          $j(".faq_text[rel=" + $j(this).attr("rel") + "]").slideToggle();
+        });
+      });
+
+    });
+  })(jQuery);
+</script>
+
+<script type="text/javascript">
+(function ($j) {
+  $j(document).ready(function () {
+
+    //----------------------------------------------------//
+    // If field has default value defined, set behavior
+    $j('input[type=text][defaultValue],textarea[defaultValue]').each(function () {
+      $j(this).focus(function () {
+        if ($.trim($j(this).val()) == $.trim($j(this).attr("defaultValue"))) {
+          $j(this).val("");
+        }
+      });
+      $j(this).blur(function () {
+        if ($j(this).val() == "") {
+          $j(this).val($.trim($j(this).attr("defaultValue")));
+          $j(this).removeAttr("style");
+        } else {
+          $j(this).css("color", "black");
+          $j(this).css("border", "none");
+        }
+      });
+    });
+
+    //----------------------------------------------------//
+    // Select field behavior
+    $j('select').each(function () {
+      $j(this).change(function () {
+        if ($j(this).attr("value") == "") {
+          $j(this).removeAttr("style");
+        } else {
+          $j(this).css("color", "black");
+        }
+      });
+    });
+
+    //----------------------------------------------------//
+    // Page count
+    $j('input#page_count').blur(function () {
+      if ($j(this).val() > 240) {
+        $j(".order_form form select option.proline").attr("disabled", "disabled").css("color", "lightgrey");
+      } else {
+        $j(".order_form form select option.proline").removeAttr("disabled").removeAttr("style");
+      }
+    });
+    $j('input#page_count').keypress(function (e) {
+      var key = e.which;
+      if ((key < 48 || key > 57) && !(key == 8 || key == 9 || key == 13 || key == 37 || key == 39 || key == 46 || key == 38 || key == 0)) {
+        // not a number
+        return false;
+      }
+    });
+
+    //----------------------------------------------------//
+    // Validate Form (and possibly submit)
+    $j('#quote_button').click(function () {
+
+      var form_valid = true;
+      var corrections = '';
+
+      if (!validateEmail($j('input#email').val())) {
+        form_valid = false;
+        corrections += '<br>&bull; ' + Drupal.t("Valid email address");
+        $j('input#email').val($j('input#email').attr('defaultValue'));
+        $j('input#email').removeAttr("style")
+        $j('input#email').css("border", "1px solid red");
+      }
+
+      $j('.order_form .form-text, .order_form select, .order-form textarea').each(
+        function () {
+          var $je = $j(this);
+          $je.css("border", "none");
+          // This is a select? Then check if .val() has something in it.
+          if ($je.is('select')) {
+            if ($je.val() == "") {
+              form_valid = false;
+              corrections += '<br>&bull; ' + $je.attr('title').replace(/\*/g, '');
+            }
+          }
+          else {
+            // Not a select? Then do the defaultValue check.
+            if ($je.val() == $je.attr('defaultValue')) {
+              form_valid = false;
+              corrections += '<br>&bull; ' + $je.attr('defaultValue').replace(/\*/g, '');
+              $je.css("border", "1px solid red");
+            }
+          }
+        }
+      );
+
+      if (form_valid) {
+        //submit form
+        $j('#quote_form').submit();
+      }
+      else {
+        //display corrections required of user
+        $j('#error_text').html('<font color="red">' + Drupal.t("Please re-submit with the following information:") + corrections + '</font>');
+      }
+    });
+
+    function validateEmail(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+
+    //----------------------------------------------------//
+    // Form Submitted
+    var l = this.location.href;
+    var n = l.indexOf("vol_conf=1");
+
+    if (n > 0) {
+      alert(Drupal.t("Thanks for submitting your quote request. Someone from our Volume Orders team will get back to you within two business days."));
+    }
+
+    //----------------------------------------------------//
+    // Book size
+    $j('#contentMainArea .order_form select.id-size_needed').change(function () {
+
+      if ($j(this).children(".trade:selected, .pocket:selected, .booklet:selected").length) {
+        $j(".order_form form select.id-cover_type option.proline").attr("disabled", "disabled").css("color", "lightgrey");
+      } else {
+        $j(".order_form form select.id-cover_type option.proline").removeAttr("disabled").removeAttr("style");
+      }
+
+      if ($j(this).children(".booklet:selected").length) {
+        $j(".order_form form select.id-cover_type option.hardcover_dj_basic").attr("disabled", "disabled").css("color", "lightgrey");
+        $j(".order_form form select.id-cover_type option.hardcover_imagewrap").attr("disabled", "disabled").css("color", "lightgrey");
+        $j(".order_form form select.id-paper_type option.pt_mfp").attr("disabled", "disabled").css("color", "lightgrey");
+        $j(".order_form form select.id-paper_type option.pt_lfp").attr("disabled", "disabled").css("color", "lightgrey");
+        $j(".order_form form select.id-paper_type option.pt_pup").attr("disabled", "disabled").css("color", "lightgrey");
+        $j(".order_form form select.id-paper_type option.pt_ppp").attr("disabled", "disabled").css("color", "lightgrey");
+        $j(".order_form form select.id-end_sheets option.proline").attr("disabled", "disabled").css("color", "lightgrey");
+
+      } else {
+        $j(".order_form form select.id-cover_type option.hardcover_dj_basic").removeAttr("disabled").removeAttr("style");
+        $j(".order_form form select.id-cover_type option.hardcover_imagewrap").removeAttr("disabled").removeAttr("style");
+        $j(".order_form form select.id-paper_type option.pt_mfp").removeAttr("disabled").removeAttr("style");
+        $j(".order_form form select.id-paper_type option.pt_lfp").removeAttr("disabled").removeAttr("style");
+        $j(".order_form form select.id-paper_type option.pt_pup").removeAttr("disabled").removeAttr("style");
+        $j(".order_form form select.id-paper_type option.pt_ppp").removeAttr("disabled").removeAttr("style");
+        $j(".order_form form select.id-end_sheets option.proline").removeAttr("disabled").removeAttr("style");
+
+      }
+
+      check_cover_endsheets($j('#contentMainArea .order_form select.id-size_needed').attr('rel'), $j('#contentMainArea .order_form .id-cover_type').attr('rel'));
+
+      var softcover_hide_array = new Array();
+      softcover_hide_array[0] = 'ls';
+      softcover_hide_array[1] = 'll';
+
+      if ($j.inArray($j(this).attr('rel'), softcover_hide_array) != -1) {
+        $j('#contentMainArea .order_form .id-cover_type option[rel="sc"]').hide();
+
+        if ($j('#contentMainArea .order_form .id-cover_type').attr('rel') == 'sc') {
+          $j('#contentMainArea .order_form .id-cover_type').val('');
+        }
+      } else {
+        $j('#contentMainArea .order_form .id-cover_type option[rel="sc"]').show();
+      }
+
+      var paper_hide_array = new Array();
+      paper_hide_array[0] = 'ss';
+      paper_hide_array[1] = 'sp';
+      paper_hide_array[2] = 'sl';
+      paper_hide_array[3] = 'll';
+      paper_hide_array[4] = 'ls';
+
+      if ($j.inArray($j(this).attr('rel'), paper_hide_array) != -1) {
+        $j('#contentMainArea .order_form #paper_type_container .id-paper_type option.proline').show();
+      } else {
+        $j('#contentMainArea .order_form #paper_type_container .id-paper_type option.proline').hide();
+        $j('#contentMainArea .order_form #paper_type_container .id-paper_type').val('');
+      }
+    });
+
+
+    //----------------------------------------------------//
+    // Cover type
+    $j('#contentMainArea .order_form select.id-cover_type').change(function () {
+      check_cover_endsheets($j('#contentMainArea .order_form select.id-size_needed').attr('rel'), $j('#contentMainArea .order_form .id-cover_type').attr('rel'));
+    });
+
+
+    //----------------------------------------------------//
+    // Check Cover Endsheets
+    function check_cover_endsheets(size, cover) {
+      var size_exclusions_array = new Array();
+      size_exclusions_array[0] = 'pc';
+      size_exclusions_array[1] = 'pb';
+      size_exclusions_array[2] = 'tc';
+      size_exclusions_array[3] = 'tb';
+
+      var result1 = $j.inArray(size, size_exclusions_array);
+
+      if (result1 != -1) {
+        $j('#contentMainArea .order_form .explanation_text').hide();
+      } else {
+        $j('#contentMainArea .order_form .explanation_text').show();
+      }
+
+      if (result1 != -1 || cover == "sc") {
+        $j('#contentMainArea .order_form #end_sheets_container').hide();
+      } else {
+        $j('#contentMainArea .order_form #end_sheets_container').show();
+      }
+    }
+  });
+})(jQuery);
+</script>
+
+<div class="module  center-aligned-content">
+  <div class="grid-construct">
+    <div class="center-aligned-content__inner">
+
+      <h5>Obtenir un devis personnalisé</h5>
+
+      <p>Nous avons besoin de quelques petites informations vous concernant pour commencer. Renseignez le formulaire ci-dessous et nous reviendrons vers vous dans un délai de deux jours ouvrés.</p>
+
+      <p>
+
+      <div class="item form one-column-form">
+        <div class='section'>
+          <div class="order_form">
+            <div
+              class="explanation_text">* champs obligatoires
+            </div>
+            <form id="quote_form"
+                  class="one-column-form__form"
+                  action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+                  method="post">
+              <input type="hidden" name="oid" value="00D600000006rrs"> <input type="hidden" name="retURL" value="http://www.blurb.com/volume-pricing?vol_conf=1" />
+
+              <div class="form-row form-row--centered form-row--compact">
+                <input name="00N60000002FiPv" id="00N60000002FiPv" maxlength="100" type="text" defaultValue=" Name*" class="form-text NormalTextBox txtSearch one-column-form__form-input" value="Nom*" />
+              </div>
+
+              <div class="form-row form-row--centered form-row--compact">
+                <input id="company" maxlength="40" name="company" type="text" defaultValue=" Organization name*" class="form-text NormalTextBox txtSearch" value="Nom de la société*" />
+              </div>
+
+              <div class="form-row form-row--centered form-row--compact">
+                <input id="phone" maxlength="40" name="phone" type="tel" defaultValue=" Phone number*" class="form-text NormalTextBox txtSearch" value="Numéro de téléphone*" />
+              </div>
+
+              <div class="form-row form-row--centered form-row--compact">
+                <input id="email" maxlength="80" name="email" type="email" defaultValue=" Email address*" class="form-text NormalTextBox txtSearch" value="Adresse électronique*" />
+              </div>
+
+              <div class="form-row form-row--centered form-row--compact">
+                <select class="js-selectmenu" id="00N60000002dSoC" name="00N60000002dSoC"
+                  title="Project intent" data-placeholder="Project intent*">
+                  <option></option>
+                  <option
+                  value="Personal book">Livre personnel
+                  </option>
+                  <option
+                  value="Book to sell">Livre à vendre
+                  </option>
+                  <option
+                  value="Business-related book">Livre d'entreprise
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-row form-row--centered form-row--compact">
+                <select class="js-selectmenu" id="00N60000002dSoH" name="00N60000002dSoH"
+                  title="When needed" data-placeholder="When needed*">
+                  <option></option>
+                  <option
+                  value="This month">Ce mois-ci
+                  </option>
+                  <option
+                  value="Next month">Le mois prochain
+                  </option>
+                  <option
+                  value="Within three months">Dans trois mois
+                  </option>
+                  <option
+                  value="3-6 months">Dans 3 à 6 mois
+                  </option>
+                  <option
+                  value="7+ months">Dans plus de 7 mois
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-row form-row--centered form-row--compact">
+                <input id="00N60000002FiPR" name="00N60000002FiPR" maxlength="5" name="page_count" type="text" defaultValue="Page count*" class="form-text NormalTextBox txtSearch" value="Nombre de pages*">
+              </div>
+
+              <div class="form-row form-row--centered form-row--compact">
+                <select class="js-selectmenu" id="00N60000002DKm4" name="00N60000002DKm4"
+                  title=" Quantity needed"
+                  class="id-quantity_needed"
+                  data-placeholder="Quantity needed*">
+                  <option></option>
+                  <option value="501-999">501 à 999</option>
+                  <option
+                  value="1,000-2,499">1 000 à 2 499
+                  </option>
+                  <option
+                  value="2,500-4,999">2 500 à 4 999
+                  </option>
+                  <option value="5,000+">Plus de 5 000</option>
+                </select>
+              </div>
+
+              <div id="error_text"></div>
+
+              <div class="form-row form-row--centered form-row--compact">
+                <button id="quote_button"
+                  class="cta btn btn--inline one-column-form__form-button">
+                  Soumettre
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- End Volume Pricing Form -->
+
+
+<!-- MODULE 7 – 2 HALF COLUMNS -->
+<div class="module  two-half-columns  product-hero-columns">
+  <div class="grid-construct two-half-columns__wrapper">
+    <div class="two-half-columns__col  two-half-columns__col--left">
+        <div class="module  product-hero-column">
+    <div class="product-hero-column__bg">
+      <div class="product-hero-column__inner-wrap">
+        <div class="product-hero-column__image-wrap">
+          <img class="product-hero-column__image" src="/sites/default/files/buildkit/7_POD.png" />
+        </div>
+        <div class="product-hero-column__image-title"><h5>Impression à la demande (POD)</h5></div>
+        <div class="product-hero-column__content-wrap">
+          <p>Pour les commandes jusqu'à 500 copies, l'impression à la demande offre un bon rapport qualité-prix pour obtenir rapidement des publications de qualité professionnelle. Notre équipe de gestion de compte vous guidera tout au long du parcours, du devis jusqu'à la livraison. Les commandes en grande quantité en POD incluent :</p>
+          <ul>
+	          <li>Une gestion de compte dédiée</li>
+	          <li>Un tirage d'essai de pré-production</li>
+	          <li>Une conversion gratuite de la version pour impression à une version ebook au format fixe</li>
+	          <li>Fonctionnalités de personnalisation uniques</li>
+	          <li>Des options d'entreposage et <a href="/volume-purchase-fulfillment">d'exécution de commandes</a></li>
+          </ul>
+          <p></p>
+          <p>Il faut compter 10 à 14 jours pour la production. Le délai de livraison est de 4 à 7 jours.</p>
+          <p>Vous souhaitez discuter d'un projet ? IL vous suffit d'utiliser le formulaire ci-dessus pour contacter notre équipe de consultants.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div class="two-half-columns__col  two-half-columns__col--right">
+        <div class="module  product-hero-column right-col">
+    <div class="product-hero-column__bg">
+      <div class="product-hero-column__inner-wrap">
+        <div class="product-hero-column__image-wrap">
+          <img class="product-hero-column__image" src="/sites/default/files/buildkit/7_Offset-Printing.png" />
+        </div>
+        <div class="product-hero-column__image-title"><h5>Impression offset</h5></div>
+        <div class="product-hero-column__content-wrap">
+          <p>Pour les commandes de grande quantité, l'impression offset est également une très bonne option. L'impression offset permet de réduire considérablement les coûts (jusqu'à 65 % du coût unitaire en POD). Toute publication créée dans l'un de nos formats peut être imprimée par la méthode offset. Les principaux avantages sont les suivants :</p>
+
+          <ul>
+	          <li>Une gestion de compte dédiée</li>
+	          <li>Un coût par exemplaire plus faible</li>
+	          <li>Un large éventail <a href="/custom-book-options">d'options de personnalisation</a></li>
+	          <li>Un contrôle qualité avec une épreuve gratuite</li>
+	          <li>Des options d'entreposage et d'exécution de commandes</li>
+          </ul>
+          <p></p>
+          <p>Blurb propose deux choix pour l'impression offset : Dans la région concernée (États-Unis, Canada et Europe), ou à l'étranger. L'impression offset est souvent moins chère mais ses délais de production sont plus longs. Une fois que vous approuvez votre épreuve et passez commande, l'impression et l'expédition prennent environ 6 à 10 semaines, en fonction du projet et du lieu d'impression.</p>
+          <p>Vous souhaitez discuter d'un projet ? IL vous suffit d'utiliser le formulaire ci-dessus pour contacter notre équipe de consultants.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+<!-- end MODULE 7 – 2 HALF COLUMNS --> 

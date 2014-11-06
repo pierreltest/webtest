@@ -1,0 +1,86 @@
+---
+layout: quickbuild 
+href: /bookwright
+headerMenu: create 
+title: "BookWright: Krachtige software voor het publiceren van boeken | Blurb"
+meta_description: "Download Blurb BookWright: de gratis publicatiesoftware voor eigen boeken die geschikt is voor iedereen. Ontwerp en publiceer prachtige fotoboeken, Trade-boeken, magazines en e-books"
+partner_tracking: true 
+---
+<script>
+  $j(window).load(function() {
+    var l = this.location.href;
+    var n = l.indexOf("register=true");
+    if (n > 0 )
+    {
+      var downloadPath ="";
+      var isOSX = (navigator.platform.indexOf('Mac') >= 0);
+      if(isOSX)
+      {
+        downloadPath = 'http://www.blurb.com/downloadbookwrightmac';
+        _GA.track(['_trackEvent','BookWright','Download','mac']);
+      } else {
+        downloadPath = 'http://www.blurb.com/downloadbookwrightwin';
+        _GA.track(['_trackEvent','BookWright','Download','win']);
+      }
+
+      path = downloadPath;
+      window.location.assign(path);
+
+    }
+  });
+</script>
+
+  <div class="module  page-banner">
+    <div class="page-banner__bg">
+      <div class="grid-construct">
+        <div class="page-banner__inner-wrap">
+          <div class="page-banner__image" style="background-image: url('/sites/default/files/buildkit/1_Banner-bookwright.jpg');">
+          </div>
+          <div class="page-banner__content">
+            <h1 class="page-banner__headline">BookWright</h1>
+            <div class="page-banner__content-divider"></div>
+            <p class="page-banner__copy">BookWright is de enige software voor desktoppublishing die speciaal is ontwikkeld voor het maken van professioneel uitziende gedrukte boeken, magazines en e-books. Je hebt geen vormgever nodig, je hoeft geen code te kennen en dure software is overbodig.</p>
+            <div class="page-banner__content-divider"></div>
+            <p>
+            <a href="/my/account/register?jumpto=http%3A//www.blurb.com/bookwright%3Fregister%3Dtrue" class="page-banner__cta  btn  btn--white  btn--inline">BookWright downloaden</a>
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<div class="module  product-highlight">
+  <div class="grid-construct">
+    <div class="product-highlight__wrapper clearfix">
+
+<div class="product-highlight--left"><img src="/sites/default/files/buildkit/15_Product-Highlight_bookwright.png" alt=""><br />
+</div>
+      <div class="product-highlight--right">
+
+        <h2 class="headline--small">Voor het creatieve genie in ons allemaal</h2>
+
+        <p class="product-highlight__copy">BookWright is een krachtige ontwerp- en lay-outtoepassing met een scala aan functies waarmee je fotoboeken, Trade-boeken, magazines en e-books kunt maken. Gebruiksvriendelijk én gratis Functies zijn onder meer:
+        </p>
+          <ul>
+            <li>Gratis downloadbare, professioneel ontworpen lay-outs (en de mogelijkheid om zelf gemakkelijk een eigen lay-out te maken)</li>
+            <li>Gedrukte boeken, e-books en PDF-uitvoer: alles op basis van hetzelfde projectbestand</li>
+            <li>Gratis een uniek ISBN-nummer voor elke versie van je boek (ter waarde van $125). </li>
+            <li>WYSIWYG-uitvoer met een kleurenprofiel dat speciaal is ontwikkeld voor onze printers</li>
+            <li>Tekstvakken met doorstroomtekst</li>
+            <li>Geïmporteerde RTF-bestanden (Rich Text Format) voor boeken met veel tekst</li>
+            <li>Importeren van je bestaande Blurb-boekbestanden (gemaakt in BookSmart of Bookify)</li>
+          </ul>
+        
+        <p class="product-highlight__copy">	Volgens ons is BookWright ongelooflijk intuïtief. Toch hebben we een <a href="/guides/bookwright/booksmart-or-bookify-importing">gedetailleerde handleiding</a> gemaakt waarmee je meteen aan de slag kunt.</p>
+
+        <div class="product-highlight__cta">
+          <a href="/my/account/register?jumpto=http%3A//www.blurb.com/bookwright%3Fregister%3Dtrue" class="cta  btn  btn--inline  btn--border-black">BookWright downloaden</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div> 

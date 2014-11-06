@@ -6,36 +6,27 @@
           class="footer__legal__list-item  footer__legal__list-item--copyright">&copy;
           {{ site.time | date: "%Y" }} Blurb
         </li>
-        <li class="footer__legal__list-item"><a class="footer__legal__link"
-                                                href="/company-profile">Company Info</a></li>
-        <li class="footer__legal__list-item"><a class="footer__legal__link"
-                                                href="/careers">Work at Blurb</a></li>
-        <li class="footer__legal__list-item"><a class="footer__legal__link"
-                                                href="/technology">Engineering</a></li>
-        <li class="footer__legal__list-item"><a class="footer__legal__link"
-                                                href="/pricing-calculator">Pricing</a></li>
-        <li class="footer__legal__list-item"><a class="footer__legal__link"
-                                                href="/about/legal">Privacy &amp;
-          Legal</a></li>
+        <li class="footer__legal__list-item"><a class="footer__legal__link" href="/company-profile">{{ site.footer_legal[language].Company-Info }}</a></li>
+        <li class="footer__legal__list-item"><a class="footer__legal__link" href="/careers">{{ site.footer_legal[language].Work-at-Blurb }}</a></li>
+        <li class="footer__legal__list-item"><a class="footer__legal__link" href="/technology">{{ site.footer_legal[language].Engineering }}</a></li>
+        <li class="footer__legal__list-item"><a class="footer__legal__link" href="/pricing-calculator">{{ site.footer_legal[language].Pricing }}</a></li>
+        <li class="footer__legal__list-item"><a class="footer__legal__link" href="/about/legal">{{ site.footer_legal[language].Privacy-Legal }}</a></li>
         {%comment%}Germany and UK have extra items here{%endcomment%}
         {% if language == "en-gb" %}
-        <li class="footer__legal__list-item"><a class="footer__legal__link"
-                                                href="/about/cookies">Cookie Policy</a></li>
+        <li class="footer__legal__list-item"><a class="footer__legal__link" href="/about/cookies">{{ site.footer_legal[language].Cookie-Policy }}</a></li>
         {% elsif language == "de" %}
-        <li class="footer__legal__list-item"><a class="footer__legal__link"
-                                                href="/about/impressum">Impressum</a></li>
+        <li class="footer__legal__list-item"><a class="footer__legal__link" href="/about/impressum">{{ site.footer_legal[language].Impressum }}</a></li>
         {% else %}
         {% endif %}
-        <li class="footer__legal__list-item"><a class="footer__legal__link"
-                                                href="https://support.blurb.com/home">Support</a></li>
+        <li class="footer__legal__list-item"><a class="footer__legal__link" href="https://support.blurb.com/home">{{ site.footer_legal[language].Support }}</a></li>
       </ul>
       <div class="footer__lang-select" data-controller="languageSelect">
         <div class="footer__lang-select__btn">
           <div class="footer__lang-select__selected  js-lang-select-btn">
                   <span
-                    class="icon  flag--{{ site.locale_names[language]|slugify }}--sm  footer__lang-select__selected-icon"></span>
+                    class="icon  flag--{{ site.locale_names.en[language]|slugify }}--sm  footer__lang-select__selected-icon"></span>
                   <span
-                    class="footer__lang-select__selected-text">{{ site.locale_names[language] }}</span>
+                    class="footer__lang-select__selected-text">{{ site.locale_names[language][language] }}</span>
             <span class="icon  indicator--down--white"></span>
           </div>
         </div>
@@ -46,50 +37,49 @@
             <ul class="footer__lang-select__column">
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.en}}?redirect=true"><span
-                  class="icon  flag--united-states"></span> United States</a>
+                  class="icon  flag--united-states"></span> {{ site.locale_names[language].en }}</a>
               </li>
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.en-au}}?redirect=true"><span
-                  class="icon  flag--australia"></span> Australia</a>
+                  class="icon  flag--australia"></span> {{ site.locale_names[language].en-au }}</a>
               </li>
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.pt-br}}?redirect=true"><span
-                  class="icon  flag--brazil"></span> Brazil</a>
+                  class="icon  flag--brazil"></span> {{ site.locale_names[language].pt-br }}</a>
               </li>
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.it}}?redirect=true"><span
-                  class="icon  flag--italy"></span> Italy</a>
+                  class="icon  flag--italy"></span> {{ site.locale_names[language].it }}</a>
               </li>
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.nl}}?redirect=true"><span
-                  class="icon  flag--netherlands"></span> Netherlands</a>
+                  class="icon  flag--netherlands"></span> {{ site.locale_names[language].nl }}</a>
               </li>
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.en-gb}}?redirect=true"><span
-                  class="icon  flag--united-kingdom"></span> United
-                  Kingdom</a>
+                  class="icon  flag--united-kingdom"></span> {{ site.locale_names[language].en-gb }}</a>
               </li>
             </ul>
             <ul class="footer__lang-select__column">
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.fr}}?redirect=true"><span
-                  class="icon  flag--france"></span> France</a>
+                  class="icon  flag--france"></span> {{ site.locale_names[language].fr }}</a>
               </li>
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.de}}?redirect=true"><span
-                  class="icon  flag--germany"></span> Germany</a>
+                  class="icon  flag--germany"></span> {{ site.locale_names[language].de }}</a>
               </li>
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.es}}?redirect=true"><span
-                  class="icon  flag--spain"></span> Spain</a>
+                  class="icon  flag--spain"></span> {{ site.locale_names[language].es }}</a>
               </li>
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.en-ca}}?redirect=true"><span
-                  class="icon  flag--canada"></span> Canada</a>
+                  class="icon  flag--canada"></span> {{ site.locale_names[language].en-ca }}</a>
               </li>
               <li class="footer__lang-select__list-item">
                 <a class="footer__lang-select__link" href="{{site.language_selector.en}}?redirect=true"><span
-                  class="icon  flag--globe"></span> Other Countries</a>
+                  class="icon  flag--globe"></span> {{ site.locale_names[language].other }}</a>
               </li>
             </ul>
             <div class="footer__lang-select__stem">

@@ -1,0 +1,86 @@
+---
+layout: quickbuild 
+href: /bookwright
+headerMenu: create 
+title: "BookWright: Potente software de publicación de libros | Blurb"
+meta_description: "Descargue Blurb BookWright: un software gratuito para publicaciones independientes que puede usar cualquier persona. Diseñe y publique hermosos libros de fotografías, libros comerciales, revistas y ebooks."
+partner_tracking: true 
+---
+<script>
+  $j(window).load(function() {
+    var l = this.location.href;
+    var n = l.indexOf("register=true");
+    if (n > 0 )
+    {
+      var downloadPath ="";
+      var isOSX = (navigator.platform.indexOf('Mac') >= 0);
+      if(isOSX)
+      {
+        downloadPath = 'http://www.blurb.com/downloadbookwrightmac';
+        _GA.track(['_trackEvent','BookWright','Download','mac']);
+      } else {
+        downloadPath = 'http://www.blurb.com/downloadbookwrightwin';
+        _GA.track(['_trackEvent','BookWright','Download','win']);
+      }
+
+      path = downloadPath;
+      window.location.assign(path);
+
+    }
+  });
+</script>
+
+  <div class="module  page-banner">
+    <div class="page-banner__bg">
+      <div class="grid-construct">
+        <div class="page-banner__inner-wrap">
+          <div class="page-banner__image" style="background-image: url('/sites/default/files/buildkit/1_Banner-bookwright.jpg');">
+          </div>
+          <div class="page-banner__content">
+            <h1 class="page-banner__headline">BookWright</h1>
+            <div class="page-banner__content-divider"></div>
+            <p class="page-banner__copy">BookWright es el único software de autoedición diseñado exclusivamente para crear libros, revistas e ebooks de aspecto profesional. No necesita contratar a un diseñador, conocer una línea de código ni comprar software costoso.</p>
+            <div class="page-banner__content-divider"></div>
+            <p>
+            <a href="/my/account/register?jumpto=http%3A//www.blurb.com/bookwright%3Fregister%3Dtrue" class="page-banner__cta  btn  btn--white  btn--inline">Descargar BookWright</a>
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<div class="module  product-highlight">
+  <div class="grid-construct">
+    <div class="product-highlight__wrapper clearfix">
+
+<div class="product-highlight--left"><img src="/sites/default/files/buildkit/15_Product-Highlight_bookwright.png" alt=""><br />
+</div>
+      <div class="product-highlight--right">
+
+        <h2 class="headline--small">Una herramienta de creación para el creativo que llevamos dentro</h2>
+
+        <p class="product-highlight__copy">BookWright es una potente aplicación de diseño y composición con múltiples características para crear libros de fotografías, libros comerciales, revistas e ebooks. Es fácil de utilizar &mdash;y es gratuita—. Las características incluyen lo siguiente:
+        </p>
+          <ul>
+            <li>Composiciones gratuitas y descargables diseñadas profesionalmente (y la capacidad de crear las suyas con facilidad)</li>
+            <li>Libro impreso, ebook y PDF a partir del mismo archivo de proyecto</li>
+            <li>Un ISBN único y gratuito para cada versión de su libro (por un valor de $125) </li>
+            <li>Material impreso tal como se ve en pantalla gracias a un perfil de color creado a la medida de nuestras impresoras</li>
+            <li>Contenedores de texto ajustables</li>
+            <li>Importación de formato de texto enriquecido (RTF) para libros basados en texto</li>
+            <li>Importación de sus archivos de libros de Blurb existentes (creados en BookSmart o Bookify)</li>
+          </ul>
+        
+        <p class="product-highlight__copy">	BookWright es increíblemente intuitivo, pero creamos una <a href="/guides/bookwright/booksmart-or-bookify-importing">guía de usuario detallada</a> para ayudarlo a comenzar.</p>
+
+        <div class="product-highlight__cta">
+          <a href="/my/account/register?jumpto=http%3A//www.blurb.com/bookwright%3Fregister%3Dtrue" class="cta  btn  btn--inline  btn--border-black">Descargar BookWright</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div> 
