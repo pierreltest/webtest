@@ -1,9 +1,18 @@
 require "open-uri"
 require "bundler/capistrano"
 require 'date'
+require 'esa_tasks/recipes/seafile'
+
 #require 'debugger'
 
 load :string => Kernel.open("#{fetch(:bud_root, 'http://repo.blurb.com/bud')}/config/deploycommon.rb", 'r', &:read)
+
+# quickbuild images are deployed under /data/drupal/quickbuild_images/contents
+set :seafile_deploy_root, '/data/drupal/quickbuild_images'
+set :seafile_library, 'quickbuild_images'
+role(:seafile) do
+  find_servers(:roles => :drupal, :only => {:primary => true})
+end
 
 namespace :deploy do
   task :default do
@@ -34,5 +43,11 @@ namespace :quickbuild do
     ensure
       run("rm -f #{temp_name}; rm -rf /tmp/quickbuild")
     end
+    deploy_images
+  end
+
+  desc 'Deploy quickbuild images from seafile'
+  task :deploy_images do
+    seafile.sync
   end
 end
