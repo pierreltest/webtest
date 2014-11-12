@@ -43,7 +43,7 @@ namespace :quickbuild do
     ensure
       run("rm -f #{temp_name}; rm -rf /tmp/quickbuild")
     end
-    deploy_images
+    deploy_images if fetch(:deploy_images,false)
   end
 
   desc 'Deploy quickbuild images from seafile'
