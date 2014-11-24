@@ -199,6 +199,24 @@ currencies:
   es-la: "USD"
   fr-ca: "CAD"
 
+bookulator_strings:
+  en:
+    title: Bookulator
+  de:
+    title: Preise für Fotobücher
+  en-gb:
+    title: Photo book pricing
+  es:
+    title: Precios de libros de fotografías
+  fr:
+    title: Tarifs des livres photo
+  it:
+    title: Listino fotolibri
+  nl:
+    title: Prijzen van fotoboeken
+  pt-br:
+    title: Preços de livros fotográficos
+
 # Global strings
 strings:
 
