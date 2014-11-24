@@ -203,19 +203,19 @@ bookulator_strings:
   en:
     title: Bookulator
   de:
-    title: Preise für Fotobücher
+    title: Bookulator
   en-gb:
-    title: Photo book pricing
+    title: Bookulator
   es:
-    title: Precios de libros de fotografías
+    title: Bookulator
   fr:
-    title: Tarifs des livres photo
+    title: Bookulator
   it:
-    title: Listino fotolibri
+    title: Bookulator
   nl:
-    title: Prijzen van fotoboeken
+    title: Bookulator
   pt-br:
-    title: Preços de livros fotográficos
+    title: Bookulator
 
 # Global strings
 strings:
