@@ -43,7 +43,10 @@ namespace :quickbuild do
     ensure
       run("rm -f #{temp_name}; rm -rf /tmp/quickbuild")
     end
-    deploy_images if fetch(:deploy_images,false)
+    if fetch(:deploy_images,false)
+      deploy_images
+      run "if [ -d /data/drupal/buildkit ]; then mv /data/drupal/buildkit /data/drupal/buildkit_old; fi && ln -fs #{seafile_deploy_root}/contents /data/drupal/buildkit"
+    end
   end
 
   desc 'Deploy quickbuild images from seafile'
