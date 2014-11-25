@@ -4,7 +4,7 @@
 <!-- Add Pricing Module 23 -->
 <div class="module  pricing-module" data-controller="pricing">
   <div class="grid-construct">
-    <h2 class="pricing--heading">Bookulator</h2>
+    <h2 class="pricing--heading">{% if site.bookulator_strings[language].title %}{{ site.bookulator_strings[language].title }}{% else %}Bookulator{% endif %}</h2>
       <div class="pricing--accordion-palette">
         <div class="js-options-groups-container"></div>
 

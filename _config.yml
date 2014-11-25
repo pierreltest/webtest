@@ -199,6 +199,24 @@ currencies:
   es-la: "USD"
   fr-ca: "CAD"
 
+bookulator_strings:
+  en:
+    title: Bookulator
+  de:
+    title: Bookulator
+  en-gb:
+    title: Bookulator
+  es:
+    title: Bookulator
+  fr:
+    title: Bookulator
+  it:
+    title: Bookulator
+  nl:
+    title: Bookulator
+  pt-br:
+    title: Bookulator
+
 # Global strings
 strings:
 
