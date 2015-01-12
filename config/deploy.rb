@@ -22,7 +22,7 @@ end
 
 namespace :quickbuild do
   task :deploy, :roles => [:drupal], :only => {:primary => true} do
-    set :user, 'blurbapp'
+    set :user, fetch(:user, 'blurbapp')
     output = `set -e; bundle exec jekyll build; tar -czf quickbuild.tar.gz -C _site quickbuild;`
     puts(output)
     temp_name = DateTime.now.strftime("/tmp/quickbuild_%Y_%m_%d_%H%M%S.tar.gz")
@@ -45,7 +45,7 @@ namespace :quickbuild do
     end
     if fetch(:deploy_images,false)
       deploy_images
-      run "if [ -d /data/drupal/buildkit ]; then mv /data/drupal/buildkit /data/drupal/buildkit_old; fi && ln -fs #{seafile_deploy_root}/contents /data/drupal/buildkit"
+      run "if [ -d /data/drupal/buildkit ]; then rm -rf /data/drupal/buildkit; fi && ln -fs #{seafile_deploy_root}/contents /data/drupal/buildkit"
     end
   end
 
