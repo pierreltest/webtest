@@ -22,7 +22,7 @@ end
 
 namespace :quickbuild do
   task :deploy, :roles => [:drupal], :only => {:primary => true} do
-    set :user, 'blurbapp'
+    set :user, fetch(:user, 'blurbapp')
     output = `set -e; bundle exec jekyll build; tar -czf quickbuild.tar.gz -C _site quickbuild;`
     puts(output)
     temp_name = DateTime.now.strftime("/tmp/quickbuild_%Y_%m_%d_%H%M%S.tar.gz")
