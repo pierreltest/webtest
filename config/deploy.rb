@@ -31,7 +31,7 @@ namespace :quickbuild do
       "rm -rf /tmp/quickbuild",
       "tar -xzf #{temp_name} -C /tmp",
       "mkdir -p #{drupal_target}",
-      "cp -f /tmp/quickbuild/* #{drupal_target}"
+      "rsync -avz --delete /tmp/quickbuild/ #{drupal_target}"
       ]
     begin
       upload("quickbuild.tar.gz", temp_name)
