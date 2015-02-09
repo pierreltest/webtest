@@ -3201,3 +3201,15 @@ types&mdash;you can choose the ideal combination to fit your creative preference
 
   </div>
 </div>
+<script>
+  (function ($) {
+    $('.ts__option-item--download a').click(function () {
+      _GA.track([
+        '_trackEvent',
+        'Download',
+        'Click-blurb',
+        $(this).attr('href').toLowerCase()
+      ]);
+    });
+  })(jQuery);
+</script>
