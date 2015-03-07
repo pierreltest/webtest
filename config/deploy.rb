@@ -46,6 +46,7 @@ namespace :quickbuild do
     if fetch(:deploy_images,false)
       deploy_images
       run "if [ -d /data/drupal/buildkit ]; then rm -rf /data/drupal/buildkit; fi && ln -fs #{seafile_deploy_root}/contents /data/drupal/buildkit"
+      run "if [ -d /data/apps/drupal/current/drupal/sites/default/files ]; then ln -sf #{seafile_deploy_root}/contents /data/apps/drupal/current/drupal/sites/default/files/buildkit; fi"
     end
   end
 
