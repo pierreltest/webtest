@@ -4,5 +4,5 @@ source 'http://repo.blurb.com/gem_repo'
 gem 'jekyll'
 
 group :deploy do
-  gem 'esa_tasks', :git => 'git@git.blurb.com:blurb/esa_tasks.git', :branch => 'master'
+  gem 'esa_tasks', :git => 'git@github.com:blurb/esa_tasks.git', :branch => 'master'
 end
