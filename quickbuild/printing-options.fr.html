@@ -47,7 +47,7 @@ partner_tracking: true
           <div class="compare-table__cell-answer">51-100 livres</div>
         </td>
         <td class="compare-table__td">
-          <div class="compare-table__cell-answer">101+ livres</div>
+          <div class="compare-table__cell-answer">+ de 101 livres</div>
         </td>
         <td class="compare-table__td">
           <div class="compare-table__cell-answer">Projets spéciaux</div>
@@ -85,11 +85,11 @@ partner_tracking: true
     </div>
     <div class="two-half-columns__col  two-half-columns__col--right">
       <h5>IMPRESSION À LA DEMANDE</h5>
-      <h6>Un minimum de 1 livre ou 1 magazine</h6><br />
+      <h6>1 livre ou 1 magazine minimum</h6><br />
       <p><a href="/on-demand-book-printing">L’impression à la demande</a> vous permet d’imprimer des exemplaires en fonction de vos besoins, avec un délai de livraison d’approximativement une semaine. </p> 
       <p>Vous pouvez aussi vendre vos <a href="/distribution-options">livres en ligne</a> avec Blurb, votre propre site web, Amazon ou à l’échelle mondiale.</p> 
       <p>Blurb gère le traitement des commandes&nbsp;: l’impression, la livraison et le service à la clientèle. </p>
-      <p>Faites baisser le <a href="/pricing-calculator">prix</a> par copie avec une commande en grande quantité.</p>
+      <p>Passez une commande de grande quantité pour faire baisser le <a href="/pricing-calculator">prix</a> par exemplaire.</p>
     </div>
   </div>
 </div>
@@ -110,8 +110,8 @@ partner_tracking: true
     <div class="two-half-columns__col  two-half-columns__col--right">
       <h5>Entreposage et exécution des commandes</h5>
       <h6>101 exemplaires ou plus</h6><br />
-      <p>Laissez Blurb se charger de l’entreposage, du traitement des commandes et de la livraison des commandes importantes. Nous entreposerons vos livres dans un entrepôt et les livrerons au fur et à mesure que vos clients les commanderont. <a href="/volume-purchase-fulfillment">En savoir plus</a></p>
-      <p>101 à 299 exemplaires, envoyez-nous un e-mail à <a href="mailto:warehousing@blurb.com">warehousing@blurb.com</a> <br />300 exemplaires ou plus, <a href="#quote-form" class="js-smooth-scroll">contactez-nous</a>.</p>
+      <p>Laissez Blurb se charger de l’entreposage, du traitement des commandes et de la livraison des commandes importantes. Nous garderons vos livres dans un entrepôt et les livrerons au fur et à mesure que vos clients les commanderont. <a href="/volume-purchase-fulfillment">En savoir plus</a></p>
+      <p>Pour 101 à 299 exemplaires, envoyez-nous un e-mail à : <a href="mailto:warehousing@blurb.com">warehousing@blurb.com</a> <br />Pour 300 exemplaires ou plus, <a href="#quote-form" class="js-smooth-scroll">veuillez nous contacter</a>.</p>
     </div>
   </div>
 </div>
@@ -130,7 +130,7 @@ partner_tracking: true
     <div class="two-half-columns__col  two-half-columns__col--right">
       <h5>Livres sur mesure</h5>
       <h6>300 livres ou plus</h6><br />
-      <p>Vous avez une excellente idée de livre, mais elle ne peut être menée à bien avec les formats standards. Ou peut-être que vous ne pouvez imaginer un livre sans marque-page. Vous avez votre idée en tête, ce que nous comprenons bien.</p>
+      <p>Vous avez une excellente idée de livre en tête, mais les formats standards ne suffisent pas pour mener à bien ce projet, ou vous ne pouvez imaginer votre livre sans marque-page. Bref, vous savez ce que vous voulez, ce que nous comprenons tout à fait.</p>
       <p>C’est pourquoi nous proposons une <a href="/custom-book-options">impression de livre entièrement sur mesure</a>, avec notamment la dorure à chaud, le gaufrage en relief, des tranchefiles, des rubans, des pages de garde personnalisées et des formats personnalisés. <a href="/custom-book-options">En savoir plus</a></p>
       <p><a href="#quote-form" class="btn--inline  btn--border-black  js-smooth-scroll">Contactez-nous</a></p>
       
@@ -154,7 +154,7 @@ partner_tracking: true
       <h5>Impression offset</h5>
       <h6>750 exemplaires ou plus</h6><br />
       <p>Pour les projets de grande envergure, l’impression offset permet de réduire les coûts de façon significative. Une fois que vous avez approuvé votre épreuve et passé votre commande, l’impression et la livraison prennent entre 6 à 10 semaines.</p>
-      <p>Optez pour la livraison de votre commande entière en une seule fois ou utilisez notre service d’entreposage et d’exécution de <a href="/volume-purchase-fulfillment">commandes</a>&nbsp;: nous entreposons vos livres jusqu’à ce que vous soyez prêt à les livrer, en grande quantité ou par commande individuelle.</p>
+      <p>Optez pour la livraison de l’ensemble de votre commande en une seule fois ou utilisez notre service d’entreposage et d’exécution de <a href="/volume-purchase-fulfillment">commandes</a>&nbsp;: nous entreposons vos livres jusqu’à ce que vous soyez prêt à les livrer, en grande quantité ou par commande individuelle.</p>
       <p>L’impression offset est une solution idéale pour les projets financés par les plateformes de financement collectif comme Kickstarter. <a href="/offset-printing">En savoir plus</a></p>
       <p><a href="#quote-form" class="btn--inline  btn--border-black  js-smooth-scroll">Contactez-nous</a></p>
     </div>
@@ -267,7 +267,7 @@ partner_tracking: true
 
       if (!validateEmail($j('input#email').val())) {
         form_valid = false;
-        corrections += '<br>&bull; ' + Drupal.t("Valid email address");
+        corrections += '<br>&bull; ' + Drupal.t("E-mail valide");
         $j('input#email').val($j('input#email').attr('defaultValue'));
         $j('input#email').removeAttr("style")
         $j('input#email').css("border", "1px solid red");
@@ -301,7 +301,7 @@ partner_tracking: true
       }
       else {
         //display corrections required of user
-        $j('#error_text').html('<font color="red">' + Drupal.t("Please re-submit with the following information:") + corrections + '</font>');
+        $j('#error_text').html('<font color="red">' + Drupal.t("Veuillez indiquer les informations suivantes:") + corrections + '</font>');
       }
     });
 
@@ -456,7 +456,7 @@ partner_tracking: true
 
               <div class="form-row form-row--centered form-row--compact">
                 <select class="js-selectmenu" id="00N60000002dSoC" name="00N60000002dSoC"
-                  title="Project intent" data-placeholder="Objectif du projet*">
+                  title="Nature du projet" data-placeholder="Nature du projet*">
                   <option></option>
                   <option
                   value="Personal book">Livre personnel
@@ -472,7 +472,7 @@ partner_tracking: true
 
               <div class="form-row form-row--centered form-row--compact">
                 <select class="js-selectmenu" id="00N60000002dSoH" name="00N60000002dSoH"
-                  title="When needed" data-placeholder="Quand le projet doit-il être prêt*">
+                  title="Délai du projet" data-placeholder="Pour quand ? *">
                   <option></option>
                   <option
                   value="This month">Ce mois-ci
@@ -481,7 +481,7 @@ partner_tracking: true
                   value="Next month">Le mois prochain
                   </option>
                   <option
-                  value="Within three months">Dans trois mois
+                  value="Within three months">Dans 3 mois
                   </option>
                   <option
                   value="3-6 months">Dans 3 à 6 mois
@@ -498,7 +498,7 @@ partner_tracking: true
 
               <div class="form-row form-row--centered form-row--compact">
                 <select class="js-selectmenu" id="00N60000002DKm4" name="00N60000002DKm4"
-                  title=" Quantity needed"
+                  title="Quantité requise"
                   class="id-quantity_needed"
                   data-placeholder="Quantité requise*">
                   <option></option>
