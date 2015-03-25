@@ -1,6 +1,6 @@
 GIT
-  remote: git@git.blurb.com:blurb/esa_tasks.git
-  revision: 67088ce71aca1183b667d846f35e08878be8e3cd
+  remote: git@github.com:blurb/esa_tasks.git
+  revision: 46b2e138d05f87136a4ee97974eecb27995aefdd
   branch: master
   specs:
     esa_tasks (0.0.3)
@@ -10,7 +10,7 @@ GIT
       diff-lcs (~> 1.1)
       grit (= 2.5.0)
       json (>= 1.5.5)
-      nokogiri (= 1.5.11)
+      nokogiri (= 1.6.3.1)
       rest-client (~> 1.6.7)
 
 GEM
@@ -44,7 +44,7 @@ GEM
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
       posix-spawn (~> 0.3.6)
-    highline (1.6.21)
+    highline (1.7.1)
     hitimes (1.2.2)
     jekyll (2.4.0)
       classifier-reborn (~> 2.0)
@@ -69,7 +69,7 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.1.1)
       listen (~> 2.7)
-    json (1.8.1)
+    json (1.8.2)
     kramdown (1.4.2)
     liquid (2.6.1)
     listen (2.7.9)
@@ -78,14 +78,16 @@ GEM
       rb-inotify (>= 0.9)
     mercenary (0.3.4)
     mime-types (1.25.1)
+    mini_portile (0.6.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
-    net-ssh (2.9.1)
+    net-ssh (2.9.2)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    nokogiri (1.5.11)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.9)
@@ -95,7 +97,7 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rdoc (4.1.2)
+    rdoc (4.2.0)
       json (~> 1.4)
     redcarpet (3.1.2)
     rest-client (1.6.8)
