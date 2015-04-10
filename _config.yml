@@ -201,21 +201,21 @@ currencies:
 
 bookulator_strings:
   en:
-    title: Bookulator
+    title: Pricing Calculator
   de:
-    title: Bookulator
+    title: Preisrechner
   en-gb:
-    title: Bookulator
+    title: Pricing Calculator
   es:
-    title: Bookulator
+    title: Calculadora de precios
   fr:
-    title: Bookulator
+    title: Calculatrice de prix 
   it:
-    title: Bookulator
+    title: Calcolatore di prezzi
   nl:
-    title: Bookulator
+    title: Prijscalculator
   pt-br:
-    title: Bookulator
+    title: Calculadora de Preços 
 
 # Global strings
 strings:
