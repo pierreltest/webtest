@@ -1,9 +1,0 @@
-<script>
-  (function ($) {
-    var qs = $.deparam.querystring();
-    if (qs.ce) {
-      var ceUrl = '/home/ce_track?ce=' + encodeURIComponent(qs.ce);
-      $.post(ceUrl);
-    }
-  })(jQuery);
-</script>
