@@ -1,0 +1,7 @@
+{% assign page_path_parts = page.path | split:"." %}
+{% if page_path_parts[0] != "quickbuild/homepage" && page_path_parts[0] != "quickbuild/home2" %}
+<section class="module email-signup" data-controller="emailSignup/emailSignup">
+  <button type="button" role="button" class="email-signup__btn-close"></button>
+  <div class="email-signup__content"></div>
+</section>
+{% endif %}
