@@ -20,10 +20,6 @@ role(:seafile) do
 end
 
 namespace :deploy do
-  task :default do
-    raise("Don't call this! Use quickbuild:deploy")
-  end
-  
   task :update_code, :except => { :no_release => true } do
     transaction do
       on_rollback { run "rm -rf #{release_path}; true" }
