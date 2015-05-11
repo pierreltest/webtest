@@ -2,6 +2,7 @@ require "open-uri"
 require "bundler/capistrano"
 require 'date'
 require 'esa_tasks/recipes/seafile'
+require 'esa_tasks/recipes/static_app'
 
 # for static deploy
 set :application, 'website'
