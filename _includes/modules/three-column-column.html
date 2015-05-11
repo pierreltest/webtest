@@ -1,0 +1,21 @@
+{% if include.order == "first" %}
+  {% assign order-class = "three-column-ctas__column--first" %}
+  <div class="module  three-column-ctas  ">
+    <div class="grid-construct">
+{% elsif include.order == "last" %} 
+  {% assign order-class = "three-column-ctas__column--last" %}
+{% else %}
+  {% assign order-class = "" %}
+{% endif %}
+
+
+    <div class="three-column-ctas__column  {{ order-class }}">
+      <h5>{{ include.header }}</h5>
+      <div class="three-column-ctas__text">{{ include.text }}</div>
+    </div>
+
+
+{% if include.order == "last" %}
+  </div>
+</div>
+{% endif %}

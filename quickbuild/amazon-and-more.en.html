@@ -7,38 +7,10 @@ meta_description: "Publish your own book with Blurb, sell on Amazon. Self-publis
 partner_tracking: true
 ---
 
-<!-- Add Page Banner Module 1 -->
+{% include modules/page-banner.html headline='Amazon & More' copy='Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.' banner_image_url='/sites/default/files/buildkit/Amazon-and-beyond.jpg' %}
 
- <div class="module  page-banner">
-  <div class="page-banner__bg">
-    <div class="grid-construct">
-      <div class="page-banner__inner-wrap">
-        <div class="page-banner__image" style="background-image: url('/sites/default/files/buildkit/Amazon-and-beyond.jpg');">
-        </div>
-        <div class="page-banner__content">
-          <h1 class="page-banner__headline">Amazon & More</h1>
-          <div class="page-banner__content-divider"></div>
-          <p class="page-banner__copy">Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.</p>
-          <div class="page-banner__content-divider"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="grid-construct">
-  </div>
-</div>
-<!-- End Page Banner Module 1 -->
-    
-<!--Add  2 Column Content -->
- <div class="module  two-half-columns">
-  <div class="grid-construct two-half-columns__wrapper">
-    <div class="two-half-columns__col  two-half-columns__col--left">
-      <div class="colored-header-column__bg  js-expand-wrap  open">
-      <div class="colored-header-column__header  colored-header-column__header--gray  js-expand-trigger">
-        <div class="colored-header-column__header-text">SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM</div>
-      </div>
-     </div>
-     <br />
+{% include modules/two-half-column-left-start.html  header='SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM' color='gray' %}
+<br />
      <p>Make any <a href="/trade-books">Trade Book</a> available to Amazon, Barnes & Noble, and 39,000 online bookstores.</p>
        <ul>
          <li>You control the list price and decide the retail seller fees</li>
@@ -46,15 +18,11 @@ partner_tracking: true
          <li>Available for trade books only</li>
        </ul><br />
        <p>Trade books can be created with <a href="/bookwright">BookWright</a> and our <a href="/indesign-plugin">InDesign Plug-in</a>. Want to learn more about global distribution through Ingram? <a href="/global-distribution">Check out our FAQ</a>.</p>
-       <p><a href="/trade-books" class="btn--inline  btn--border-black  js-smooth-scroll">Create a Trade Book</a></p>
-    </div>
-    
-    <div class="two-half-columns__col  two-half-columns__col--right">
-    <div class="colored-header-column__bg  js-expand-wrap  open">
-      <div class="colored-header-column__header  colored-header-column__header--orange  js-expand-trigger">
-        <div class="colored-header-column__header-text">SELL ON <span class="colored-header-column__vendor-text">AMAZON</span></div>
-      </div>
-     </div>
+       <p>
+         {% include modules/black-button.html text='Create a Trade Book' url='/trade-books' %}
+       </p>
+{% include modules/two-half-column-left-end.html %}
+{% include modules/two-half-column-right-start.html header='SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>' color='orange' %}
      <br />
       <p>Sell any <a href="/photo-books">Photo Book</a> on Amazon.com only.</p>
        <ul>
@@ -62,28 +30,12 @@ partner_tracking: true
          <li>Blurb handles printing, fulfillment, and shipping for all orders made through Amazon. <a href="/printing-options#warehousing">Warehousing options</a> available for volume orders.</li>
        </ul><br />
        <p>Photo books can be created with <a href="/bookmaking-tools">any of our tools</a>. More questions about selling on Amazon? <a href="/amazon-distribution">Check out the FAQ</a>.</p>
-       <p><a href="/photo-books" class="btn--inline  btn--border-black  js-smooth-scroll">Create a Photo Book</a></p>
-    </div>
-  </div>
-</div>
-<!-- End 2 Column Content -->
+       <p>
+         {% include modules/black-button.html url='/photo-books' text='Create a Photo Book' %}
+       </p>
+{% include modules/two-half-column-right-end.html %}
 
-<!-- Add Three Column CTA Module 2 -->
-<div class="module  three-column-ctas  ">
-  <div class="grid-construct">
-    <div class="three-column-ctas__column  three-column-ctas__column--first">
-      <h5>Already made a book?</h5>
-      <div class="three-column-ctas__text">Decide where you want to <a href="/sell-and-distribute">sell your book</a>.</div>
-    </div>
-    <div class="three-column-ctas__column">
-      <h5>GET STARTED</h5>
-      <div class="three-column-ctas__text">Select the right format for your book and <a href="/bookmaking-tools">get started</a>.</div>
-    </div>
-    <div class="three-column-ctas__column  three-column-ctas__column--last">
-      <h5>HIRE AN EXPERT</h5>
-      <div class="three-column-ctas__text">Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.</div>
-    </div>
-  </div>
-</div>
-<!-- End Three Column CTA Module 2 -->
 
+{% include modules/three-column-column.html header='Already made a book?' text='Decide where you want to <a href="/sell-and-distribute">sell your book</a>.' order='first'%}
+{% include modules/three-column-column.html header='GET STARTED' text='Select the right format for your book and <a href="/bookmaking-tools">get started</a>.' %}
+{% include modules/three-column-column.html header='HIRE AN EXPERT' text='Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.' order='last' %}
