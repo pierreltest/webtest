@@ -1,6 +1,14 @@
 # Build settings
 markdown: kramdown
-exclude: [vendor]
+exclude:
+  - "vendor"
+  - "Rakefile"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "bower.json"
+  - "config"
+  - "capfile"
 
 # Site settings
 language_selector:
