@@ -5,10 +5,9 @@ require 'esa_tasks/recipes/seafile'
 
 # for static deploy
 set :application, 'website'
-set :jenkins_job, 'website-Artifact'
+set :jenkins_job, "#{application}-Artifact"
 set :artifact_name, 'website.tar.gz'
 set (:artifact_url) { jenkins_build_artifact_urls.find { |u| u =~ /#{artifact_name}$/ } }
-
 
 load :string => Kernel.open("#{fetch(:bud_root, 'http://repo.blurb.com/bud')}/config/deploycommon.rb", 'r', &:read)
 
