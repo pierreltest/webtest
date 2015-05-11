@@ -3,7 +3,12 @@ require "bundler/capistrano"
 require 'date'
 require 'esa_tasks/recipes/seafile'
 
-#require 'debugger'
+# for static deploy
+set :application, 'website'
+set :jenkins_job, 'website-Artifact'
+set :artifact_name 'website.tar.gz'
+set (:artifact_url) { jenkins_build_artifact_urls.find { |u| u =~ /#{artifact_name}$/ } }
+
 
 load :string => Kernel.open("#{fetch(:bud_root, 'http://repo.blurb.com/bud')}/config/deploycommon.rb", 'r', &:read)
 
@@ -17,6 +22,20 @@ end
 namespace :deploy do
   task :default do
     raise("Don't call this! Use quickbuild:deploy")
+  end
+  
+  task :update_code, :except => { :no_release => true } do
+    transaction do
+      on_rollback { run "rm -rf #{release_path}; true" }
+      artifact = File.basename(artifact_url)
+      runCommands <<-UPDATE_CODE
+        mkdir -p #{release_path}
+        cd #{release_path}
+        wget -q #{artifact_url} -O #{artifact}
+        tar zxf #{artifact} --warning=none
+        rm -f #{artifact}
+      UPDATE_CODE
+    end
   end
 end
 
