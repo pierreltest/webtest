@@ -1,4 +1,4 @@
-# Quickbuild
+# Blurb.com Website
 
 Static site generator for CMS page layouts.
 
