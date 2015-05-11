@@ -6,7 +6,7 @@ require 'esa_tasks/recipes/seafile'
 # for static deploy
 set :application, 'website'
 set :jenkins_job, 'website-Artifact'
-set :artifact_name 'website.tar.gz'
+set :artifact_name, 'website.tar.gz'
 set (:artifact_url) { jenkins_build_artifact_urls.find { |u| u =~ /#{artifact_name}$/ } }
 
 
