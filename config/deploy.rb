@@ -4,22 +4,19 @@ require 'esa_tasks/recipes/static_app'
 
 # for static deploy
 set :application, 'website'
-set(:jenkins_job) { "#{application}-Artifact" }
+set(:jenkins_job) { "#{application}-#{branch}" }
 set(:artifact_name) { "#{application}.tar.gz" }
-set(:artifact_url) { jenkins_build_artifact_urls.find { |u| u =~ /#{artifact_name}$/ } }
 
-namespace :deploy do
-  task :update_code, :except => { :no_release => true } do
-    transaction do
-      on_rollback { run "rm -rf #{release_path}; true" }
-      artifact = File.basename(artifact_url)
-      runCommands <<-UPDATE_CODE
-        mkdir -p #{release_path}
-        cd #{release_path}
-        wget -q #{artifact_url} -O #{artifact}
-        tar zxf #{artifact} --warning=none
-        rm -f #{artifact}
-      UPDATE_CODE
-    end
+before 'website:deploy' do
+  set :jenkins_host, "jenkins.blurb.com"
+  set :artifact_number, "lastSuccessfulBuild" unless exists?(:artifact_number)
+  set :artifact_job, "#{application}-#{branch}" unless exists?(:artifact_job)
+  set :artifact_url, "http://#{jenkins_host}/job/#{artifact_job}/#{artifact_number}/artifact/#{artifact_name}" unless exists?(:artifact_url)
+end
+
+namespace :website do
+  task :deploy, :roles => :web, :except => { :no_release => true } do
+    static.update_code
+    top.deploy.symlink
   end
 end
