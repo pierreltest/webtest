@@ -3,5 +3,5 @@ _site
 vendor
 .bundle
 config/deploy
-pages/assets
+pages/assets/bower
 
