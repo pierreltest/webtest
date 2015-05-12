@@ -3,5 +3,5 @@ _site
 vendor
 .bundle
 config/deploy
-bower_components
-quickbuild.tar.gz
+pages/assets
+

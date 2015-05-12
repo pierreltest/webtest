@@ -1,4 +1,5 @@
 # Build settings
+source: pages
 markdown: kramdown
 exclude:
   - "vendor"
@@ -9,7 +10,14 @@ exclude:
   - "bower.json"
   - "config"
   - "capfile"
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "main"
 
+  
 # Site settings
 language_selector:
   en: "http://www.blurb.com"
