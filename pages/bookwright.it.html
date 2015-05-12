@@ -1,0 +1,93 @@
+---
+
+href: /bookwright
+headerMenu: create 
+title: "BookWright: Potente strumento per la pubblicazione di libri"
+meta_description: "Scarica Blurb BookWright: software per la pubblicazione autonoma gratuito e adatto a tutti. Progetta e pubblica splendidi fotolibri, libri tascabili, riviste e e-book"
+partner_tracking: true 
+---
+<script>
+  $j(window).load(function() {
+    var l = this.location.href;
+    var n = l.indexOf("download=true");
+    if (n > 0 )
+    {
+      var downloadPath ="";
+      var isOSX = (navigator.platform.indexOf('Mac') >= 0);
+      if(isOSX)
+      {
+        downloadPath = '/downloadbookwrightmac';
+        _GA.track(['_trackEvent','BookWright','Download','mac']);
+      } else {
+        downloadPath = '/downloadbookwrightwin';
+        _GA.track(['_trackEvent','BookWright','Download','win']);
+      }
+
+      path = downloadPath;
+      window.location.assign(path);
+
+    }
+  });
+</script>
+
+  <div class="module  page-banner">
+    <div class="page-banner__bg">
+      <div class="grid-construct">
+        <div class="page-banner__inner-wrap">
+          <div class="page-banner__image" style="background-image: url('/sites/default/files/buildkit/1_Banner-bookwright.jpg');">
+          </div>
+          <div class="page-banner__content">
+            <h1 class="page-banner__headline">BookWright</h1>
+            <div class="page-banner__content-divider"></div>
+            <p class="page-banner__copy">BookWright è l'unico strumento di desktop publishing creato per la pubblicazione di libri, riviste su carta e e-book con aspetto professionale. Non dovrai consultare un designer, conoscere codici né acquistare software costosi.</p>
+            <div class="page-banner__content-divider"></div>
+            <p>
+            <a href="/my/account/register?jumpto=/bookwright%3Fdownload%3Dtrue" class="page-banner__cta  btn  btn--white  btn--inline">Scarica BookWright</a>
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<div class="module  product-highlight">
+  <div class="grid-construct">
+    <div class="product-highlight__wrapper clearfix">
+
+<div class="product-highlight--left"><img src="/sites/default/files/buildkit/15_Product-Highlight_bookwright.png" alt=""><br />
+</div>
+      <div class="product-highlight--right">
+
+        <h2 class="headline--small">Uno strumento di creazione per la creatività che c’è in ognuno di noi</h2>
+
+        <p class="product-highlight__copy">BookWright è un'applicazione potente per design e layout multifunzione per la creazione di fotolibri, libri tascabili, riviste e e-book. È semplice da usare e gratuito. Ecco le funzionalità:
+        </p>
+          <ul>
+            <li>Layout gratuiti, scaricabili e progettati con <a href="/templates">aspetto professionale</a> (o possibilità di creare i tuoi)</li>
+            <li>Stampa di libri, e-book o PDF con lo stesso file di progetto</li>
+            <li>ISBN univoco e gratuito per ogni versione del libro</li>
+            <li>Stampa super fedele grazie al profilo colori incorporato per le nostre stampanti</li>
+            <li>Riquadri di testo con adattamento automatico</li>
+            <li>Importazione Rich Text Format (RTF) per libri basati sul testo</li>
+            <li>Importazione dei file Blurb esistenti (creati con BookSmart o Bookify)</li>
+          </ul>
+        
+       <p class="product-highlight__copy">Risorse per BookWright:<br /><a href="/guides/bookwright-how-to">Guida dettagliata per l'utente</a></p> Requisiti di sistema <span class="icon  plus-circle--blue  js-tooltip-target"></span>
+        <div class="formats-drawer__tip  js-tooltip-text">
+          <div class="formats-drawer__tip-heading"><strong class="formats-drawer__format-name">Requisiti minimi di sistema</strong></div>
+            <p>Windows: XP, Vista, Windows 7, Windows 8<br /> Processore Intel Pentium Dual-Core o AMD Athlon II<br /> 2 GB di RAM<br /> 500 MB di spazio disponibile su disco<br /> Risoluzione schermo: 1280x800<br /> Connessione a Internet necessaria per la pubblicazione</p>
+            <p>Mac OSX: 10.6, 10.7, 10.8, 10.9, 10.10<br /> Processore Intel Core 2 Duo<br /> 2 GB di RAM<br /> 500 MB di spazio disponibile su disco<br /> Risoluzione schermo: 1280x800<br /> Connessione a Internet necessaria per la pubblicazione</p>
+        </div>
+
+        <p></p>
+
+        <div class="product-highlight__cta">
+          <a href="/my/account/register?jumpto=/bookwright%3Fdownload%3Dtrue" class="cta  btn  btn--inline  btn--border-black">Scarica BookWright</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div> 
