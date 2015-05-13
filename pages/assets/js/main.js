@@ -4,17 +4,27 @@
 
   var is_url_element = function(account_element) { return account_element.type == 'url'; };
   var is_image_element = function(account_element) { return account_element.type == 'url_with_css_image_hash'; };
+  var social_element_type = function(klass) {
+    if (klass == 'facebook-img') {
+      return 'facebook';
+    } else if (klass == 'google-plus-img') {
+      return 'googleplus';
+    } else if (klass == 'twitter-img') {
+      return 'twitter';
+    }
+  }
   var url_menu_element = function(url, text) {
     return '<li class="utility__list-item  utility__list-item--show-lg utility__account-menu-item js-utility__account-menu-item"><a class="utility__cta" href="' + url + '">' + text + '</a></li>';
   }
   var image_menu_element = function(klass, url) {
-    return '';
+    var type = social_element_type(klass);
+    return '<li class="utility__list-item  utility__list-item--social  utility__list-item--show-lg"><a class="utility__cta" href="' + url + '"><span class="icon  social--utility--' + type  + '--blue"></span></a></li>';
   }
   var menu_element = function(account_element) {
     if (is_url_element(account_element)) {
       return url_menu_element(account_element.url, account_element.text);
     } else if (is_image_element(account_element)) {
-      return image_menu_element(account_element.klass, account_element.url);
+      return image_menu_element(account_element.class, account_element.url);
     } else {
       return '';
     }
