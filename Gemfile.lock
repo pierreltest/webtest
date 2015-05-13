@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:blurb/esa_tasks.git
-  revision: 77043ed45adff3ca316ea5419db6511e63f556cf
+  revision: 1522cd80835147403b250dd28986918f8e6324c5
   branch: master
   specs:
     esa_tasks (0.0.6)
@@ -117,3 +117,6 @@ PLATFORMS
 DEPENDENCIES
   esa_tasks!
   jekyll
+
+BUNDLED WITH
+   1.10.0.pre.2
