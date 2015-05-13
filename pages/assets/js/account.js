@@ -7,7 +7,7 @@ Account = (function() {
     this.domain = domain;
     this._ = _;
     this.$ = $;
-    this.endpoint = 'http://' + this.domain + this.path;
+    this.endpoint = document.location.protocol + '//' + this.domain + this.path;
   }
 
   Account.prototype.render = function(targetEl) {
