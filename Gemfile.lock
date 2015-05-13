@@ -117,6 +117,3 @@ PLATFORMS
 DEPENDENCIES
   esa_tasks!
   jekyll
-
-BUNDLED WITH
-   1.10.0.pre.2
