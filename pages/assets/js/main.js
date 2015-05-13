@@ -1,17 +1,17 @@
 (function($, _) {
-  var hostname = function() {
-    var blurblocation = BlurbLocation();
-    var subdomain = blurblocation.subdomain.replace(/-static/, '');
+  // set up the domain
+  var blurblocation = BlurbLocation();
+  var subdomain = blurblocation.baseSubdomain,
+      domain;
 
-    if (subdomain == "website") {
-      return 'master.eng.blurb.com';
-    } else {
-      return subdomain + '.blurb.com';
-    }
+  if (subdomain == "website") {
+    domain = 'master.eng.blurb.com';
+  } else {
+    domain = subdomain + '.blurb.com';
   }
 
-  
-  var account = new BlurbWebsite.Account(_, $, hostname());
+  // set up the account nav
+  var account = new BlurbWebsite.Account(_, $, domain);
   account.render('#block-blurb-menu-blurby-account-menu-v4');
 })($, _)
 
