@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "dependencies": {
     "buildkit": "http://jenkins.blurb.com/view/Buildkit/job/Buildkit-Artifact/405/artifact/build/buildkit-dist.tgz",
-    "blurblocation": "git@github.com:blurb/blurblocation.git"
+    "blurblocation": "http://jenkins.blurb.com/job/BlurbLocation-Master/12/artifact/build/blurblocation.zip"
   }
 }
