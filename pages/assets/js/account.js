@@ -7,7 +7,7 @@ Account = (function() {
     this.domain = domain;
     this._ = _;
     this.$ = $;
-    this.endpoint = this.domain + this.path;
+    this.endpoint = 'http://' + this.domain + this.path;
   }
 
   Account.prototype.render = function(targetEl) {
@@ -66,7 +66,7 @@ Account = (function() {
     }
 
     $.ajax({
-      url: 'http://www.blurb.com/api/v4/navigation/account_menu',
+      url: this.endpoint ,
     })
       .done(function(resp) {
         if (resp.account_menu) {
