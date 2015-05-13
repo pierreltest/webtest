@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:blurb/esa_tasks.git
-  revision: 46b2e138d05f87136a4ee97974eecb27995aefdd
+  revision: 1522cd80835147403b250dd28986918f8e6324c5
   branch: master
   specs:
-    esa_tasks (0.0.3)
+    esa_tasks (0.0.6)
       capistrano (= 2.9.0.1)
       capistrano-ext (= 1.2.1)
       capistrano_colors (= 0.5.5)
@@ -44,7 +44,7 @@ GEM
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
       posix-spawn (~> 0.3.6)
-    highline (1.7.1)
+    highline (1.7.2)
     hitimes (1.2.2)
     jekyll (2.4.0)
       classifier-reborn (~> 2.0)
@@ -90,7 +90,7 @@ GEM
       mini_portile (= 0.6.0)
     parslet (1.5.0)
       blankslate (~> 2.0)
-    posix-spawn (0.3.9)
+    posix-spawn (0.3.11)
     pygments.rb (0.6.0)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
@@ -117,3 +117,6 @@ PLATFORMS
 DEPENDENCIES
   esa_tasks!
   jekyll
+
+BUNDLED WITH
+   1.10.0.pre.2

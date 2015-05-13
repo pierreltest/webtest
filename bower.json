@@ -2,7 +2,7 @@
   "name": "blurb-static",
   "version": "1.0.0",
   "dependencies": {
-    "buildkit": "http://jenkins.blurb.com/view/Buildkit/job/Buildkit-Artifact/401/artifact/build/buildkit-dist.tgz",
+    "buildkit": "http://jenkins.blurb.com/view/Buildkit/job/Buildkit-Artifact/405/artifact/build/buildkit-dist.tgz",
     "blurblocation": "git@github.com:blurb/blurblocation.git"
   }
 }
