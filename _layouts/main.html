@@ -7,7 +7,7 @@
       {% include header.html %}
       <main class="main" role="main">
         {{ content }}
-        {% unless page.name contains 'home' %}
+        {% unless page.name contains 'home' or page.name contains 'index' %}
           {% include email-signup.html %}
         {% endunless %}
       </main>
