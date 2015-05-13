@@ -31,11 +31,16 @@
   }
   var url_menu_sum = function(memo, elem) { return memo + elem; };
 
+  var update_search_url = function(url) {
+    $(nav_selector + ' .utility__list-item--search form').attr('action', url);
+  }
+
   $.ajax({
     url: 'http://www.blurb.com/api/v4/navigation/account_menu',
   })
     .done(function(resp) {
       if (resp.account_menu) {
+        // add the account stuff
         var $list = $(nav_selector + ' ul'); 
         var forward_elements = _.chain(resp.account_menu)
             .filter(is_url_element)
@@ -47,8 +52,12 @@
             .map(menu_element)
             .reduce(url_menu_sum, '')
             .value();
-      $list.prepend(forward_elements);
-      $list.append(backward_elements);
+        $list.prepend(forward_elements);
+        $list.append(backward_elements);
+
+        // update the search url
+        var search_url = _.find(resp.account_menu, function(elem) { return elem.type == "search"; }).url;
+        update_search_url(search_url);
       } else {
         console.log('something is wrong with the account menu response');
       }
