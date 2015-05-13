@@ -1,5 +1,9 @@
 amazon-and-more:
-  title: "spanish title"
-  test1: "spanish test1"
-  test2: "spanish test2"
-  test3: "spanish test3"
+  title: 'SPANISH: Sell your self-published book on Amazon'
+  page-banner:
+    headline: 'SPANISH: Amazone & More'
+    copy: 'SPANISH: Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.'
+    banner_image_url: 'SPANISH: /sites/default/files/buildkit/Amazon-and-beyond.jpg'
+  two-half-column-left-start:
+    header: 'SPANISH: SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
+    color: 'SPANISH: gray'
