@@ -1,5 +1,6 @@
 #languages: ['en', 'en-gb', 'de', 'fr', 'pt', 'it', 'nl', 'es']
 languages: ['en', 'de']
+plugins: _plugins
 
 # Build settings
 source: pages
