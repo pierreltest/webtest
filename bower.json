@@ -2,6 +2,8 @@
   "name": "blurb-static",
   "version": "1.0.0",
   "dependencies": {
+    "jquery": "~1.7.0",
+    "underscore": "1.6.0",
     "buildkit": "http://jenkins.blurb.com/view/Buildkit/job/Buildkit-Artifact/409/artifact/build/buildkit-dist.tgz",
     "blurblocation": "http://jenkins.blurb.com/job/BlurbLocation-Master/12/artifact/build/blurblocation.zip"
   }
