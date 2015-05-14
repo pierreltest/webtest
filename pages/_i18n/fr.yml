@@ -4,7 +4,7 @@ amazon_and_more:
   page_banner:
     headline: 'Amazon et bien plus encore'
     copy: 'Vendez vos livres sur Amazon, Barnes & Noble et plus de <br>39&nbsp;000 librairies en ligne.'
-    banner_image_url: '/sites/default/files/buildkit/Amazon-and-beyond.jpg'
+    banner_image_url: 'assets/images/Amazon-and-beyond.jpg'
   two_half_column_left_start:
     header: 'VENDEZ SUR <span class="colored-header-column__vendor-text">AMAZON</span><br />ET SUR D’AUTRES LIBRAIRIES EN LIGNE AVEC INGRAM'
     color: 'gray'
