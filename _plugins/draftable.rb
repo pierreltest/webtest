@@ -24,8 +24,10 @@ module Jekyll
     def generate(site)
       draft_pages = []
       site.pages.each do |page|
-        draft_pages << page if page.content.include?("{% draft %}")
+        draft_pages << page if page.content.include?("{% draft %}") || page.data['draft'] == true
       end
+
+      site.pages.reject!{|p| p.data['draft'] == true}
 
       puts("Found #{draft_pages.length} pages with draft content")
 
