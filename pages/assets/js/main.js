@@ -7,7 +7,7 @@
   if (subdomain == "website") {
     domain = 'master.eng.blurb.com';
   } else {
-    domain = subdomain + '.blurb.com';
+    domain = subdomain + '.blurb' + blurblocation.domainSuffix;
   }
 
   // set up the account nav
