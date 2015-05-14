@@ -16,19 +16,13 @@ partner_tracking: true
 {% capture two_half_column_left_start_color %}{% t amazon_and_more.two_half_column_left_start.color %}{% endcapture %}
 {% include modules/two-half-column-left-start.html  header=two_half_column_left_start_header color=two_half_column_left_start_color %}
 
-<br />
-<p>Make any <a href="/trade-books">Trade Book</a> available to Amazon, Barnes & Noble, and 39,000 online bookstores.</p>
-       <ul>
-         <li>You control the list price and decide the retail seller fees</li>
-         <li>The book is printed <a href="/printing-options#printondemand">on demand</a> and shipped to the buyer</li>
-         <li>Available for trade books only</li>
-       </ul><br />
-       <p>Trade books can be created with <a href="/bookwright">BookWright</a> and our <a href="/indesign-plugin">InDesign Plug-in</a>. Want to learn more about global distribution through Ingram? <a href="/global-distribution">Check out our FAQ</a>.</p>
-       <p>
-         {% capture two_half_column_left_start_black_button_text %}{% t amazon_and_more.two_half_column_left_start.black_button_text %}{% endcapture %}
-         {% capture two_half_column_left_start_black_button_url %}{% t amazon_and_more.two_half_column_left_start.black_button_url %}{% endcapture %}
-         {% include modules/black-button.html text=two_half_column_left_start_black_button_text url=two_half_column_left_start.black_button_url %}
-       </p>
+{% capture two_half_column_left_start_text %}{% t amazon_and_more.two_half_column_left_start.text %}{% endcapture %}
+{{ two_half_column_left_start_text }}
+<p>
+{% capture two_half_column_left_start_black_button_text %}{% t amazon_and_more.two_half_column_left_start.black_button_text %}{% endcapture %}
+{% capture two_half_column_left_start_black_button_url %}{% t amazon_and_more.two_half_column_left_start.black_button_url %}{% endcapture %}
+{% include modules/black-button.html text=two_half_column_left_start_black_button_text url=two_half_column_left_start.black_button_url %}
+</p>
 
 {% include modules/two-half-column-left-end.html %}
 
@@ -36,18 +30,13 @@ partner_tracking: true
 {% capture two_half_column_right_start_color %}{% t amazon_and_more.two_half_column_right_start.color %}{% endcapture %}
 {% include modules/two-half-column-right-start.html header=two_half_column_right_start_header color=two_half_column_right_start_color %}
 
-     <br />
-      <p>Sell any <a href="/photo-books">Photo Book</a> on Amazon.com only.</p>
-       <ul>
-         <li>You control the list price. Amazon fees are set at 15% of the book price plus $1.35 per copy</li>
-         <li>Blurb handles printing, fulfillment, and shipping for all orders made through Amazon. <a href="/printing-options#warehousing">Warehousing options</a> available for volume orders.</li>
-       </ul><br />
-       <p>Photo books can be created with <a href="/bookmaking-tools">any of our tools</a>. More questions about selling on Amazon? <a href="/amazon-distribution">Check out the FAQ</a>.</p>
-       <p>
-         {% capture two_half_column_right_start_black_button_text %}{% t amazon_and_more.two_half_column_right_start.black_button_text %}{% endcapture %}
-         {% capture two_half_column_right_start_black_button_url %}{% t amazon_and_more.two_half_column_right_start.black_button_url %}{% endcapture %}
-         {% include modules/black-button.html text=two_half_column_right_start_black_button_text url=two_half_column_right_start_black_button_url %}
-       </p>
+{% capture two_half_column_right_start_text %}{% t amazon_and_more.two_half_column_right_start.text %}{% endcapture %}
+{{ two_half_column_right_start_text }}
+<p>
+{% capture two_half_column_right_start_black_button_text %}{% t amazon_and_more.two_half_column_right_start.black_button_text %}{% endcapture %}
+{% capture two_half_column_right_start_black_button_url %}{% t amazon_and_more.two_half_column_right_start.black_button_url %}{% endcapture %}
+{% include modules/black-button.html text=two_half_column_right_start_black_button_text url=two_half_column_right_start_black_button_url %}
+</p>
 
 {% include modules/two-half-column-right-end.html %}
 
