@@ -1,9 +1,43 @@
-amazon-and-more:
-  title: 'FRENCH: Sell your self-published book on Amazon'
-  page-banner:
-    headline: 'FRENCH: Amazone & More'
-    copy: 'FRENCH: Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.'
-    banner_image_url: 'FRENCH: /sites/default/files/buildkit/Amazon-and-beyond.jpg'
-  two-half-column-left-start:
-    header: 'FRENCH: SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
-    color: 'FRENCH: gray'
+amazon_and_more:
+  title: 'Sell your self-published book on Amazon'
+  meta_description: "Publish your own book with Blurb, sell on Amazon. Self-published book distribution made simple: you set the price, we handle the rest"
+  page_banner:
+    headline: 'Amazon et bien plus encore'
+    copy: 'Vendez vos livres sur Amazon, Barnes & Noble et plus de <br>39&nbsp;000 librairies en ligne.'
+    banner_image_url: '/sites/default/files/buildkit/Amazon-and-beyond.jpg'
+  two_half_column_left_start:
+    header: 'VENDEZ SUR <span class="colored-header-column__vendor-text">AMAZON</span><br />ET SUR D’AUTRES LIBRAIRIES EN LIGNE AVEC INGRAM'
+    color: 'gray'
+    black_button_text: 'CRÉEZ UN GRAND POCHE'
+    black_button_url: '/trade-books'
+    text: '<br />
+     <p>Vendez n’importe quel <a href="/trade-books">Grand Poche</a> sur Amazon, Barnes & Noble et plus de 39&nbsp;000 librairies en ligne.</p>
+       <ul>
+         <li>Vous contrôlez le prix et déterminez les frais pour les détaillants</li>
+         <li>Le livre est imprimé sur <a href="/printing-options#printondemand">demande</a> et livré à l’acheteur </li>
+         <li>Disponible pour les Grands Poches uniquement</li>
+       </ul><br />
+       <p>Les Grands Poches peuvent être créés avec <a href="/bookwright">BookWright</a> et notre <a href="/indesign-plugin">plug-in InDesign</a>. Vous voulez en savoir plus sur la distribution mondiale avec Ingram ? <a href="/global-distribution">Consultez notre FAQ</a>.</p>'
+  two_half_column_right_start:
+    header: 'VENDEZ SUR <span class="colored-header-column__vendor-text">AMAZON</span>'
+    color: 'orange'
+    black_button_text: 'CRÉEZ UN LIVRE PHOTO'
+    black_button_url: '/photo-books'
+    text: '<br />
+      <p>Vendez n’importe quel <a href="/photo-books">livre photo </a> sur Amazon.com.</p>
+       <ul>
+         <li>Vous contrôlez le prix. Les frais d’Amazon sont fixés à 15 % du prix du livre plus 1,35 $ par exemplaire.</li>
+         <li>Blurb gère l’impression, le traitement des commandes et la livraison pour toutes les commandes passées par Amazon. <a href="/printing-options#warehousing">Des options </a> d’entreposage sont disponibles pour les commandes en grande quantité.</li>
+       </ul><br />
+       <p>Des livres photos au format papier peuvent être créés avec <a href="/bookmaking-tools">l’un de nos outils</a>. Vous avez d’autres questions sur la vente sur Amazon ? <a href="/amazon-distribution">Visitez la FAQ</a>.</p>'
+  three_column_column_first:
+    header: 'VOUS AVEZ DÉJÀ CRÉÉ UN LIVRE'
+    text: 'Décidez où vous voulez <a href="/sell-and-distribute">commercialiser votre livre</a>.'
+    order: 'first'
+  three_column_column:
+    header: 'LANCEZ-VOUS'
+    text: 'Sélectionnez le bon format pour votre livre et <a href="/bookmaking-tools">lancez-vous</a>.'
+  three_column_column_last:
+    header: 'ENGAGEZ UN EXPERT'
+    text: 'Vous avez besoin d’aide avec votre projet d’édition ? <a href="/dreamteam/collaborators">Des experts reconnus par Blurb</a> sont disponibles pour vous aider.'
+    order: 'last'
