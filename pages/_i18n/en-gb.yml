@@ -4,7 +4,7 @@ amazon_and_more:
   page_banner:
     headline: 'Amazon & More'
     copy: 'Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.'
-    banner_image_url: '/sites/default/files/buildkit/Amazon-and-beyond.jpg'
+    banner_image_url: 'assets/images/Amazon-and-beyond.jpg'
   two_half_column_left_start:
     header: 'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
     color: 'gray'
