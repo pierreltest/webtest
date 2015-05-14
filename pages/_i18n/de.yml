@@ -4,7 +4,7 @@ amazon_and_more:
   page_banner:
     headline: 'Amazon und andere Online-Anbieter'
     copy: 'Verkaufen Sie Ihr Buch auf Amazon, bei Barnes & Noble und über 39.000 Online-Buchhändlern.'
-    banner_image_url: '/sites/default/files/buildkit/Amazon-and-beyond.jpg'
+    banner_image_url: 'assets/images/Amazon-and-beyond.jpg'
   two_half_column_left_start:
     header: 'VERTRIEB AUF<br /> <span class="colored-header-column__vendor-text">AMAZON</span><br /> UND ANDEREN PLATTFORMEN ÜBER INGRAM'
     color: 'gray'
