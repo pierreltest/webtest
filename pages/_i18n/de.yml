@@ -1,20 +1,43 @@
 amazon_and_more:
   title: 'Sell your self-published book on Amazon'
   meta_description: "Publish your own book with Blurb, sell on Amazon. Self-published book distribution made simple: you set the price, we handle the rest"
-  page_banner_headline: 'Amazon & More'
-  page_banner_copy: 'Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.'
-  page_banner_banner_image_url: '/sites/default/files/buildkit/Amazon-and-beyond.jpg'
-  two_half_column_left_start_header: 'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
-  two_half_column_left_start_color: 'gray'
-  black_button_text: 'Create a Trade Book'
-  black_button_url: '/trade-books'
-  two_half_column_right_start_header: 'SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>'
-  two_half_column_right_start_color: 'orange'
-  three_column_column_first_header: 'Already made a book?'
-  three_column_column_first_text: 'Decide where you want to <a href="/sell-and-distribute">sell your book</a>.'
-  three_column_column_first_order: 'first'
-  three_column_column_header: 'Already made a book?'
-  three_column_column_text: 'Decide where you want to <a href="/sell-and-distribute">sell your book</a>.'
-  three_column_column_last_header: 'HIRE AN EXPERT'
-  three_column_column_last_text: 'Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.'
-  three_column_column_last_order: 'last'
+  page_banner:
+    headline: 'Amazon und andere Online-Anbieter'
+    copy: 'Verkaufen Sie Ihr Buch auf Amazon, bei Barnes & Noble und über 39.000 Online-Buchhändlern.'
+    banner_image_url: '/sites/default/files/buildkit/Amazon-and-beyond.jpg'
+  two_half_column_left_start:
+    header: 'VERTRIEB AUF<br /> <span class="colored-header-column__vendor-text">AMAZON</span><br /> UND ANDEREN PLATTFORMEN ÜBER INGRAM'
+    color: 'gray'
+    black_button_text: 'Buch im Taschenbuchformat'
+    black_button_url: '/trade-books'
+    text: '<br />
+       <p>Machen Sie jedes beliebige <a href="/trade-books">Buch im Taschenbuchformat</a> auf Amazon, bei Barnes & Noble und 39.000 Online-Buchhändlern verfügbar.</p>
+       <ul>
+         <li>Sie bestimmen den Listenpreis und legen den Einzelhändleraufschlag fest</li>
+         <li>Das Buch wird <a href="/printing-options#printondemand">je nach Bedarf</a> gedruckt und an den Käufer versendet</li>
+         <li>Nur für Bücher im Taschenbuchformat verfügbar</li>
+       </ul><br />
+       <p>Bücher im Taschenbuchformat können mit <a href="/bookwright">BookWright</a> und unserem <a href="/indesign-plugin">InDesign Plug-in</a> erstellt werden. Möchten Sie mehr über den weltweiten Vertrieb über Ingram erfahren? <a href="/global-distribution">Lesen Sie unsere FAQ</a>.</p>'
+  two_half_column_right_start:
+    header: 'VERKAUF AUF <span class="colored-header-column__vendor-text">AMAZON</span>'
+    color: 'orange'
+    black_button_text: 'Create a Photo Book'
+    black_button_url: '/photo-books'
+    text: '<br />
+      <p>Sie können auch jedes beliebige <a href="/photo-books">Fotobuch</a> ausschließlich auf Amazon.com verkaufen.</p>
+       <ul>
+         <li>Sie bestimmen den Listenpreis. Amazon erhebt Gebühren von 15 % des Buchpreises zuzüglich 1,35 USD pro Exemplar</li>
+         <li>Blurb übernimmt den Druck, die Auftragsabwicklung und den Versand für alle über Amazon getätigten Bestellungen. Bei Großbestellungen stehen zudem Optionen <a href="/printing-options#warehousing">zur Lagerung</a> Ihrer Bücher zur Verfügung.</li>
+       </ul><br />
+       <p>Fotobücher können mit <a href="/bookmaking-tools">jedem unserer Tools</a> erstellt werden. Weitere Fragen zum Verkauf bei Amazon? <a href="/amazon-distribution">Lesen Sie unsere FAQ</a>.</p>'
+  three_column_column_first:
+    header: 'SIE HABEN BEREITS EIN BUCH ERSTELLT'
+    text: 'Wählen Sie die passende <a href="/sell-and-distribute">Vertriebsplattform für Ihr Buch</a>.'
+    order: 'first'
+  three_column_column:
+    header: 'LOS GEHT‘S'
+    text: 'Wählen Sie das für Ihr Buch geeignete Format <a href="/bookmaking-tools">und legen Sie los</a>.'
+  three_column_column_last:
+    header: 'BEAUFTRAGEN SIE EINEN EXPERTEN'
+    text: 'Von Blurb ausgewählte und geprüfte Experten</a> stehen Ihnen bei Bedarf unterstützend zur Seite.'
+    order: 'last'
