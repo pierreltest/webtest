@@ -1,5 +1,5 @@
-#languages: ['en', 'en-gb', 'de', 'fr', 'pt', 'it', 'nl', 'es']
-languages: ['en', 'de']
+languages: ['en', 'en-gb', 'de', 'fr', 'pt', 'it', 'nl', 'es']
+#exclude_from_localizations: ["assets"]
 plugins: _plugins/
 
 # Build settings

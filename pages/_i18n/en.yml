@@ -35,8 +35,8 @@ amazon_and_more:
     text: 'Decide where you want to <a href="/sell-and-distribute">sell your book</a>.'
     order: 'first'
   three_column_column:
-    header: 'Already made a book?'
-    text: 'Decide where you want to <a href="/sell-and-distribute">sell your book</a>.'
+    header: 'GET STARTED'
+    text: 'Select the right format for your book and <a href="/bookmaking-tools">get started</a>.'
   three_column_column_last:
     header: 'HIRE AN EXPERT'
     text: 'Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.'
