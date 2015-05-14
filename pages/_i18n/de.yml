@@ -21,7 +21,7 @@ amazon_and_more:
   two_half_column_right_start:
     header: 'VERKAUF AUF <span class="colored-header-column__vendor-text">AMAZON</span>'
     color: 'orange'
-    black_button_text: 'Create a Photo Book'
+    black_button_text: 'Sie können auch jedes beliebige'
     black_button_url: '/photo-books'
     text: '<br />
       <p>Sie können auch jedes beliebige <a href="/photo-books">Fotobuch</a> ausschließlich auf Amazon.com verkaufen.</p>
