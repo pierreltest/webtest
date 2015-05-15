@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:blurb/esa_tasks.git
-  revision: 1522cd80835147403b250dd28986918f8e6324c5
+  revision: bc2f48c77479487d0e616dbf96f7434aeeffa4cf
   branch: master
   specs:
-    esa_tasks (0.0.6)
+    esa_tasks (0.0.9)
       capistrano (= 2.9.0.1)
       capistrano-ext (= 1.2.1)
       capistrano_colors (= 0.5.5)
