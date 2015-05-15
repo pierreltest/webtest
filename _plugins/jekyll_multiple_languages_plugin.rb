@@ -158,12 +158,12 @@ module Blurb
     end
 
     def render(context)
-      jekyll_render context
+      jekyll_render context, @key
     end
 
     private
-    def jekyll_render(context)
-      Jekyll::LocalizeTag.new(@tag_name, @key, @tokens).render context
+    def jekyll_render(context, key)
+      Jekyll::LocalizeTag.new(@tag_name, key, @tokens).render context
     end
   end
 end
