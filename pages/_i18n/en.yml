@@ -183,10 +183,9 @@ amazon-and-more:
   "Create a Trade Book": 'Create a Trade Book'
   "Amazon & More": 'Amazon & More'
   "Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.": 'Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.'
+  'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM': 'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
 amazon_and_more:
   two_half_column_left_start:
-    header: 'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
-    color: 'gray'
     text: '<br />
       <p>Make any <a href="/trade-books">Trade Book</a> available to Amazon, Barnes & Noble, and 39,000 online bookstores.</p>
        <ul>
