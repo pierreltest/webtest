@@ -188,7 +188,6 @@ amazon_and_more:
     header: 'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
     color: 'gray'
     black_button_text: 'Create a Trade Book'
-    black_button_url: '/trade-books'
     text: '<br />
       <p>Make any <a href="/trade-books">Trade Book</a> available to Amazon, Barnes & Noble, and 39,000 online bookstores.</p>
        <ul>
@@ -201,7 +200,6 @@ amazon_and_more:
     header: 'SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>'
     color: 'orange'
     black_button_text: 'Create a Photo Book'
-    black_button_url: '/photo-books'
     text: '<br />
       <p>Sell any <a href="/photo-books">Photo Book</a> on Amazon.com only.</p>
        <ul>
