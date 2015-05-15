@@ -106,9 +106,9 @@ unless Hash.method_defined? :access
 end
 
 module Blurb
+  DELIMITER = "^^^"
+
   class LocalizeTag < Liquid::Tag
-    DELIMITER = "^^^"
-    
     def initialize(tag_name, key, tokens)
       super
       @key = key.strip
@@ -139,7 +139,25 @@ module Blurb
       Jekyll::LocalizeTag.new(@tag_name, key, @tokens).render context, DELIMITER
     end
   end
+
+  class LocalizeBlock < Liquid::Block
+    def render(context)
+      res = super
+      jekyll_render context, key(context, res.strip)
+    end
+
+    private
+    def key(context, given_key)
+      page = context["page"]["name"].gsub('.html', '')
+      "#{page}#{DELIMITER}#{given_key}"
+    end
+
+    def jekyll_render(context, key)
+      Jekyll::LocalizeTag.new(@tag_name, key, @tokens).render context, DELIMITER
+    end
+  end
 end
 
 Liquid::Template.register_tag('t', Blurb::LocalizeTag)
+Liquid::Template.register_tag('tb', Blurb::LocalizeBlock)
 Liquid::Template.register_tag('translate', Jekyll::LocalizeTag)
