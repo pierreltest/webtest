@@ -8,6 +8,8 @@ this.Blurb || (this.Blurb = {});
 
   if (subdomain == "website") {
     domain = 'master.eng.blurb.com';
+  } else if (subdomain == "prod") {
+    domain = "www.blurb.com";
   } else {
     domain = subdomain + '.blurb.' + blurblocation.domainSuffix;
   }
