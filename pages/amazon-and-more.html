@@ -29,18 +29,8 @@ partner_tracking: true
 
 {% include modules/two-half-column-right-end.html %}
 
-{% capture three_column_column_first_header %}{% translate amazon_and_more.three_column_column_first.header %}{% endcapture %}
-{% capture three_column_column_first_text %}{% translate amazon_and_more.three_column_column_first.text %}{% endcapture %}
-{% capture three_column_column_first_order %}{% translate amazon_and_more.three_column_column_first.order %}{% endcapture %}
-{% include modules/three-column-column.html header=three_column_column_first_header text=three_column_column_first_text order=three_column_column_first_order %}
+{% include modules/three-column-column.html header='Already made a book?' text='Decide where you want to <a href="/sell-and-distribute">sell your book</a>.' order="first" %}
 
+{% include modules/three-column-column.html header='GET STARTED' text='Select the right format for your book and <a href="/bookmaking-tools">get started</a>.' %}
 
-{% capture three_column_column_header %}{% translate amazon_and_more.three_column_column.header %}{% endcapture %}
-{% capture three_column_column_text %}{% translate amazon_and_more.three_column_column.text %}{% endcapture %}
-{% include modules/three-column-column.html header=three_column_column_header text=three_column_column_text %}
-
-
-{% capture three_column_column_last_header %}{% translate amazon_and_more.three_column_column_last.header %}{% endcapture %}
-{% capture three_column_column_last_text %}{% translate amazon_and_more.three_column_column_last.text %}{% endcapture %}
-{% capture three_column_column_last_order %}{% translate amazon_and_more.three_column_column_last.order %}{% endcapture %}
-{% include modules/three-column-column.html header=three_column_column_last_header text=three_column_column_last_text order=three_column_column_last_order %}
+{% include modules/three-column-column.html header='HIRE AN EXPERT' text='Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.' order="last" %}

@@ -186,6 +186,12 @@ amazon-and-more:
   'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM': 'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
   'SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>': 'SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>'
   'Create a Photo Book': 'Create a Photo Book'
+  'Already made a book?': 'Already made a book?'
+  'Decide where you want to <a href="/sell-and-distribute">sell your book</a>.': 'Decide where you want to <a href="/sell-and-distribute">sell your book</a>.'
+  'GET STARTED': 'GET STARTED'
+  'Select the right format for your book and <a href="/bookmaking-tools">get started</a>.': 'Select the right format for your book and <a href="/bookmaking-tools">get started</a>.'
+  'HIRE AN EXPERT': 'HIRE AN EXPERT'
+  'Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.': 'Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.'
 amazon_and_more:
   two_half_column_left_start:
     text: '<br />
@@ -204,17 +210,6 @@ amazon_and_more:
          <li>Blurb handles printing, fulfillment, and shipping for all orders made through Amazon. <a href="/printing-options#warehousing">Warehousing options</a> available for volume orders.</li>
        </ul><br />
        <p>Photo books can be created with <a href="/bookmaking-tools">any of our tools</a>. More questions about selling on Amazon? <a href="/amazon-distribution">Check out the FAQ</a>.</p>'
-  three_column_column_first:
-    header: 'Already made a book?'
-    text: 'Decide where you want to <a href="/sell-and-distribute">sell your book</a>.'
-    order: 'first'
-  three_column_column:
-    header: 'GET STARTED'
-    text: 'Select the right format for your book and <a href="/bookmaking-tools">get started</a>.'
-  three_column_column_last:
-    header: 'HIRE AN EXPERT'
-    text: 'Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.'
-    order: 'last'
 search:
   search: 'Search'
   close: 'Close form'
