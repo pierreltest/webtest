@@ -158,10 +158,24 @@ module Blurb
     end
 
     def render(context)
-      jekyll_render context, @key
+      key = full_key context, @key
+      jekyll_render context, key
     end
 
     private
+    def full_key(context, given_key)
+      page = context["page"]["name"].gsub('.html', '')
+      "#{page}.#{key context, given_key}"
+    end
+
+    def key(context, key)
+      if "#{context[@key]}" != "" #Check for page variable
+        "#{context[@key]}"
+      else
+        @key
+      end
+    end
+
     def jekyll_render(context, key)
       Jekyll::LocalizeTag.new(@tag_name, key, @tokens).render context
     end
