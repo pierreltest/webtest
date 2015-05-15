@@ -17,14 +17,12 @@ partner_tracking: true
 
 {% include modules/two-half-column-left-end.html %}
 
-{% capture two_half_column_right_start_header %}{% translate amazon_and_more.two_half_column_right_start.header %}{% endcapture %}
-{% capture two_half_column_right_start_color %}{% translate amazon_and_more.two_half_column_right_start.color %}{% endcapture %}
-{% include modules/two-half-column-right-start.html header=two_half_column_right_start_header color=two_half_column_right_start_color %}
+{% include modules/two-half-column-right-start.html header='SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>' color="orange" %}
 
 {% capture two_half_column_right_start_text %}{% translate amazon_and_more.two_half_column_right_start.text %}{% endcapture %}
 {{ two_half_column_right_start_text }}
 <p>
-{% include modules/black-button.html text="amazon_and_more.two_half_column_right_start.black_button_text" url_untranslated="/photo-books" %}
+{% include modules/black-button.html text="Create a Photo Book" url_untranslated="/photo-books" %}
 </p>
 
 {% include modules/two-half-column-right-end.html %}

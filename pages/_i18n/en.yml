@@ -184,6 +184,8 @@ amazon-and-more:
   "Amazon & More": 'Amazon & More'
   "Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.": 'Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.'
   'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM': 'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
+  'SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>': 'SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>'
+  'Create a Photo Book': 'Create a Photo Book'
 amazon_and_more:
   two_half_column_left_start:
     text: '<br />
@@ -195,9 +197,6 @@ amazon_and_more:
        </ul><br />
        <p>Trade books can be created with <a href="/bookwright">BookWright</a> and our <a href="/indesign-plugin">InDesign Plug-in</a>. Want to learn more about global distribution through Ingram? <a href="/global-distribution">Check out our FAQ</a>.</p>'
   two_half_column_right_start:
-    header: 'SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>'
-    color: 'orange'
-    black_button_text: 'Create a Photo Book'
     text: '<br />
       <p>Sell any <a href="/photo-books">Photo Book</a> on Amazon.com only.</p>
        <ul>
