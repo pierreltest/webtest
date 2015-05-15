@@ -148,7 +148,27 @@ unless Hash.method_defined? :access
   end
 end
 
-Liquid::Template.register_tag('t', Jekyll::LocalizeTag)
+module Blurb
+  class LocalizeTag < Liquid::Tag
+    def initialize(tag_name, key, tokens)
+      super
+      @key = key.strip
+      @tag_name = tag_name
+      @tokens = tokens
+    end
+
+    def render(context)
+      jekyll_render context
+    end
+
+    private
+    def jekyll_render(context)
+      Jekyll::LocalizeTag.new(@tag_name, @key, @tokens).render context
+    end
+  end
+end
+
+Liquid::Template.register_tag('t', Blurb::LocalizeTag)
 Liquid::Template.register_tag('translate', Jekyll::LocalizeTag)
 Liquid::Template.register_tag('tf', Jekyll::Tags::LocalizeInclude)
 Liquid::Template.register_tag('translate_file', Jekyll::Tags::LocalizeInclude)
