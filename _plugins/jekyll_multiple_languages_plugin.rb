@@ -143,7 +143,8 @@ module Blurb
   class LocalizeBlock < Liquid::Block
     def render(context)
       res = super
-      jekyll_render context, key(context, res.strip)
+      stripped = res.strip.gsub("\n", '')
+      jekyll_render context, key(context, stripped)
     end
 
     private
