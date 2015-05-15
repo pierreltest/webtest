@@ -6,6 +6,7 @@ require 'esa_tasks/recipes/static_app'
 set :application, 'website'
 set(:jenkins_job) { "#{application}-#{branch}" }
 set(:artifact_name) { "#{application}.tar.gz" }
+set :skip_static_symlinks, true
 
 before 'website:deploy' do
   set :jenkins_host, "jenkins.blurb.com"
