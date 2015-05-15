@@ -41,3 +41,8 @@ amazon_and_more:
     header: 'HUUR EEN EXPERT IN'
     text: '<a href="/dreamteam/collaborators">De door Blurb goedgekeurde deskundigen</a> staan klaar om je te helpen.'
     order: 'last'
+search:
+  search: "Zoeken"
+  close: "Zoekformulier sluiten"
+  submit: "Verzenden"
+  search_for: "Zoeken naar"

@@ -41,3 +41,8 @@ amazon_and_more:
     header: 'ENGAGEZ UN EXPERT'
     text: 'Vous avez besoin d’aide avec votre projet d’édition ? <a href="/dreamteam/collaborators">Des experts reconnus par Blurb</a> sont disponibles pour vous aider.'
     order: 'last'
+search:
+  search: "Rechercher:"
+  close: "Fermer le formulaire de recherche"
+  submit: "Soumettre"
+  search_for: "Recherche..."

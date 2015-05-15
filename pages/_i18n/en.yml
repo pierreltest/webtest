@@ -41,3 +41,8 @@ amazon_and_more:
     header: 'HIRE AN EXPERT'
     text: 'Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.'
     order: 'last'
+search:
+  search: 'Search'
+  close: 'Close form'
+  search_for: 'Search for'
+  submit: 'Submit'

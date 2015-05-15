@@ -41,3 +41,8 @@ amazon_and_more:
     header: 'CONTRATE A UN EXPERTO'
     text: '¿Necesita ayuda para publicar su libro? <a href="/dreamteam/collaborators">Los expertos aprobados por Blurb</a> estarán encantados de ayudarle.'
     order: 'last'
+search:
+  search: 'Búsqueda'
+  close: "Cerrar formulario de búsqueda"
+  search_for: 'Buscar'
+  submit: 'Enviar'

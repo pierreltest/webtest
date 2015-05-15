@@ -41,3 +41,8 @@ amazon_and_more:
     header: 'BEAUFTRAGEN SIE EINEN EXPERTEN'
     text: 'Von Blurb ausgewählte und geprüfte Experten</a> stehen Ihnen bei Bedarf unterstützend zur Seite.'
     order: 'last'
+search:
+  search: "Suchen"
+  close: "Suchformular schließen"
+  submit: "Absenden"
+  search_for: "Suche nach"

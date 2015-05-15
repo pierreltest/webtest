@@ -41,3 +41,8 @@ amazon_and_more:
     header: 'CONTRATAR UM ESPECIALISTA'
     text: 'Precisa de ajuda em seus esforços de publicação? <a href="/dreamteam/collaborators">Especialistas aprovados pela Blurb</a> estão disponíveis para ajudá-lo.'
     order: 'last'
+search:
+  search: "Pesquisa"
+  close: "Fechar formulário de pesquisa"
+  submit: "Enviar"
+  search_for: "Procurar"
