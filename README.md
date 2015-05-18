@@ -59,7 +59,7 @@ If you want to add generic html please remember to wrap the content in "tb" tags
     $ bundle install
     $ bower install
     $ bundle exec jekyll serve
-    $ open http://website.blurb.com:4000/amazon-and-more.en.html # just an example for now
+    $ open http://website.blurb.com:4000/amazon-and-more.html # just an example for now
 
 ### Building
     $ bundle install
