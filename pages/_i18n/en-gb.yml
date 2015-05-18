@@ -170,19 +170,14 @@ navigation_menu:
   canada_fr: "Canada (French)"
   apple_ibooks_store: "Apple iBooks Store"
 
-amazon_and_more:
-  title: 'Sell your self-published book on Amazon'
-  meta_description: "Publish your own book with Blurb, sell on Amazon. Self-published book distribution made simple: you set the price, we handle the rest"
-  page_banner:
-    headline: 'Amazon & More'
-    copy: 'Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.'
-    banner_image_url: 'assets/images/Amazon-and-beyond.jpg'
-  two_half_column_left_start:
-    header: 'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
-    color: 'gray'
-    black_button_text: 'Create a Trade Book'
-    black_button_url: '/trade-books'
-    text: '<br />
+amazon-and-more:
+  'Sell your self-published book on Amazon': 'Sell your self-published book on Amazon'
+  'Publish your own book with Blurb, sell on Amazon. Self-published book distribution made simple: you set the price, we handle the rest': "Publish your own book with Blurb, sell on Amazon. Self-published book distribution made simple: you set the price, we handle the rest"
+  "Amazon & More": 'Amazon & More'
+  "Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.": 'Sell your book on Amazon, Barnes & Noble, and more than 39,000 online bookstores.'
+  'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM': 'SELL ON<br /><span class="colored-header-column__vendor-text">AMAZON & BEYOND</span><br />THROUGH INGRAM'
+  "Create a Trade Book": 'Create a Trade Book'
+  '<br /><p>Make any <a href="/trade-books">Trade Book</a> available to Amazon, Barnes & Noble, and 39,000 online bookstores.</p><ul><li>You control the list price and decide the retail seller fees</li><li>The book is printed <a href="/printing-options#printondemand">on demand</a> and shipped to the buyer</li><li>Available for trade books only</li></ul><br /><p>Trade books can be created with <a href="/bookwright">BookWright</a> and our <a href="/indesign-plugin">InDesign Plug-in</a>. Want to learn more about global distribution through Ingram? <a href="/global-distribution">Check out our FAQ</a>.</p>': '<br />
       <p>Make any <a href="/trade-books">Trade Book</a> available to Amazon, Barnes & Noble, and 39,000 online bookstores.</p>
        <ul>
          <li>You control the list price and decide the retail seller fees</li>
@@ -190,29 +185,21 @@ amazon_and_more:
          <li>Available for trade books only</li>
        </ul><br />
        <p>Trade books can be created with <a href="/bookwright">BookWright</a> and our <a href="/indesign-plugin">InDesign Plug-in</a>. Want to learn more about global distribution through Ingram? <a href="/global-distribution">Check out our FAQ</a>.</p>'
-  two_half_column_right_start:
-    header: 'SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>'
-    color: 'orange'
-    black_button_text: 'Create a Photo Book'
-    black_button_url: '/photo-books'
-    text: '<br />
+  'SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>': 'SELL ON <span class="colored-header-column__vendor-text">AMAZON</span>'
+  'Create a Photo Book': 'Create a Photo Book'
+  '<br /><p>Sell any <a href="/photo-books">Photo Book</a> on Amazon.com only.</p><ul><li>You control the list price. Amazon fees are set at 15% of the book price plus $1.35 per copy</li><li>Blurb handles printing, fulfillment, and shipping for all orders made through Amazon. <a href="/printing-options#warehousing">Warehousing options</a> available for volume orders.</li></ul><br /><p>Photo books can be created with <a href="/bookmaking-tools">any of our tools</a>. More questions about selling on Amazon? <a href="/amazon-distribution">Check out the FAQ</a>.</p>': '<br />
       <p>Sell any <a href="/photo-books">Photo Book</a> on Amazon.com only.</p>
        <ul>
          <li>You control the list price. Amazon fees are set at 15% of the book price plus $1.35 per copy</li>
          <li>Blurb handles printing, fulfillment, and shipping for all orders made through Amazon. <a href="/printing-options#warehousing">Warehousing options</a> available for volume orders.</li>
        </ul><br />
        <p>Photo books can be created with <a href="/bookmaking-tools">any of our tools</a>. More questions about selling on Amazon? <a href="/amazon-distribution">Check out the FAQ</a>.</p>'
-  three_column_column_first:
-    header: 'Already made a book?'
-    text: 'Decide where you want to <a href="/sell-and-distribute">sell your book</a>.'
-    order: 'first'
-  three_column_column:
-    header: 'GET STARTED'
-    text: 'Select the right format for your book and <a href="/bookmaking-tools">get started</a>.'
-  three_column_column_last:
-    header: 'HIRE AN EXPERT'
-    text: 'Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.'
-    order: 'last'
+  'Already made a book?': 'Already made a book?'
+  'Decide where you want to <a href="/sell-and-distribute">sell your book</a>.': 'Decide where you want to <a href="/sell-and-distribute">sell your book</a>.'
+  'GET STARTED': 'GET STARTED'
+  'Select the right format for your book and <a href="/bookmaking-tools">get started</a>.': 'Select the right format for your book and <a href="/bookmaking-tools">get started</a>.'
+  'HIRE AN EXPERT': 'HIRE AN EXPERT'
+  'Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.': 'Need help in your publishing efforts? <a href="/dreamteam/collaborators">Blurb-approved experts</a> are available to assist you.'
 search:
   search: 'Search'
   close: 'Close form'

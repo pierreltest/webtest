@@ -2,12 +2,12 @@
   <div class="page-banner__bg">
     <div class="grid-construct">
       <div class="page-banner__inner-wrap">
-        <div class="page-banner__image" style="background-image: url('{{ include.banner_image_url }}');">
+        <div class="page-banner__image" style="background-image: url('{{ include.banner_image_url_untranslated }}');">
         </div>
         <div class="page-banner__content">
-          <h1 class="page-banner__headline">{{ include.headline }}</h1>
+          <h1 class="page-banner__headline">{% t include.headline %}</h1>
           <div class="page-banner__content-divider"></div>
-          <p class="page-banner__copy">{{ include.copy }}</p>
+          <p class="page-banner__copy">{% t include.copy %}</p>
           <div class="page-banner__content-divider"></div>
         </div>
       </div>
