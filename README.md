@@ -20,7 +20,7 @@ For more information on the Fork and Pull model used here please check https://h
 ### Adding a Page
 
 1. Create a new file in [website folder]/pages, let's call it "new-page.html"
-2. In the [front-matter](https://github.com/blurb/website/blob/cd7b0bd7fb5926362ed846c67b946e2582a6be91/pages/amazon-and-more.html#L1-L7) add "draft: true" (this will ensure the new page starts as a draft).
+2. In the [front-matter](https://github.com/blurb/website/blob/cd7b0bd7fb5926362ed846c67b946e2582a6be91/pages/amazon-and-more.html#L1-L7) add `draft: true` (this will ensure the new page starts as a draft).
 3. Add your content. See [Using modules](#using-modules) and [Creating content outside of modules](#creating-content-outside-of-modules) for different ways of adding content.
 
 ### Committing a page
