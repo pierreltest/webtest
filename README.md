@@ -1,14 +1,14 @@
 # Blurb.com Website
 
-Static site generator for CMS page layouts.
+This is our website!
 
 ## For Content Creators
 
-## Pre-reqs
+### Pre-reqs
 
 Download the [github client](https://mac.github.com).
 
-## Getting the code
+### Getting the code
 
 1. Go to https://github.com/blurb/website
 2. Create a fork by clicking on "Fork"
@@ -17,13 +17,13 @@ Download the [github client](https://mac.github.com).
 
 For more information on the Fork and Pull model used here please check https://help.github.com/articles/using-pull-requests/
 
-## Adding a Page
+### Adding a Page
 
 1. Create a new file in [website folder]/pages, let's call it "new-page.html"
 2. In the [front-matter](https://github.com/blurb/website/blob/cd7b0bd7fb5926362ed846c67b946e2582a6be91/pages/amazon-and-more.html#L1-L7) add "draft: true" (this will ensure the new page starts as a draft).
 3. Add your content. See [Using modules](#using-modules) and [Creating content outside of modules](#creating-content-outside-of-modules) for different ways of adding content.
 
-## Committing a page
+### Committing a page
 
 After you've created and saved your page you're going to want to push it up and watch it get deployed.
 
