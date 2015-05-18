@@ -1,2 +1,10 @@
+{% comment %}
+Creates a black button with the given test
+
+Parameters:
+url_untranslated: The url the button goes to
+text: The text within the button
+{% endcomment %}
+
 <a href="{{ include.url_untranslated }}" class="btn--inline  btn--border-black  js-smooth-scroll">{% t include.text %}</a>
 

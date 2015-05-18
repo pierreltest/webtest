@@ -34,11 +34,11 @@ After you've created and saved your page you're going to want to push it up and 
 4. Go to your fork and click on "Compare & pull request"
 5. When you've added a proper description and summary click on "Create pull request"
 6. Once gengo has translated everything (and maybe you've run it by some peers) you can click on "Merge pull request"
-7. Check [the master build](http://jenkins.blurb.com/job/website-master/) and then [the master deploy job](http://jenkins.blurb.com/job/website-master-deploy/)
+7. Check [the master build](http://jenkins.blurb.com/job/website-master/) and then [the master deploy job](http://jenkins.blurb.com/job/website-master-deploy/). If either job fails please see [Pierre](plarochelle@blurb.com).
 8. Once each job has finished you should be able to go to master.eng.blurb.com/drafts/[name of your page]
-9. If all looks good you're welcome to remove the `draft: true`, commit and sync with master, wait for [the master build](http://jenkins.blurb.com/job/website-master/), and then build [the production deploy job](http://jenkins.blurb.com/job/website-production-deploy/)
+9. If all looks good you're welcome to remove the `draft: true`, commit and sync with master, wait for [the master build](http://jenkins.blurb.com/job/website-master/), and then build [the production deploy job](http://jenkins.blurb.com/job/website-production-deploy/). If either of the jobs fail please see [Pierre](plarochelle@blurb.com).
 
-Once done your new page should be visible on the production website.
+Once done your new page should be visible on the production website. For an overview of all the jobs you can also go to the [website view](http://jenkins.blurb.com/view/website/).
 
 ### Using modules
 
