@@ -1,3 +1,11 @@
+{% if page.name == "amazon-and-more.html" %}
+  {% assign amazon_and_more_active = "active" %}
+{% endif %}
+
+{% if amazon_and_more_active == "active" %}
+  {% assign sell_and_distribute_active = "active" %}
+{% endif %}
+
 <div class="header--main  header-nav--main block block-blurb-menu contextual-links-region delta_2 " id="block-blurb-menu-blurby-navigation-menu-v4">
   <div class="guideline--horizontal"></div>
   <div class="grid-construct  guidline__wrapper">
@@ -53,7 +61,7 @@
               </li>
             </ul>
           </li>
-          <li class="controls__nav__list-item active" data-tab="sell-and-distribute-dropdown">
+          <li class="controls__nav__list-item {{ sell_and_distribute_active }}" data-tab="sell-and-distribute-dropdown">
             <div class="controls__nav__cta  cta  cta--button  js-parent-nav-link">
               <span class="icon  controls__nav__expand-icon"></span>
               <a class="controls__nav__cta__link" href="/sell-and-distribute">{% translate navigation_menu.sell_and_distribute %}</a>
@@ -153,7 +161,7 @@
           <span class="controls__current-subnav__arrow  icon  indicator--down--blue"></span>
         </li>
       </ul>
-      <ul class="controls__current-subnav active" data-trigger="sell-and-distribute-dropdown">
+      <ul class="controls__current-subnav {{ sell_and_distribute_active }}" data-trigger="sell-and-distribute-dropdown">
         <li class="controls__current-subnav__item">
           <a class="controls__current-subnav__link" href="/sell-and-distribute">{% translate navigation_menu.sell_and_distribute_options %}</a>
           <span class="controls__current-subnav__arrow  icon  indicator--down--blue"></span>
@@ -162,7 +170,7 @@
           <a class="controls__current-subnav__link" href="/sell-through-blurb">{% translate navigation_menu.sell_through_blurb %}</a>
           <span class="controls__current-subnav__arrow  icon  indicator--down--blue"></span>
         </li>
-        <li class="controls__current-subnav__item active">
+        <li class="controls__current-subnav__item {{ amazon_and_more_active }}">
           <a class="controls__current-subnav__link" href="/amazon-and-more">{% translate navigation_menu.sell_on_amazon %}</a>
           <span class="controls__current-subnav__arrow  icon  indicator--down--blue"></span>
         </li>
