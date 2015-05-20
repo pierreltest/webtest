@@ -1,3 +1,12 @@
+{% comment %}
+A single column of the three-column cta module: http://buildkit.eng.blurb.com/documentation/modules/three_column_ctas.html . Must be used 3 at a time: https://github.com/blurb/website/blob/4ee4735f2c8059fed13b8f26b8fd013ec72012bf/pages/amazon-and-more.html#L49-L53 .
+
+Parameters:
+header: The headline of the column
+text: The body text of the column
+order: Can be one of "first" or "last" (middle is implied) see example above for its usage
+{% endcomment %}
+
 {% if include.order == "first" %}
   {% assign order-class = "three-column-ctas__column--first" %}
   <div class="module  three-column-ctas  ">

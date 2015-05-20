@@ -1,4 +1,12 @@
- <div class="module  two-half-columns">
+{% comment %}
+Beginning of the first column of the two-half column module: http://buildkit.eng.blurb.com/documentation/modules/two_half_columns.html . Must be used in conjunction with two-half-column-left-end, two-half-column-right-start, and two-half-column-right-end. See https://github.com/blurb/website/blob/4ee4735f2c8059fed13b8f26b8fd013ec72012bf/pages/amazon-and-more.html#L11-L47 for a proper use. It is required that the column's main content be included (within a translation block) between this module and the two-half-column-left-end module (as in https://github.com/blurb/website/blob/4ee4735f2c8059fed13b8f26b8fd013ec72012bf/pages/amazon-and-more.html#L11-L29)
+
+Parameters:
+header: The headline of the column
+color: The background color of the headline of the column
+{% endcomment %}
+
+<div class="module  two-half-columns">
   <div class="grid-construct two-half-columns__wrapper">
     <div class="two-half-columns__col  two-half-columns__col--left">
       <div class="colored-header-column__bg  js-expand-wrap  open">
