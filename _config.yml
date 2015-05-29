@@ -10,7 +10,8 @@ assets:
     - new-website-assets/bower/buildkit/assets/js
     - new-website-assets/bower/buildkit/assets/css
     - new-website-assets/bower/buildkit/assets/js/vendor/modernizr
-
+  baseurl: /new-website-assets
+  
 # Build settings
 source: pages
 markdown: kramdown
