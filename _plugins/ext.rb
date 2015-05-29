@@ -6,7 +6,7 @@ module Blurb
     
     def generate(site)
       `rm -rf _site/fonts`
-      `cp -R _site/assets/bower/buildkit/assets/fonts _site/fonts`
+      `cp -R pages/assets/bower/buildkit/assets/fonts _site/fonts`
     end
   end
 end
