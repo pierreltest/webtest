@@ -3,14 +3,13 @@ plugins: _plugins/
 
 assets:
   sources:
-    - assets/js
-    - assets/bower/jquery
-    - assets/bower/underscore
-    - assets/bower/blurblocation
-    - assets/bower/buildkit/assets/js
-    - assets/bower/buildkit/assets/css
-    - assets/bower/buildkit/assets/js/vendor/modernizr
-
+    - new-website-assets/js
+    - new-website-assets/bower/jquery
+    - new-website-assets/bower/underscore
+    - new-website-assets/bower/blurblocation
+    - new-website-assets/bower/buildkit/assets/js
+    - new-website-assets/bower/buildkit/assets/css
+    - new-website-assets/bower/buildkit/assets/js/vendor/modernizr
 
 # Build settings
 source: pages
