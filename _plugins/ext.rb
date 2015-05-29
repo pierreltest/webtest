@@ -5,9 +5,8 @@ module Blurb
     safe true
     
     def generate(site)
-      `rm -rf _site/fonts`
-      `cp -R pages/new-website-assets/bower/buildkit/assets/fonts _site/fonts`
       `cp _site/assets/* _site/new-website-assets/ 2>/dev/null`
+      `sed -i '' 's/url\("../url\("\\/new-website-assets\\/bower\\/buildkit\\/assets/g' _site/new-website-assets/*.css`
     end
   end
 end
