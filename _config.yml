@@ -1,6 +1,16 @@
 languages: ['en', 'en-gb', 'de', 'fr', 'pt', 'it', 'nl', 'es']
-#exclude_from_localizations: ["assets"]
 plugins: _plugins/
+
+assets:
+  sources:
+    - assets/js
+    - assets/bower/jquery
+    - assets/bower/underscore
+    - assets/bower/blurblocation
+    - assets/bower/buildkit/assets/js
+    - assets/bower/buildkit/assets/css
+    - assets/bower/buildkit/assets/js/vendor/modernizr
+
 
 # Build settings
 source: pages

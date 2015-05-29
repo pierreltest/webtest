@@ -1,3 +1,9 @@
+//= require jquery.min.js
+//= require underscore.js
+//= require index.js
+//= require account.js
+
+
 this.Blurb || (this.Blurb = {});
 
 (function($, _) {
