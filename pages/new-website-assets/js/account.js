@@ -1,5 +1,5 @@
 var Account;
-
+var something;
 Account = (function() {
   Account.prototype.path = '/api/v4/navigation/account_menu';
 
