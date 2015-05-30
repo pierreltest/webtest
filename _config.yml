@@ -13,6 +13,7 @@ assets:
     - new-website-assets/bower/buildkit/assets/css
     - new-website-assets/bower/buildkit/assets/js/vendor/modernizr
   baseurl: /new-website-assets
+  js_compressor:  uglifier
   
 # Build settings
 source: pages

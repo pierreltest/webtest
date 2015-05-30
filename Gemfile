@@ -3,6 +3,7 @@ source 'http://repo.blurb.com/gem_repo'
 
 gem 'jekyll'
 gem 'jekyll-assets'
+gem 'uglifier'
 
 group :development do
   gem 'pry'
