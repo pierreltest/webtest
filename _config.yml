@@ -1,7 +1,5 @@
 languages: ['en', 'en-gb', 'de', 'fr', 'pt', 'it', 'nl', 'es']
 plugins: _plugins/
-exclude_from_localizations:
-  - new-website-assets
 
 assets:
   sources:
