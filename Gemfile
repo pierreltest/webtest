@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 source 'http://repo.blurb.com/gem_repo'
 
+gem 'rake'
 gem 'jekyll'
 gem 'jekyll-assets'
 gem 'uglifier'
