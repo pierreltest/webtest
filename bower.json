@@ -4,7 +4,7 @@
   "dependencies": {
     "jquery": "~1.7.0",
     "underscore": "1.6.0",
-    "buildkit": "http://jenkins.blurb.com/view/Buildkit/job/Buildkit-Artifact/430/artifact/build/buildkit-dist.tgz",
+    "buildkit": "http://jenkins.blurb.com/view/Buildkit/job/Buildkit-Artifact/430/artifact/build/buildkit-assets.tgz",
     "blurblocation": "http://jenkins.blurb.com/job/BlurbLocation-Master/12/artifact/build/blurblocation.zip"
   }
 }
