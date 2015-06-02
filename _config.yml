@@ -12,6 +12,13 @@ assets:
     - new-website-assets/bower/buildkit/js/vendor/modernizr
   baseurl: /new-website-assets
   js_compressor:  uglifier
+
+prose:
+  rooturl: 'pages'
+  site-url: 'http://www.blurb.com/'
+  media: 'pages/new-website-assets/images'
+  relativeLinks: 'http://www.blurb.com/new-website-assets/links.jsonp'
+  
   
 # Build settings
 source: pages
